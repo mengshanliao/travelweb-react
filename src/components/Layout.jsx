@@ -3,7 +3,7 @@ import Logo from "@/assets/images/quill.png";
 const Layout = ({ children }) => {
   return (
     <div>
-      <header class="flex justify-between items-center h-[120px] m-[20px] p-[10px]">
+      <header class="flex justify-between items-center h-[120px] m-[20px] p-[10px] ">
         <section>
           <h1 class="flex p-2 text-[2.5rem]">
             Let's Create

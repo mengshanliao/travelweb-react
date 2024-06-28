@@ -36,7 +36,7 @@ const Home = () => {
               class="w-auto h-[300px]"
               src="/src/assets/images/台北中正紀念堂.jpg"
             />
-            <span class="absolute top-0 right-0 z-10 font-medium text-orange-600 bg-amber-300 py-1 px-2 rounded-t-r-[4px]]">
+            <span class="absolute top-0 right-0 z-10 font-medium text-orange-600 bg-amber-300 py-1 px-2 rounded-t-r-[4px]">
               93折
             </span>
             <div class="absolute top-0 left-0 w-auto h-auto opacity-40 bg-black"></div>
