@@ -29,7 +29,7 @@ const Trip = () => {
         <img
           src="/src/assets/images/富士山2.jpg"
           alt=""
-          class="mb-4 w-3/4 h-[420px]  "
+          class="mb-4 w-3/4 h-[420px]"
         />
         <h1 class="w-3/4 mt-16 text-3xl font-semibold ">|| 方案選擇</h1>
         <div class="mb-4">

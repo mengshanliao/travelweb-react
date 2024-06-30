@@ -1,32 +1,62 @@
+import { Carousel } from "antd";
+import { useNavigate } from "react-router-dom";
 import Layout from "@/components/Layout";
+import CityCard from "@/components/CityCard";
+import TripCard from "@/components/TripCard";
+
+const carouselImages = [
+  "/src/assets/images/富士山2.jpg",
+  "/src/assets/images/台北101.jpg",
+  "/src/assets/images/台南鹽山.jpg",
+  "/src/assets/images/韓國首爾塔.jpg",
+  "/src/assets/images/泰國鄭王廟.jpg",
+];
+const cityData = [
+  { key: "japan", title: "日本", image: "/src/assets/images/東京迪士尼.jpg" },
+  { key: "korea", title: "韓國", image: "/src/assets/images/東京迪士尼.jpg" },
+  {
+    key: "thailand",
+    title: "泰國",
+    image: "/src/assets/images/東京迪士尼.jpg",
+  },
+  { key: "taipei", title: "台北", image: "/src/assets/images/東京迪士尼.jpg" },
+  { key: "tainan", title: "台南", image: "/src/assets/images/東京迪士尼.jpg" },
+];
 
 const Home = () => {
+  const navigate = useNavigate();
+  const changePage = (url) => {
+    navigate(url);
+  };
   return (
     <Layout>
-      <section class="h-80 mb-10 bg-slate-400">輪播圖</section>
-      <h2 class="flex justify-center p-2 text-3xl font-medium bg-orange-50">
+      <Carousel autoplay>
+        {carouselImages.map((image) => (
+          <div class=" h-[420px]">
+            <img
+              class="w-full h-[420px] object-cover"
+              src={image}
+              alt="carousel-images"
+            />
+          </div>
+        ))}
+      </Carousel>
+
+      <h2 class="flex justify-center p-2 my-6 text-3xl font-medium bg-orange-50">
         熱門旅遊景點
       </h2>
-      <section class="p-7 flex flex-col justify-center items-center">
-        <ul class="flex justify-between">
-          <div class="spot-image1">
-            <li class="mr-24 font-semibold text-2xl tracking-wide">日本</li>
-          </div>
-          <div class="spot-image2">
-            <li class="mr-24 font-semibold text-2xl tracking-wide">韓國</li>
-          </div>
-          <div class="spot-image3">
-            <li class="mr-24 font-semibold text-2xl tracking-wide">泰國</li>
-          </div>
-          <div class="spot-image4">
-            <li class="mr-24 font-semibold text-2xl tracking-wide">台北</li>
-          </div>
-          <div class="spot-image5">
-            <li class="mr-0 font-semibold text-2xl tracking-wide">澎湖</li>
-          </div>
-        </ul>
-      </section>
-      <h2 class="flex justify-center p-2 text-3xl font-medium bg-orange-50">
+      <div class="flex justify-around">
+        {cityData.map((data) => (
+          <CityCard
+            key={data.key}
+            title={data.title}
+            cityKey={data.key}
+            onClick={() => changePage(`/search?keyword=${data.key}`)}
+          />
+        ))}
+      </div>
+
+      <h2 class="flex justify-center p-2 my-6 text-3xl font-medium bg-orange-50">
         行程及門票
       </h2>
       <section class="flex flex-wrap justify-center items-center p-8">
@@ -127,7 +157,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <h2 class="flex justify-center p-2 text-3xl font-medium bg-orange-50">
+
+      <h2 class="flex justify-center p-2 my-6 text-3xl font-medium bg-orange-50">
         熱門記憶庫
       </h2>
       <section class="p-[30px] flex flex-wrap justify-center items-center">

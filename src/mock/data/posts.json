@@ -1,1 +1,12 @@
-{}
+[
+  {
+    "id": 1,
+    "title": "日本｜東京迪士尼門票",
+    "label": "熱賣中",
+    "cardImg": "/src/assets/images/東京迪士尼.jpg",
+    "cardDiscount": "93折",
+    "priceDiscount": "NT$ 1825",
+    "priceOrigin": "NT$ 1950",
+    "sold": "11975人參加過"
+  }
+]
