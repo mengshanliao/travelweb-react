@@ -1,8 +1,6 @@
-import Layout from "@/components/Layout";
-
 const City = () => {
   return (
-    <Layout>
+    <>
       <div class="flex w-[1300px] h-96 justify-center my-10 ml-20 bg-black text-white rounded-md ">
         <div class="flex flex-col p-8 ">
           <h1 class="text-4xl font-medium mb-6 ">韓國 | 旅遊指南</h1>
@@ -144,7 +142,7 @@ const City = () => {
           <p class="text-xl font-medium">韓式烤大腸</p>
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 export default City;

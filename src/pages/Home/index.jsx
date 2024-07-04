@@ -1,26 +1,33 @@
-import { Carousel } from "antd";
 import { useNavigate } from "react-router-dom";
-import Layout from "@/components/Layout";
 import CityCard from "@/components/CityCard";
 import TripCard from "@/components/TripCard";
 
-const carouselImages = [
-  "/src/assets/images/富士山2.jpg",
-  "/src/assets/images/台北101.jpg",
-  "/src/assets/images/台南鹽山.jpg",
-  "/src/assets/images/韓國首爾塔.jpg",
-  "/src/assets/images/泰國鄭王廟.jpg",
-];
 const cityData = [
-  { key: "japan", title: "日本", image: "/src/assets/images/東京迪士尼.jpg" },
-  { key: "korea", title: "韓國", image: "/src/assets/images/東京迪士尼.jpg" },
   {
-    key: "thailand",
-    title: "泰國",
-    image: "/src/assets/images/東京迪士尼.jpg",
+    cityKey: "japan",
+    title: "日本",
+    image: "/src/assets/images/富士山櫻花.jpg",
   },
-  { key: "taipei", title: "台北", image: "/src/assets/images/東京迪士尼.jpg" },
-  { key: "tainan", title: "台南", image: "/src/assets/images/東京迪士尼.jpg" },
+  {
+    cityKey: "korea",
+    title: "韓國",
+    image: "/src/assets/images/韓國首爾塔.jpg",
+  },
+  {
+    cityKey: "thailand",
+    title: "泰國",
+    image: "/src/assets/images/泰國水上市場.jpg",
+  },
+  {
+    cityKey: "taipei",
+    title: "台北",
+    image: "/src/assets/images/台北101.jpg",
+  },
+  {
+    cityKey: "tainan",
+    title: "台南",
+    image: "/src/assets/images/台南鹽山.jpg",
+  },
 ];
 
 const Home = () => {
@@ -29,35 +36,32 @@ const Home = () => {
     navigate(url);
   };
   return (
-    <Layout>
-      <Carousel autoplay>
-        {carouselImages.map((image) => (
-          <div class=" h-[420px]">
-            <img
-              class="w-full h-[420px] object-cover"
-              src={image}
-              alt="carousel-images"
-            />
-          </div>
-        ))}
-      </Carousel>
+    <>
+      <div class="relative">
+        <button class="absolute z-20 top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] px-4 py-3 text-[22px] font-medium rounded-2xl bg-[#ffffffcc] text-[#002143] hover:text-white hover:bg-[#002143]">
+          開始你的旅遊記憶庫
+        </button>
+        <img
+          src="/src/assets/images/lake拷貝2.jpg"
+          alt=""
+          class="my-1 w-full h-[320px] "
+        />
+        <div class="absolute z-10 w-full h-[320px] top-0 left-0 bg-[#0000002a]"></div>
+      </div>
 
-      <h2 class="flex justify-center p-2 my-6 text-3xl font-medium bg-orange-50">
-        熱門旅遊景點
-      </h2>
-      <div class="flex justify-around">
+      <div class="flex justify-center mt-[60px]">
         {cityData.map((data) => (
           <CityCard
-            key={data.key}
             title={data.title}
             cityKey={data.key}
-            onClick={() => changePage(`/search?keyword=${data.key}`)}
+            image={data.image}
+            onClick={() => changePage(`/cities/${data.key}`)}
           />
         ))}
       </div>
 
-      <h2 class="flex justify-center p-2 my-6 text-3xl font-medium bg-orange-50">
-        行程及門票
+      <h2 class="flex p-2 m-6 mt-[70px] text-[27px] font-medium text-[#002143]">
+        <i class="fa-solid fa-ticket"> 行程及門票</i>
       </h2>
       <section class="flex flex-wrap justify-center items-center p-8">
         <div class="w-[280px] m-5 border border-solid border-gray-200 rounded-xl overflow-hidden">
@@ -158,8 +162,8 @@ const Home = () => {
         </div>
       </section>
 
-      <h2 class="flex justify-center p-2 my-6 text-3xl font-medium bg-orange-50">
-        熱門記憶庫
+      <h2 class="flex p-2 m-6 text-[27px] mt-[70px] font-medium  text-[#002143]">
+        <i class="fa-solid fa-umbrella-beach"> 熱門記憶庫</i>
       </h2>
       <section class="p-[30px] flex flex-wrap justify-center items-center">
         <div class=" w-[360px] m-5 overflow-hidden">
@@ -319,7 +323,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 
