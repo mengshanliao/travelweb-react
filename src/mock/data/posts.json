@@ -1,12 +1,32 @@
 [
   {
     "id": 1,
-    "title": "日本｜東京迪士尼門票",
-    "label": "熱賣中",
-    "cardImg": "/src/assets/images/東京迪士尼.jpg",
-    "cardDiscount": "93折",
-    "priceDiscount": "NT$ 1825",
-    "priceOrigin": "NT$ 1950",
-    "sold": "11975人參加過"
+    "title": "日本|東京迪士尼門票",
+    "tags": ["日本旅遊", "東京必遊景點", "淺草寺", "四天三夜"],
+    "cover": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGphcGFufGVufDB8fDB8fHww",
+    "desc": "探索日本四天三夜的奇妙旅程，從東京的繁華都市到京都的歷史古蹟，再到富士山的壯麗自然，感受無與倫比的文化與美景。",
+    "avatar": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "name": "Kelly Chen",
+    "createdAt": 1689834957
+  },
+  {
+    "id": 2,
+    "title": "韓國|首爾探險：傳統與現代的完美融合",
+    "tags": ["首爾旅遊", "首爾必買", "弘大延南洞", "韓國烤肉"],
+    "cover": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGphcGFufGVufDB8fDB8fHww",
+    "desc": "首爾，這座充滿活力的城市，將現代科技與古老傳統完美結合。從古色古香的景福宮到熙熙攘攘的明洞購物街，每個角落都充滿著驚喜和魅力。無論是品嚐韓國美食還是探索歷史文化，首爾都是不可錯過的旅遊勝地。",
+    "avatar": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "name": "Kelly Chen",
+    "createdAt": 1708444800
+  },
+  {
+    "id": 3,
+    "title": "澎湖群島：台灣的海上樂園",
+    "tags": ["澎湖必遊景點", "摩西分海", "雙心石滬", "澎湖海鮮"],
+    "cover": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGphcGFufGVufDB8fDB8fHww",
+    "desc": "澎湖群島，以其美麗的海灘和豐富的海洋資源吸引著眾多遊客。這裡有壯觀的雙心石滬、古老的天后宮和令人垂涎的澎湖花枝丸。無論是喜歡水上活動還是探索歷史文化，澎湖都是理想的旅遊目的地。",
+    "avatar": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "name": "Kelly Chen",
+    "createdAt": 1698422400
   }
 ]

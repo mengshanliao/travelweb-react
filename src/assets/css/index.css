@@ -7,13 +7,13 @@
 * {
   box-sizing: border-box;
 }
-header section h1 {
+header div h1 {
   font-family: "Playwrite NZ", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-header section h2 {
+header div h2 {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
