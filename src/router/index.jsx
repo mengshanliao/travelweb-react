@@ -10,6 +10,7 @@ import {
   Post,
   Ticket,
   Cart,
+  Booking,
   NotFound,
 } from "@/pages";
 
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/booking",
+        element: <Booking />,
       },
       {
         path: "/post/:id",

@@ -11,46 +11,54 @@ const PostCard = ({
   createdAt,
 }) => {
   return (
-    <div className="w-[360px] overflow-hidden border border-solid border-gray-200 rounded-xl  hover:shadow-lg">
-      <div className="relative h-[280px] overflow-hidden">
-        <img
-          className="w-full h-full object-cover cursor-pointer"
-          src={cover}
-        />
-        <span className="absolute top-0 left-0 text-black text-[26px] py-1 px-3 hover:text-yellow-500 cursor-pointer">
+    <div className="w-[360px] m-4 overflow-hidden border border-solid border-gray-300 rounded-xl">
+      <div className="relative h-[260px] overflow-hidden">
+        <img className="w-full h-full object-cover" src={cover} />
+        <span className="absolute top-0 left-0 text-black text-3xl py-1 px-3 hover:text-yellow-500 cursor-pointer">
           <i className="fa-regular fa-bookmark"></i>
         </span>
       </div>
-      <div className="h-48 p-2 text-sm">
-        {tags.map((tag) => {
+      <div className="h-full text-sm flex flex-wrap m-3">
+        {tags.map((tag) => (
           <span
             key={tag}
-            className="mr-2 py-[2px] px-1 bg-gray-300 text-gray-600 "
+            className="mx-1 px-1 bg-bgBlue text-themeBlue rounded-sm"
           >
             {tag}
-          </span>;
-        })}
+          </span>
+        ))}
         <h1
           onClick={onClick}
-          className="whitespace-nowrap overflow-hidden text-ellipsis my-2 text-2xl font-extrabold hover:text-themeRed cursor-pointer"
+          className="whitespace-nowrap overflow-hidden cursor-pointer text-ellipsis mx-1 my-2 text-xl font-semibold hover:text-themeRed"
         >
           {title}
         </h1>
-        <h3 className=" whitespace-nowrap overflow-hidden text-ellipsis mb-2 text-gray-600 text-base">
+        <h3 className="whitespace-nowrap overflow-hidden text-ellipsis mx-2 text-gray-500 text-base">
           {desc}
         </h3>
         <hr />
-        <div className="flex items-center m-[6px] cursor-pointer">
-          <img className="w-9 h-9 rounded-full" src={avatar} alt="" />
-          <div className="p-1 mx-2 text-xl font-medium ">{name}</div>
-        </div>
-        <div className="flex justify-between items-center mx-2">
-          <span className="text-base font-medium text-gray-700">
-            {formatDate(createdAt)}
-          </span>
-          <span className="text-2xl hover:text-themeRed cursor-pointer">
-            <i className="fa-regular fa-heart"></i>
-          </span>
+        <div className="w-full flex flex-col">
+          <div className="flex items-center mx-2 my-1">
+            <img
+              className="w-9 h-9 object-cover rounded-full cursor-pointer"
+              src={avatar}
+              alt=""
+            />
+            <div className="mx-2 text-xl font-medium cursor-pointer">
+              {name}
+            </div>
+            <span className="mx-5 px-2 text-base font-medium rounded-sm text-themeRed hover:bg-bgRed cursor-pointer border border-solid border-themeRed">
+              追蹤
+            </span>
+          </div>
+          <div className="flex justify-between items-center mx-2">
+            <span className="text-base mx-2 font-medium text-black">
+              {formatDate(createdAt)}
+            </span>
+            <span className="text-3xl hover:text-themeRed cursor-pointer">
+              <i className="fa-regular fa-heart"></i>
+            </span>
+          </div>
         </div>
       </div>
     </div>

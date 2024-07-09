@@ -6,6 +6,18 @@ import NewTrip from "./NewTrip";
 import Ticket from "./Ticket";
 import Post from "./Post";
 import Cart from "./Cart";
+import Booking from "./Booking";
 import NotFound from "./NotFound";
 
-export { Home, City, MyTrip, Trip, NewTrip, Ticket, Cart, Post, NotFound };
+export {
+  Home,
+  City,
+  MyTrip,
+  Trip,
+  NewTrip,
+  Ticket,
+  Cart,
+  Booking,
+  Post,
+  NotFound,
+};

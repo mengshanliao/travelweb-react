@@ -53,7 +53,6 @@ const Home = () => {
     if (code === 200) {
       setPosts(data);
     }
-    console.log("post data", data);
   };
   useEffect(() => {
     getPosts();
@@ -65,7 +64,6 @@ const Home = () => {
     if (code === 200) {
       setTickets(data);
     }
-    console.log("ticket data", data);
   };
   useEffect(() => {
     getTickets();
@@ -105,8 +103,8 @@ const Home = () => {
       <h2 className="flex p-2 m-6 mt-[50px] text-[27px] font-medium text-themeBlue">
         <i className="fa-solid fa-ticket"> 行程及門票</i>
       </h2>
-      <section className="my-12 flex flex-wrap justify-center items-center p-2 ">
-        {tickets.map((ticket) => {
+      <section className="my-4 flex flex-wrap justify-center items-center">
+        {tickets.map((ticket) => (
           <TicketCard
             key={ticket.id}
             title={ticket.title}
@@ -117,15 +115,15 @@ const Home = () => {
             priceOrigin={ticket.priceOrigin}
             sold={ticket.sold}
             onClick={() => changePage(`/ticket/${ticket.id}`)}
-          />;
-        })}
+          />
+        ))}
       </section>
 
       <h2 className="flex p-2 m-6 text-[27px] mt-[50px] font-medium text-themeBlue">
         <i className="fa-solid fa-umbrella-beach"> 熱門記憶庫</i>
       </h2>
       <section className="my-12 flex flex-wrap justify-center p-2 items-center">
-        {posts.map((post) => {
+        {posts.map((post) => (
           <PostCard
             key={post.id}
             cover={post.cover}
@@ -136,8 +134,8 @@ const Home = () => {
             name={post.name}
             createdAt={post.createdAt}
             onClick={() => changePage(`/post/${post.id}`)}
-          />;
-        })}
+          />
+        ))}
       </section>
     </>
   );
