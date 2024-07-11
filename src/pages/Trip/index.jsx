@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 const Trip = () => {
+  const navigate = useNavigate();
+  const changePage = (url) => {
+    navigate(url);
+  };
+
   return (
     <>
       <img
@@ -6,12 +13,11 @@ const Trip = () => {
         alt=""
         className="w-full h-[320px]"
       />
-      <div></div>
       <div className="flex flex-col justify-center items-center mt-[-70px] text-[#002143]">
         <img
           src="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D"
           alt="authorImage"
-          className="w-[160px] h-[160px] overflow-hidden rounded-full border-[7px] border-solid border-white"
+          className="w-40 h-40 object-cover overflow-hidden rounded-full border-[7px] border-solid border-white"
         />
         <h1 className="m-1 font-medium text-3xl">Kelly Chen</h1>
         <span className="m-2 px-4 text-xl border border-solid border-[#002143] cursor-pointer">
@@ -47,7 +53,7 @@ const Trip = () => {
             </h2>
             <div className="flex">
               <img
-                src="/src/assets/images/台北中正紀念堂.jpg"
+                src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGphcGFufGVufDB8fDB8fHww"
                 alt=""
                 className="w-[200px] h-[160px] rounded-xl"
               />

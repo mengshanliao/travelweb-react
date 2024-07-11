@@ -7,6 +7,7 @@ import Ticket from "./Ticket";
 import Post from "./Post";
 import Cart from "./Cart";
 import Booking from "./Booking";
+import CompleteOrder from "./CompleteOrder";
 import NotFound from "./NotFound";
 
 export {
@@ -19,5 +20,6 @@ export {
   Cart,
   Booking,
   Post,
+  CompleteOrder,
   NotFound,
 };

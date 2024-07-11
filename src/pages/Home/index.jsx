@@ -54,9 +54,6 @@ const Home = () => {
       setPosts(data);
     }
   };
-  useEffect(() => {
-    getPosts();
-  }, []);
 
   //ticket setting
   const getTickets = async () => {
@@ -65,7 +62,10 @@ const Home = () => {
       setTickets(data);
     }
   };
+
+  //useEffect
   useEffect(() => {
+    getPosts();
     getTickets();
   }, []);
 
@@ -107,6 +107,7 @@ const Home = () => {
         {tickets.map((ticket) => (
           <TicketCard
             key={ticket.id}
+            id={ticket.id}
             title={ticket.title}
             tags={ticket.tags}
             cover={ticket.cover}

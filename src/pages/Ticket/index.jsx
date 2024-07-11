@@ -1,9 +1,18 @@
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Button, Drawer } from "antd";
 
 const Ticket = () => {
   const navigate = useNavigate();
   const changePage = (url) => {
     navigate(url);
+  };
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
   };
 
   return (
@@ -45,17 +54,17 @@ const Ticket = () => {
         <span className="w-3/4 text-2xl font-medium">方案選擇</span>
         <div className="mb-4">
           <div className="mt-4 p-1 text-base">
-            <span className="mr-3 py-1 px-3 border border-solid border-black rounded-lg">
+            <span className="mr-3 py-1 px-3 border border-solid border-black cursor-pointer rounded-lg hover:bg-bgRed hover:border-themeRed hover:text-themeRed">
               明日
             </span>
-            <span className="mr-3 py-1 px-2 border border-solid border-black rounded-lg">
+            <span className="mr-3 py-1 px-2 border border-solid border-black cursor-pointer rounded-lg hover:bg-bgRed  hover:border-themeRed hover:text-themeRed">
               6月30日
             </span>
-            <span className="py-1 px-2 border border-solid border-black rounded-lg">
+            <span className="py-1 px-2 border border-solid border-black cursor-pointer rounded-lg hover:bg-bgRed  hover:border-themeRed hover:text-themeRed">
               7月1日
             </span>
           </div>
-          <div className=" w-3/4 mt-4 p-5 border border-solid border-black rounded-2xl">
+          <div className=" w-3/4 mt-4 p-5 border-2 border-solid border-gray-200 rounded-2xl cursor-pointer hover:border-themeRed hover:border-2">
             <h1 className="text-[22px] font-medium mb-4">
               東京迪士尼樂園一日護照
             </h1>
@@ -71,23 +80,52 @@ const Ticket = () => {
               </span>
             </div>
             <div className="flex justify-between">
-              <div className="p-2 flex items-center text-lg bg-orange-100 text-orange-700 font-semibold rounded-lg">
-                <span>方案詳情</span>
-                <i className="fa-solid fa-chevron-right"></i>
-              </div>
-              <div className="flex items-center mr-10 text-xl ">
-                <p className="mr-8 text-2xl font-bold">
-                  NT$ 1,803
-                  <span className="text-base pl-2">起</span>
-                </p>
-                <button
-                  onClick={() => {
-                    changePage("/cart");
+              <p className="mr-8 text-2xl font-bold">
+                NT$ 1,803
+                <span className="text-base pl-2">起</span>
+              </p>
+              <div className="p-2 flex items-center text-lg text-orange-700 font-semibold rounded-lg">
+                <Button
+                  type="primary"
+                  onClick={showDrawer}
+                  style={{
+                    color: "#002143",
+                    backgroundColor: "#00224340",
+                    fontSize: "18px",
+                    fontWeight: "500",
                   }}
-                  className="py-2 px-6 bg-gray-500 text-white rounded-xl"
                 >
-                  選擇
-                </button>
+                  <i className="fa-solid fa-angles-right"></i>
+                  方案詳情
+                </Button>
+                <Drawer
+                  title="東京迪士尼樂園一日護照"
+                  onClose={onClose}
+                  open={open}
+                >
+                  <div className="mb-5">
+                    <h1 className="font-semibold text-lg">票價：</h1>
+                    <p className="text-base">成人（18歲及以上）：9,400日元</p>
+                    <p className="text-base">青少年（12-17歲）：7,800日元</p>
+                    <p className="text-base">兒童（4-11歲）：5,600日元</p>
+                    <p className="text-base">長者（65歲及以上）：8,100日元</p>
+                  </div>
+                  <hr />
+                  <div className="my-5">
+                    <h1 className="font-semibold text-lg">購票：</h1>
+                    <p className="text-base">
+                      可以通過東京迪士尼度假區的官方網站或現場購買，有時會提供特定時間的折扣或優惠，建議提前查看最新信息。
+                    </p>
+                  </div>
+                  <hr />
+                  <div className="my-5">
+                    <h1 className="font-semibold text-lg">主題區域：</h1>
+                    <p className="text-base">
+                      東京迪士尼樂園共有七個主題區，包括冒險樂園、幻想樂園、未來樂園、動物王國、微縮模型王國、動物園區、和哥倫布遊樂區，每個區域都有獨特的遊樂設施和娛樂表演。
+                    </p>
+                  </div>
+                  <hr />
+                </Drawer>
               </div>
             </div>
           </div>

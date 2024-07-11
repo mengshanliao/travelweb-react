@@ -29,25 +29,43 @@ const Post = () => {
         ))}
       </Carousel>
 
-      <h1 className="text-[27px] w-2/3 mt-6 ml-10 px-2 py-3 font-bold text-black">
-        日本｜東京四天三夜自由行
-      </h1>
-      <div className="w-2/3 ml-10 flex flex-col p-2">
+      <div className="flex flex-col w-2/3 my-4 ml-10">
+        <h1 className="text-[27px] px-2 py-3 font-bold text-black">
+          日本｜東京四天三夜自由行
+        </h1>
+        <div className="px-2 py-3">
+          <span className="p-1 mr-2 text-base rounded-sm bg-bgBlue text-themeBlue">
+            日本旅遊
+          </span>
+          <span className="p-1 mr-2 text-base rounded-sm bg-bgBlue text-themeBlue">
+            東京必遊景點
+          </span>
+          <span className="p-1 mr-2 text-base rounded-sm bg-bgBlue text-themeBlue">
+            淺草寺
+          </span>
+          <span className="p-1 text-base rounded-sm bg-bgBlue text-themeBlue">
+            四天三夜
+          </span>
+        </div>
+      </div>
+      <hr />
+
+      <div className="w-2/3 my-4 ml-10 flex flex-col p-2">
         <div className="flex items-center mb-1">
           <img
             className="w-14 h-14 object-cover rounded-full"
             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
             alt=""
           />
-          <h3 className=" p-[2px] ml-3 text-xl font-medium ">Kelly Chen</h3>
+          <h3 className=" p-[2px] ml-3 text-2xl font-medium ">Kelly Chen</h3>
           <span className="mx-5 px-3 text-lg border border-solid rounded-sm border-[#002143] cursor-pointer">
             追蹤
           </span>
         </div>
-        <p className="mt-4 text-lg">
+        <p className="mt-3 text-lg">
           探索日本五天四夜的奇妙旅程，從東京的繁華都市到京都的歷史古蹟，再到富士山的壯麗自然，感受無與倫比的文化與美景。
         </p>
-        <div className="mb-3 mt-12">
+        <div className="mt-6">
           <div className="text-lg flex justify-between items-center">
             <div className="mr-2 p-1 text-black">2023年7月23日</div>
             <div>
@@ -69,7 +87,7 @@ const Post = () => {
         </div>
       </div>
       <hr />
-      <section className="flex m-10">
+      <section className="flex mx-10 my-4">
         <div className="w-2/3 m-3">
           <h2 className="text-[#cd3333] bg-[#cd333339] w-20 text-center p-2 rounded-3xl font-bold">
             第一天
@@ -149,6 +167,7 @@ const Post = () => {
             </div>
           </div>
         </div>
+
         <div className="w-1/3 m-3 flex flex-col text-lg text-gray-500 font-semibold">
           <div className="flex m-2 p-3 border border-solid border-gray-200 ">
             <span className="mx-12">第一天</span>

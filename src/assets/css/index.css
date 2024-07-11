@@ -20,6 +20,16 @@ header div h2 {
   font-style: normal;
 }
 
+/* Booking page - antd:steps */
+.ant-steps-item-title::after {
+  background-color: #002143 !important;
+}
+.ant-steps-item-title {
+  color: #002143 !important;
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
 /* 尾頁 */
 footer {
   font-family: "Outfit", sans-serif;

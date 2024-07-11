@@ -1,4 +1,5 @@
 const TicketCard = ({
+  id,
   onClick,
   title,
   tags,

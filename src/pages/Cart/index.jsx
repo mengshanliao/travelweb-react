@@ -23,7 +23,7 @@ const Cart = () => {
                 title: "選擇方案",
                 status: "finish",
                 icon: (
-                  <ShoppingCartOutlined className="text-2xl text-themeBlue" />
+                  <ShoppingCartOutlined className="text-2xl text-themeBlue bg-bgBlue p-2 rounded-full" />
                 ),
               },
               {
