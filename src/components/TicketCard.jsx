@@ -26,7 +26,10 @@ const TicketCard = ({
           {title}
         </h1>
         {tags.map((tag) => (
-          <span className="p-1 mx-1 rounded text-red-500 bg-red-100 text-sm">
+          <span
+            key={tag}
+            className="p-1 mx-1 rounded text-red-500 bg-red-100 text-sm"
+          >
             {tag}
           </span>
         ))}

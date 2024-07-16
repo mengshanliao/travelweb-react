@@ -1,6 +1,12 @@
 import { formatDate } from "@/utils/time";
+import LikeIcon from "./LikeIcon";
+import CollectIcon from "./CollectIcon";
+import FollowIcon from "./FollowIcon";
 
 const PostCard = ({
+  id,
+  isLike,
+  isFollow,
   onClick,
   title,
   tags,
@@ -15,7 +21,7 @@ const PostCard = ({
       <div className="relative h-[260px] overflow-hidden">
         <img className="w-full h-full object-cover" src={cover} />
         <span className="absolute top-0 left-0 text-black text-3xl py-1 px-3 hover:text-yellow-500 cursor-pointer">
-          <i className="fa-regular fa-bookmark"></i>
+          <CollectIcon id={id} />
         </span>
       </div>
       <div className="h-full text-sm flex flex-wrap m-3">
@@ -47,8 +53,8 @@ const PostCard = ({
             <div className="mx-2 text-xl font-medium cursor-pointer">
               {name}
             </div>
-            <span className="mx-5 px-2 text-base font-medium rounded-sm text-themeRed hover:bg-bgRed cursor-pointer border border-solid border-themeRed">
-              追蹤
+            <span>
+              <FollowIcon id={id} isFollow={isFollow} />
             </span>
           </div>
           <div className="flex justify-between items-center mx-2">
@@ -56,7 +62,7 @@ const PostCard = ({
               {formatDate(createdAt)}
             </span>
             <span className="text-3xl hover:text-themeRed cursor-pointer">
-              <i className="fa-regular fa-heart"></i>
+              <LikeIcon id={id} isLike={isLike} />
             </span>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { ticketApi } from "@/api/ticket";
 import CityCard from "@/components/CityCard";
 import PostCard from "@/components/PostCard";
 import TicketCard from "@/components/TicketCard";
+import { usePostStore } from "@/store/post";
 
 const cityData = [
   {
@@ -40,7 +41,8 @@ const cityData = [
 ];
 
 const Home = () => {
-  const [posts, setPosts] = useState([]);
+  const { storagePosts, setStoragePosts } = usePostStore();
+  const [posts, setPosts] = useState(storagePosts);
   const [tickets, setTickets] = useState([]);
   const navigate = useNavigate();
   const changePage = (url) => {
@@ -52,6 +54,7 @@ const Home = () => {
     const { code, data } = await postApi.getPosts();
     if (code === 200) {
       setPosts(data);
+      setStoragePosts(data);
     }
   };
 
@@ -65,7 +68,9 @@ const Home = () => {
 
   //useEffect
   useEffect(() => {
-    getPosts();
+    if (!posts.length) {
+      getPosts();
+    }
     getTickets();
   }, []);
 
@@ -126,6 +131,7 @@ const Home = () => {
       <section className="my-12 flex flex-wrap justify-center p-2 items-center">
         {posts.map((post) => (
           <PostCard
+            id={post.id}
             key={post.id}
             cover={post.cover}
             tags={post.tags}
@@ -134,6 +140,8 @@ const Home = () => {
             avatar={post.avatar}
             name={post.name}
             createdAt={post.createdAt}
+            isLike={post.isLike}
+            isFollow={post.isFollow}
             onClick={() => changePage(`/post/${post.id}`)}
           />
         ))}
