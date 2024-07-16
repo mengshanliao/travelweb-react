@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Checkbox from "@/components/Checkbox";
+
 import {
   ShoppingCartOutlined,
   SmileOutlined,
@@ -45,10 +47,7 @@ const Cart = () => {
           <div className="w-3/4 flex flex-col justify-center items-center">
             <div className="w-4/5 p-4 rounded-2xl bg-white">
               <div className="flex justify-between items-center mb-3">
-                <div>
-                  <i className="fa-regular fa-square"></i>
-                  <span className="ml-2 text-base">全選</span>
-                </div>
+                <Checkbox>全選</Checkbox>
                 <span className="py-1 px-2 text-sm border border-solid border-black hover:bg-gray-200 rounded-xl cursor-pointer">
                   刪除選中的活動
                 </span>
@@ -71,10 +70,9 @@ const Cart = () => {
                   2024年7月24日 11:20
                 </h3>
                 <div className="flex justify-between items-center m-1 text-[15px]">
-                  <div>
-                    <i className="fa-regular fa-square"></i>
-                    <span className="ml-1 mr-5">選取</span>
-                    <button className="px-1 text-gray-600 border border-solid border-gray-300 rounded-md cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]">
+                  <div className="flex">
+                    <Checkbox>選取</Checkbox>
+                    <button className="ml-4 px-1 text-base text-gray-600 border border-solid border-gray-300 rounded-md cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]">
                       <i class="fa-solid fa-trash-can mx-1"></i>
                       刪除
                     </button>
@@ -100,10 +98,9 @@ const Cart = () => {
                   2024年7月24日 11:20
                 </h3>
                 <div className="flex justify-between items-center m-1 text-[15px]">
-                  <div>
-                    <i className="fa-regular fa-square"></i>
-                    <span className="ml-1 mr-5">選取</span>
-                    <button className="px-1 text-gray-600 border border-solid border-gray-300 rounded-md cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]">
+                  <div className="flex">
+                    <Checkbox>選取</Checkbox>
+                    <button className="ml-4 px-1 text-base text-gray-600 border border-solid border-gray-300 rounded-md cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]">
                       <i class="fa-solid fa-trash-can mx-1"></i>
                       刪除
                     </button>
@@ -129,10 +126,9 @@ const Cart = () => {
                   2024年7月24日 11:20
                 </h3>
                 <div className="flex justify-between items-center m-1 text-[15px]">
-                  <div>
-                    <i className="fa-regular fa-square"></i>
-                    <span className="ml-1 mr-5">選取</span>
-                    <button className="px-1 text-gray-600 border border-solid border-gray-300 rounded-md cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]">
+                  <div className="flex">
+                    <Checkbox>選取</Checkbox>
+                    <button className="ml-4 px-1 text-base text-gray-600 border border-solid border-gray-300 rounded-md cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]">
                       <i class="fa-solid fa-trash-can mx-1"></i>
                       刪除
                     </button>

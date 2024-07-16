@@ -20,7 +20,7 @@ const PostCard = ({
     <div className="w-[360px] m-4 overflow-hidden border border-solid border-gray-300 rounded-xl">
       <div className="relative h-[260px] overflow-hidden">
         <img className="w-full h-full object-cover" src={cover} />
-        <span className="absolute top-0 left-0 text-black text-3xl py-1 px-3 hover:text-yellow-500 cursor-pointer">
+        <span className="absolute top-0 left-0 text-black text-3xl py-2 px-4 hover:text-yellow-500 cursor-pointer">
           <CollectIcon id={id} />
         </span>
       </div>

@@ -8,6 +8,7 @@
     "priceDiscount": "1825",
     "priceOrigin": "1950",
     "sold": "11975",
+    "isLike": "false",
     "desc": "夢幻遊行簡介：這是一個以迪士尼夢幻故事為主題的大型遊行表演。各種迪士尼角色會乘坐華麗的花車遊行，伴隨著動聽的音樂和舞蹈，給觀眾帶來夢幻般的視覺和聽覺享受。亮點：米老鼠、唐老鴨和其他經典迪士尼角色將與觀眾互動，整個遊行充滿了歡樂和驚喜。夜間煙火秀  簡介：這是一場結合了煙火、激光、燈光和音樂的夜間表演，旨在講述一個充滿希望和夢想的故事。觀眾可以在夜幕降臨後，欣賞到美輪美奐的煙火和燈光秀。亮點：表演以美麗的海洋為背景，搭配壯觀的煙火和動聽的音樂，帶給人震撼的視覺和聽覺體驗。",
     "descImg": "https://images.unsplash.com/photo-1624601573012-efb68931cc8f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG9reW8lMjBkaXNuZXlsYW5kfGVufDB8fDB8fHww",
     "comments": [
@@ -81,6 +82,7 @@
     "priceDiscount": "1825",
     "priceOrigin": "1950",
     "sold": "23877",
+    "isLike": "false",
     "desc": "日本環球影城位於大阪，是一個以電影和電視作品為主題的主題樂園。它包含多個主題區域，如《哈利波特》的魔法世界、《侏羅紀公園》、《怪獸與牠們的產地》等，每個區域都有獨特的遊樂設施、表演和餐飲場所。環球影城以其精湛的設計和豐富的娛樂內容吸引著來自世界各地的遊客。",
     "descImg": "https://images.unsplash.com/photo-1624601573012-efb68931cc8f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG9reW8lMjBkaXNuZXlsYW5kfGVufDB8fDB8fHww",
     "comments": [
@@ -154,6 +156,7 @@
     "priceDiscount": "1825",
     "priceOrigin": "1950",
     "sold": "3625",
+    "isLike": "false",
     "desc": "韓國釜山的膠囊列車是一種創新的住宿選擇，類似於小型的胶囊旅馆。這些膠囊設施通常位於交通便利的地區，如車站附近或市中心，提供基本的睡眠空間和設施，適合短期停留或者預算有限的旅客。膠囊列車設計獨特，結合了現代科技和實用性，為探險心切的旅人提供了一個別具特色的住宿體驗。",
     "descImg": "https://images.unsplash.com/photo-1624601573012-efb68931cc8f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG9reW8lMjBkaXNuZXlsYW5kfGVufDB8fDB8fHww",
     "comments": [

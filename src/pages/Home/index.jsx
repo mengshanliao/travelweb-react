@@ -6,6 +6,7 @@ import CityCard from "@/components/CityCard";
 import PostCard from "@/components/PostCard";
 import TicketCard from "@/components/TicketCard";
 import { usePostStore } from "@/store/post";
+import { useTicketStore } from "@/store/ticket";
 
 const cityData = [
   {
@@ -41,9 +42,11 @@ const cityData = [
 ];
 
 const Home = () => {
-  const { storagePosts, setStoragePosts } = usePostStore();
+  const { storagePosts, setStoragePosts } = usePostStore(); //存入localStorage
+  const { storageTickets, setStorageTickets } = useTicketStore();
+
   const [posts, setPosts] = useState(storagePosts);
-  const [tickets, setTickets] = useState([]);
+  const [tickets, setTickets] = useState(storageTickets);
   const navigate = useNavigate();
   const changePage = (url) => {
     navigate(url);
@@ -63,6 +66,7 @@ const Home = () => {
     const { code, data } = await ticketApi.getTickets();
     if (code === 200) {
       setTickets(data);
+      setStorageTickets(data);
     }
   };
 
@@ -120,6 +124,7 @@ const Home = () => {
             priceDiscount={ticket.priceDiscount}
             priceOrigin={ticket.priceOrigin}
             sold={ticket.sold}
+            isLike={ticket.isLike}
             onClick={() => changePage(`/ticket/${ticket.id}`)}
           />
         ))}
