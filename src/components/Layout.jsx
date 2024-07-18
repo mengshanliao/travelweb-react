@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div>
+      <div className="flex flex-col min-h-screen">
         <header className="flex p-2 justify-between h-[110px] bg-white text-themeBlue shadow-lg">
           <div onClick={() => changePage("/")} className="mx-2 cursor-pointer">
             <h1 className="flex text-4xl ">
@@ -89,7 +89,7 @@ const Layout = ({ children }) => {
           </ul>
         </header>
 
-        <div>
+        <div className="flex-1">
           <Outlet />
         </div>
         <footer className="flex justify-center p-4 text-3xl">Follow Us</footer>

@@ -11,6 +11,18 @@ export const formatDate = (timestamp) => {
   const formattedDate = `${year}/${month}/${day}`;
   return formattedDate;
 };
+// 格式化日期為 MM月DD日
+export const formatDateTW = (timestamp) => {
+  const now = timestamp ? new Date(timestamp * 1000) : new Date();
+
+  // 月份從0開始，所以需要+1
+  const month = String(now.getMonth() + 1);
+  const day = String(now.getDate()).padStart(2, "0");
+
+  // 格式化日期為 YYYY/MM/DD
+  const formattedDate = `${month}月${day}日`;
+  return formattedDate;
+};
 
 export const formatDateTime = (timestamp) => {
   const now = timestamp ? new Date(timestamp * 1000) : new Date();

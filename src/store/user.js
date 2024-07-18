@@ -6,6 +6,8 @@ export const useUserStore = create(
     (set, get) => ({
       token: "",
       setToken: (token) => set(() => ({ token })),
+      cart: [],
+      setCart: (products) => set(() => ({ cart: products })),
     }),
     {
       name: "user",

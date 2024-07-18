@@ -75,7 +75,9 @@ const Home = () => {
     if (!posts.length) {
       getPosts();
     }
-    getTickets();
+    if (!tickets.length) {
+      getTickets();
+    }
   }, []);
 
   return (

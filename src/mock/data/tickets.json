@@ -4,71 +4,70 @@
     "title": "日本｜東京迪士尼門票",
     "tags": ["熱賣中", "憑證入場", "當天有效"],
     "cover": "https://images.unsplash.com/photo-1547782101-30c84b97a71b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW4lMjBkaXNuZXl8ZW58MHx8MHx8fDA%3D",
-    "discount": "93",
-    "priceDiscount": "1825",
+    "discount": "94",
+    "priceDiscount": "1850",
     "priceOrigin": "1950",
     "sold": "11975",
+    "dates": [1721145600, 1721232000, 1721318400],
     "isLike": "false",
     "desc": "夢幻遊行簡介：這是一個以迪士尼夢幻故事為主題的大型遊行表演。各種迪士尼角色會乘坐華麗的花車遊行，伴隨著動聽的音樂和舞蹈，給觀眾帶來夢幻般的視覺和聽覺享受。亮點：米老鼠、唐老鴨和其他經典迪士尼角色將與觀眾互動，整個遊行充滿了歡樂和驚喜。夜間煙火秀  簡介：這是一場結合了煙火、激光、燈光和音樂的夜間表演，旨在講述一個充滿希望和夢想的故事。觀眾可以在夜幕降臨後，欣賞到美輪美奐的煙火和燈光秀。亮點：表演以美麗的海洋為背景，搭配壯觀的煙火和動聽的音樂，帶給人震撼的視覺和聽覺體驗。",
     "descImg": "https://images.unsplash.com/photo-1624601573012-efb68931cc8f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG9reW8lMjBkaXNuZXlsYW5kfGVufDB8fDB8fHww",
+
     "comments": [
       {
         "id": 1,
         "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
         "name": "Kelly Chen",
         "message": "東京迪士尼樂園真的非常棒，適合所有年齡層的人。無論是小朋友還是成年人，都能在這裡找到樂趣。遊樂設施種類豐富，從刺激的過山車到夢幻的遊行表演，每個細節都展現出迪士尼的魔法和魅力。",
-        "createAt": "2023年8月12日"
+        "createdAt": "2023年8月12日"
       },
       {
         "id": 2,
         "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
         "name": "Michael Lee",
         "message": "東京迪士尼真的是一家人出遊的好地方。孩子們特別喜歡小熊維尼的探險之旅，而大人們也能在園區內享受美食和購物。整個園區的氛圍讓人感受到童話世界的美好。",
-        "createAt": "2023年8月15日"
+        "createdAt": "2023年8月15日"
       },
       {
         "id": 3,
         "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
         "name": "Emily Wong",
         "message": "上週去了一趟東京迪士尼，真是回憶滿滿。晚上看了煙火秀，整個天空都被五彩斑斕的煙火點亮，浪漫極了。建議大家提早預訂餐廳，這樣可以避開排隊高峰。",
-        "createAt": "2023年8月20日"
+        "createdAt": "2023年8月20日"
       }
     ],
     "detail": [
       {
         "id": 1,
         "title": "東京迪士尼樂園一日護照",
-        "labels": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "tags": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "price": "2350",
         "drawer": {
-          "adult": "成人:9400日元",
-          "teenager": "青少年:7800日元",
-          "children": "兒童:5600日元",
+          "price": "2350",
           "buy": "可以通過東京迪士尼度假區的官方網站或現場購買，有時會提供特定時間的折扣或優惠，建議提前查看最新信息。",
-          "detail": "東京迪士尼樂園共有七個主題區，包括冒險樂園、幻想樂園、未來樂園、動物王國、微縮模型王國、動物園區、和哥倫布遊樂區，每個區域都有獨特的遊樂設施和娛樂表演。"
+          "desc": "東京迪士尼樂園共有七個主題區，包括冒險樂園、幻想樂園、未來樂園、動物王國、微縮模型王國、動物園區、和哥倫布遊樂區，每個區域都有獨特的遊樂設施和娛樂表演。"
         }
       },
       {
         "id": 2,
         "title": "東京迪士尼樂園晚間護照",
-        "labels": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "tags": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "price": "1850",
         "drawer": {
-          "adult": "成人:7400日元",
-          "teenager": "青少年:6200日元",
-          "children": "兒童:4400日元",
+          "price": "1850",
           "buy": "可以通過東京迪士尼度假區的官方網站或現場購買，有時會提供特定時間的折扣或優惠，建議提前查看最新信息。",
-          "detail": "僅在週末和假日的下午3點後有效。東京迪士尼樂園共有七個主題區，包括冒險樂園、幻想樂園、未來樂園、動物王國、微縮模型王國、動物園區、和哥倫布遊樂區，每個區域都有獨特的遊樂設施和娛樂表演。"
+          "desc": "僅在週末和假日的下午3點後有效。東京迪士尼樂園共有七個主題區，包括冒險樂園、幻想樂園、未來樂園、動物王國、微縮模型王國、動物園區、和哥倫布遊樂區，每個區域都有獨特的遊樂設施和娛樂表演。"
         }
       },
       {
         "id": 3,
         "title": "東京迪士尼樂園週末通行證",
-        "labels": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "tags": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "price": "1975",
         "drawer": {
-          "adult": "成人:7900日元",
-          "teenager": "青少年:6600日元",
-          "children": "兒童:4700日元",
+          "price": "1975",
           "buy": "可以通過東京迪士尼度假區的官方網站或現場購買，有時會提供特定時間的折扣或優惠，建議提前查看最新信息。",
-          "detail": "僅限於大東京地區的居民，適用於平日。東京迪士尼樂園共有七個主題區，包括冒險樂園、幻想樂園、未來樂園、動物王國、微縮模型王國、動物園區、和哥倫布遊樂區，每個區域都有獨特的遊樂設施和娛樂表演。"
+          "desc": "僅限於大東京地區的居民，適用於平日。東京迪士尼樂園共有七個主題區，包括冒險樂園、幻想樂園、未來樂園、動物王國、微縮模型王國、動物園區、和哥倫布遊樂區，每個區域都有獨特的遊樂設施和娛樂表演。"
         }
       }
     ]
@@ -79,9 +78,10 @@
     "tags": ["熱賣中", "憑證入場", "當天有效"],
     "cover": "https://images.unsplash.com/photo-1613278137247-0bf3fff95fe2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8amFwYW4lMjBkaXNuZXl8ZW58MHx8MHx8fDA%3D",
     "discount": "93",
-    "priceDiscount": "1825",
-    "priceOrigin": "1950",
+    "priceDiscount": "2050",
+    "priceOrigin": "2200",
     "sold": "23877",
+    "dates": [1721145600, 1721232000, 1721318400],
     "isLike": "false",
     "desc": "日本環球影城位於大阪，是一個以電影和電視作品為主題的主題樂園。它包含多個主題區域，如《哈利波特》的魔法世界、《侏羅紀公園》、《怪獸與牠們的產地》等，每個區域都有獨特的遊樂設施、表演和餐飲場所。環球影城以其精湛的設計和豐富的娛樂內容吸引著來自世界各地的遊客。",
     "descImg": "https://images.unsplash.com/photo-1624601573012-efb68931cc8f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG9reW8lMjBkaXNuZXlsYW5kfGVufDB8fDB8fHww",
@@ -91,58 +91,58 @@
         "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
         "name": "Cindy Chen",
         "message": "日本環球影城真的太讚了！無論是追求刺激的遊戲愛好者還是迪士尼迷，這裡絕對不會讓你失望。每個遊樂設施都充滿驚喜，每一個角落都充滿著魔法與魅力。一定要來感受一下！",
-        "createAt": "2023年8月12日"
+        "createdAt": "2023年8月12日"
       },
       {
         "id": 2,
         "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
         "name": "Angela Liu",
         "message": "我在日本環球影城度過了一個難忘的假期！從《哈利波特》的魔法世界到《侏羅紀公園》的奇幻旅程，每一個主題區域都讓人驚嘆不已。適合全家大小一起來享受的好地方！",
-        "createAt": "2023年8月15日"
+        "createdAt": "2023年8月15日"
       },
       {
         "id": 3,
         "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
         "name": "Kevin Wang",
         "message": "環球影城給我留下深刻印象！每個遊樂設施都設計精良，不論是年輕人還是老年人，都能找到自己喜愛的活動。無論是白天還是夜晚，這裡的魔法氛圍都讓人難以忘懷。",
-        "createAt": "2023年8月20日"
+        "createdAt": "2023年8月20日"
       }
     ],
     "detail": [
       {
         "id": 1,
         "title": "日本環球影城一日護照",
-        "labels": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "tags": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "price": "2050",
+
         "drawer": {
-          "adult": "成人:8200日元",
-          "teenager": "青少年:6400日元",
-          "children": "兒童:5400日元",
+          "price": "2050",
           "buy": "可以通過日本環球影城的官方網站或認可的票務平台購買，建議提前購票以避免現場排隊和票務售罄的情況。",
-          "detail": "此票券可讓您在一天內無限制地進入園區內的所有遊樂設施和觀看表演。適合計劃在一日內充分體驗樂園的遊客。"
+          "desc": "此票券可讓您在一天內無限制地進入園區內的所有遊樂設施和觀看表演。適合計劃在一日內充分體驗樂園的遊客。"
         }
       },
       {
         "id": 2,
         "title": "日本環球影城二日護照",
-        "labels": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "tags": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "price": "3350",
+
         "drawer": {
-          "adult": "成人:13400日元",
-          "teenager": "青少年:10400日元",
-          "children": "兒童:8400日元",
+          "price": "3350",
           "buy": "可以通過日本環球影城的官方網站或認可的票務平台購買，建議提前購票以避免現場排隊和票務售罄的情況。",
-          "detail": "此票券允許您在兩天內無限制地進入園區，適合希望在多日內充分遊覽樂園的遊客。"
+          "desc": "此票券允許您在兩天內無限制地進入園區，適合希望在多日內充分遊覽樂園的遊客。"
         }
       },
       {
         "id": 3,
         "title": "日本環球影城快速通行證",
-        "labels": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "tags": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "price": "2000",
+
         "drawer": {
-          "adult": "價格根據選擇的設施數量和種類而定",
-          "teenager": "價格根據選擇的設施數量和種類而定",
-          "children": "價格根據選擇的設施數量和種類而定",
+          "price": "價格根據選擇的設施數量和種類而定",
           "buy": "可以通過日本環球影城的官方網站或認可的票務平台購買，建議提前購票以避免現場排隊和票務售罄的情況。",
-          "detail": "此票券可讓您快速進入一些最受歡迎的遊樂設施，如「哈利波特禁忌之旅」、「飛天恐龍」和「小黃人瘋狂乘車」。"
+          "desc": "此票券可讓您快速進入一些最受歡迎的遊樂設施，如「哈利波特禁忌之旅」、「飛天恐龍」和「小黃人瘋狂乘車」。"
         }
       }
     ]
@@ -150,12 +150,13 @@
   {
     "id": 3,
     "title": "韓國｜釜山膠囊列車票一日遊",
-    "tags": ["熱賣中", "當天有效"],
+    "tags": ["熱賣中", "當天有效", "免費取消"],
     "cover": "https://images.unsplash.com/photo-1616340705328-c48c03dc722e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QnVzYW4lMjB0cmFpbnxlbnwwfHwwfHx8MA%3D%3D",
     "discount": "93",
     "priceDiscount": "1825",
     "priceOrigin": "1950",
     "sold": "3625",
+    "dates": [1721145600, 1721232000, 1721318400],
     "isLike": "false",
     "desc": "韓國釜山的膠囊列車是一種創新的住宿選擇，類似於小型的胶囊旅馆。這些膠囊設施通常位於交通便利的地區，如車站附近或市中心，提供基本的睡眠空間和設施，適合短期停留或者預算有限的旅客。膠囊列車設計獨特，結合了現代科技和實用性，為探險心切的旅人提供了一個別具特色的住宿體驗。",
     "descImg": "https://images.unsplash.com/photo-1624601573012-efb68931cc8f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG9reW8lMjBkaXNuZXlsYW5kfGVufDB8fDB8fHww",
@@ -165,58 +166,58 @@
         "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
         "name": "Emily Liu",
         "message": "釜山的膠囊列車真是太有創意了！它不僅提供便利的住宿選擇，還讓人感受到現代科技與舒適的完美結合。無論是短暫停留還是體驗異國風情，都是一個理想的選擇。",
-        "createAt": "2023年8月12日"
+        "createdAt": "2023年8月12日"
       },
       {
         "id": 2,
         "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
         "name": "Michael Wang",
         "message": "我在釜山膠囊列車度過了一個特別的假期！這種小巧而現代化的住宿方式，讓人在旅途中感受到了獨特的城市節奏和便利。推薦給所有探險心切的旅行者！",
-        "createAt": "2023年8月15日"
+        "createdAt": "2023年8月15日"
       },
       {
         "id": 3,
         "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
         "name": "Sophia Chen",
         "message": "韓國釜山的膠囊列車給我留下了深刻的印象！它不僅環境乾淨舒適，還能體驗到當地獨特的城市魅力。是一個適合年輕旅客和背包客的經濟又實惠的住宿選擇。",
-        "createAt": "2023年8月20日"
+        "createdAt": "2023年8月20日"
       }
     ],
     "detail": [
       {
         "id": 1,
         "title": "釜山膠囊列車一日護照",
-        "labels": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "tags": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "price": "400",
+
         "drawer": {
-          "adult": "成人:10000韓元",
-          "teenager": "青少年:8000韓元",
-          "children": "兒童:6000韓元",
+          "price": "400",
           "buy": "可以通過釜山交通公社的官方網站或現場購買，有時會提供特定時間的折扣或優惠，建議提前查看最新信息。",
-          "detail": "釜山膠囊列車是一種自動導向列車，連接主要景點如海雲台、松島和龍頭山公園。此票券可讓您在一天內無限制地乘坐膠囊列車，方便探索釜山各大景點。"
+          "desc": "釜山膠囊列車是一種自動導向列車，連接主要景點如海雲台、松島和龍頭山公園。此票券可讓您在一天內無限制地乘坐膠囊列車，方便探索釜山各大景點。"
         }
       },
       {
         "id": 2,
         "title": "釜山膠囊列車半日護照",
-        "labels": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "tags": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "price": "200",
+
         "drawer": {
-          "adult": "成人:7000韓元",
-          "teenager": "青少年:5600韓元",
-          "children": "兒童:4200韓元",
+          "price": "200",
           "buy": "可以通過釜山交通公社的官方網站或現場購買，有時會提供特定時間的折扣或優惠，建議提前查看最新信息。",
-          "detail": "此票券允許您在半天內無限制地乘坐膠囊列車，非常適合時間有限的遊客。"
+          "desc": "此票券允許您在半天內無限制地乘坐膠囊列車，非常適合時間有限的遊客。"
         }
       },
       {
         "id": 3,
         "title": "釜山膠囊列車家庭票",
-        "labels": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "tags": ["14天前可免費取消", "憑證入場", "立即確認"],
+        "price": "400",
+
         "drawer": {
-          "adult": "價格根據家庭人數而定",
-          "teenager": "價格根據家庭人數而定",
-          "children": "價格根據家庭人數而定",
+          "price": "價格根據家庭人數而定",
           "buy": "可以通過釜山交通公社的官方網站或現場購買，有時會提供特定時間的折扣或優惠，建議提前查看最新信息。",
-          "detail": "此票券適合家庭出遊，提供優惠的家庭套餐價格，讓您和家人一起享受釜山膠囊列車之旅。"
+          "desc": "此票券適合家庭出遊，提供優惠的家庭套餐價格，讓您和家人一起享受釜山膠囊列車之旅。"
         }
       }
     ]
