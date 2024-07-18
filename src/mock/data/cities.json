@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "cityKey": "japan",
+    "image": "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGphcGFufGVufDB8fDB8fHww",
+    "title": "日本",
+    "desc": "日本是一個結合了傳統文化和現代科技的魅力國度。東京探索古老的寺廟和神社，京都和奈良保存完好的歷史建築，大阪是以其美食和娛樂設施聞名。富士山則是日本的象徵，無論登山還是遠觀都令人難忘。",
+    "cover": "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGphcGFufGVufDB8fDB8fHww",
+    "weather": "18~27°C",
+    "volt": "100v",
+    "currency": "JPY",
+    "location": [
+      {
+        "id": 1,
+        "title": "東京鐵塔",
+        "desc": "東京鐵塔是日本東京的標誌性建築，塔內設有觀景台，提供360度的城市全景，天氣晴朗時甚至可以看到富士山。",
+        "cover": "https://images.unsplash.com/photo-1574171561594-338bfc560f69?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHRva3lvJTIwdG93ZXJ8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        "id": 2,
+        "title": "京都清水寺",
+        "desc": "京都清水寺是日本最著名的佛教寺廟之一，以宏偉的木造建築和懸崖邊的壯麗景觀聞名。特別是春天的櫻花季和秋天的紅葉季。",
+        "cover": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGt5b3RvfGVufDB8fDB8fHww"
+      },
+      {
+        "id": 3,
+        "title": "富士山",
+        "desc": "富士山是日本最高的山峰，也是日本的象徵之一。從山頂可以看到壯麗的日出景觀。周圍還有許多溫泉和湖泊。",
+        "cover": "https://images.unsplash.com/photo-1635215277614-5bea1b092836?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZnVqaXxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 4,
+        "title": "大阪城",
+        "desc": "大阪城是日本大阪市的一座著名城堡。擁有美麗的庭園和壯觀的天守閣，每年春天城堡周圍的櫻花盛開，吸引大量遊客前來賞花。",
+        "cover": "https://images.unsplash.com/photo-1580138051672-325eb98b2749?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3Nha2ElMjBjYXN0bGV8ZW58MHx8MHx8fDA%3D"
+      }
+    ],
+    "food": [
+      {
+        "id": 1,
+        "title": "壽司之神-すきやばし次郎",
+        "desc": "由知名壽司師傅小野二郎經營得米其林三星餐廳，以其極致的壽司技藝和高品質的食材而著稱。",
+        "cover": "https://images.unsplash.com/photo-1545879429-677464262714?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fGphcGFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 2,
+        "title": "一蘭拉麵",
+        "desc": "一蘭拉麵以其獨特的豬骨湯底和個人化的口味選擇而聞名，是日本最受歡迎的拉麵連鎖店之一。",
+        "cover": "https://images.unsplash.com/photo-1584255717248-c5737a381c4b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aWNoaXJhbiUyMHJhbWVufGVufDB8fDB8fHww"
+      },
+      {
+        "id": 3,
+        "title": "築地市場海鮮丼",
+        "desc": "築地市場是東京最大的魚市場，這裡的海鮮丼以新鮮的魚生和豐富的配料而著稱，讓人可以品嚐到最新鮮的海味。",
+        "cover": "https://images.unsplash.com/photo-1579398937948-598009379315?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGphcGFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 4,
+        "title": "大阪章魚燒",
+        "desc": "大阪章魚燒是日本大阪的著名街頭小吃，以其外酥內軟的口感和豐富的配料而深受喜愛。",
+        "cover": "https://images.unsplash.com/photo-1667579027553-52b3eba803a6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8b3Nha2ElMjBmb29kfGVufDB8fDB8fHww"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "cityKey": "korea",
+    "image": "https://images.unsplash.com/photo-1597552571860-136a103d5eb3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHNlb3VsfGVufDB8fDB8fHww",
+    "title": "韓國",
+    "cover": "https://images.unsplash.com/photo-1597552571860-136a103d5eb3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHNlb3VsfGVufDB8fDB8fHww",
+    "weather": "18~27°C",
+    "volt": "220v",
+    "currency": "KRW",
+    "location": [
+      {
+        "id": 1,
+        "title": "首爾塔",
+        "desc": "首爾塔是首爾市的地標之一，位於南山頂上，提供壯麗的城市全景。遊客可以乘坐纜車或步行登上塔頂，欣賞首爾市日夜不同的美麗景色。",
+
+        "cover": ""
+      }
+    ],
+    "food": [{ "id": 1, "title": "", "desc": "", "cover": "" }]
+  },
+  {
+    "cityKey": "thailand",
+    "image": "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhhaWxhbmR8ZW58MHx8MHx8fDA%3D",
+    "title": "泰國",
+    "cover": "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhhaWxhbmR8ZW58MHx8MHx8fDA%3D",
+    "weather": "28~34°C",
+    "volt": "220v",
+    "currency": "THB",
+    "location": [
+      {
+        "id": 1,
+        "title": "普吉島",
+        "desc": "普吉島是泰國南部的一個熱門旅遊目的地，以其美麗的海灘、清澈的海水和豐富的水上活動而聞名。遊客可以在這裡享受陽光沙灘、潛水、浮潛以及豐富的夜生活和餐飲選擇。",
+
+        "cover": ""
+      }
+    ],
+    "food": [{ "id": 1, "title": "", "desc": "", "cover": "" }]
+  },
+  {
+    "cityKey": "taipei",
+    "image": "https://images.unsplash.com/photo-1572715381359-002b1eabd56b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8MTAxfGVufDB8fDB8fHww",
+    "title": "台北",
+    "cover": "https://images.unsplash.com/photo-1572715381359-002b1eabd56b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8MTAxfGVufDB8fDB8fHww",
+    "weather": "27~30°C",
+    "volt": "110v",
+    "currency": "TWD",
+    "location": [
+      {
+        "id": 1,
+        "title": "台北101",
+        "desc": "台北101是台灣最著名的地標建築之一，曾經是全球最高樓。它的設計結合了現代技術和台灣文化元素，擁有觀景台、購物中心和多樣化的餐飲選擇，是台北市區不可錯過的景點。",
+        "cover": ""
+      }
+    ],
+    "food": [{ "id": 1, "title": "", "desc": "", "cover": "" }]
+  },
+  {
+    "cityKey": "tainan",
+    "image": "https://images.unsplash.com/photo-1621315892013-f32af7358947?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGFpbmFufGVufDB8fDB8fHww",
+    "title": "台南",
+    "cover": "https://images.unsplash.com/photo-1621315892013-f32af7358947?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGFpbmFufGVufDB8fDB8fHww",
+    "weather": "27~32°C",
+    "volt": "110v",
+    "currency": "TWD",
+    "location": [
+      {
+        "id": 1,
+        "title": "安平古堡",
+        "desc": "安平古堡是台灣歷史最悠久的要塞之一，建於荷蘭時期。遊客可以登上古堡觀望台，俯瞰台南市區和安平港的景色。",
+        "cover": ""
+      },
+      {
+        "id": 2,
+        "title": "赤崁樓",
+        "desc": "赤崁樓是台南的代表性古蹟，建於17世紀。樓內展示了台灣歷史的多樣性和文化特色，是了解台灣早期歷史的重要場所。",
+        "cover": ""
+      }
+    ],
+    "food": [{ "id": 1, "title": "", "desc": "", "cover": "" }]
+  }
+]

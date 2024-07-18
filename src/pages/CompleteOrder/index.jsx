@@ -13,7 +13,7 @@ const CompleteOrder = () => {
   };
 
   return (
-    <div className="flex flex-col py-14 bg-[#0022431b]">
+    <div className="h-screen py-14 bg-[#0022431b]">
       <div className="mx-32 mb-4 px-4 py-2">
         <Steps
           items={[
@@ -41,7 +41,7 @@ const CompleteOrder = () => {
           ]}
         />
       </div>
-      <div className="w-3/4 mx-32 mb-12 p-10 flex flex-col items-center justify-center rounded-2xl bg-white text-xl font-bold border border-solid border-black">
+      <div className="w-3/4 mx-32 mb-12 p-10 flex flex-col items-center justify-center rounded-2xl bg-white text-xl font-bold">
         <div className="my-5">訂單已完成</div>
         <button
           onClick={() => {

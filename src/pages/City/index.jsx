@@ -1,18 +1,28 @@
 import { Pagination } from "antd";
 
-const City = () => {
+const City = ({
+  cityKey,
+  title,
+  desc,
+  cover,
+  weather,
+  volt,
+  currency,
+  location,
+  food,
+}) => {
   return (
     <div className="flex flex-col py-14 items-center">
       <div className="flex w-[90%] h-80 bg-black text-white rounded-lg">
         <div className="flex flex-col m-5">
-          <h1 className="text-[27px] font-medium mx-4">日本 | 旅遊指南</h1>
+          <h1 className="text-[27px] font-medium mx-4">{title} | 旅遊指南</h1>
           <p className=" text-lg mt-6 mb-3 mx-4">
             日本是一個結合了傳統文化和現代科技的魅力國度。東京探索古老的寺廟和神社，京都和奈良保存完好的歷史建築，大阪是以其美食和娛樂設施聞名。富士山則是日本的象徵，無論登山還是遠觀都令人難忘。
           </p>
           <div className="flex justify-around items-center h-32 text-xl text-center text-black">
             <span className="p-1 w-1/4 flex flex-col rounded-md bg-slate-300">
               <i className="fa-solid fa-sun my-2">天氣</i>
-              18~27°C
+              {weather}
             </span>
             <span className="p-1 w-1/4 flex flex-col rounded-md bg-slate-300">
               <i className="fa-solid fa-plug-circle-bolt my-2">電壓</i>

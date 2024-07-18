@@ -2,44 +2,12 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { postApi } from "@/api/post";
 import { ticketApi } from "@/api/ticket";
+import { cityApi } from "@/api/city";
 import CityCard from "@/components/CityCard";
 import PostCard from "@/components/PostCard";
 import TicketCard from "@/components/TicketCard";
 import { usePostStore } from "@/store/post";
 import { useTicketStore } from "@/store/ticket";
-
-const cityData = [
-  {
-    cityKey: "japan",
-    title: "日本",
-    image:
-      "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGphcGFufGVufDB8fDB8fHww",
-  },
-  {
-    cityKey: "korea",
-    title: "韓國",
-    image:
-      "https://images.unsplash.com/photo-1597552571860-136a103d5eb3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHNlb3VsfGVufDB8fDB8fHww",
-  },
-  {
-    cityKey: "thailand",
-    title: "泰國",
-    image:
-      "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhhaWxhbmR8ZW58MHx8MHx8fDA%3D",
-  },
-  {
-    cityKey: "taipei",
-    title: "台北",
-    image:
-      "https://images.unsplash.com/photo-1572715381359-002b1eabd56b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8MTAxfGVufDB8fDB8fHww",
-  },
-  {
-    cityKey: "tainan",
-    title: "台南",
-    image:
-      "https://images.unsplash.com/photo-1621315892013-f32af7358947?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGFpbmFufGVufDB8fDB8fHww",
-  },
-];
 
 const Home = () => {
   const { storagePosts, setStoragePosts } = usePostStore(); //存入localStorage
@@ -47,6 +15,8 @@ const Home = () => {
 
   const [posts, setPosts] = useState(storagePosts);
   const [tickets, setTickets] = useState(storageTickets);
+  const [cities, setCities] = useState([]);
+
   const navigate = useNavigate();
   const changePage = (url) => {
     navigate(url);
@@ -70,6 +40,14 @@ const Home = () => {
     }
   };
 
+  //city setting
+  const getCities = async () => {
+    const { code, data } = await cityApi.getCities();
+    if (code === 200) {
+      setCities(data);
+    }
+  };
+
   //useEffect
   useEffect(() => {
     if (!posts.length) {
@@ -78,6 +56,7 @@ const Home = () => {
     if (!tickets.length) {
       getTickets();
     }
+    getCities();
   }, []);
 
   return (
@@ -100,13 +79,14 @@ const Home = () => {
       </div>
 
       <div className="flex justify-center mt-[60px]">
-        {cityData.map((data) => (
+        {cities.map((city) => (
           <CityCard
-            key={data.cityKey}
-            title={data.title}
-            cityKey={data.key}
-            image={data.image}
-            onClick={() => changePage(`/cities/${data.cityKey}`)}
+            id={city.id}
+            key={city.cityKey}
+            title={city.title}
+            cityKey={city.key}
+            image={city.image}
+            onClick={() => changePage(`/cities/${city.cityKey}`)}
           />
         ))}
       </div>
