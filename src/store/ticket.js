@@ -7,6 +7,8 @@ export const useTicketStore = create(
     (set, get) => ({
       storageTickets: [],
       setStorageTickets: (tickets) => set(() => ({ storageTickets: tickets })),
+      storageCities: [],
+      setStorageCities: (cities) => set(() => ({ storageCities: cities })),
     }),
     {
       name: "ticket",

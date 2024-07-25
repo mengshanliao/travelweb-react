@@ -7,6 +7,7 @@ import {
 import { Steps } from "antd";
 import { useUserStore } from "@/store/user";
 import { formatDateTW } from "@/utils/time";
+import { useEffect, useState } from "react";
 
 const Booking = () => {
   const navigate = useNavigate();
@@ -15,6 +16,19 @@ const Booking = () => {
   };
 
   const { cart, setCart } = useUserStore();
+  const [total, setTotal] = useState(0);
+
+  //totalPrice
+  useEffect(() => {
+    const calculatePrice = () => {
+      let totalPrice = 0;
+      for (const item of cart) {
+        totalPrice += item.price * item.quantity;
+      }
+      setTotal(totalPrice);
+    };
+    calculatePrice();
+  }, [cart]);
 
   return (
     <div className="py-14 bg-[#0022431b]">
@@ -50,28 +64,31 @@ const Booking = () => {
           <h1 className="px-2 pb-3 text-xl font-bold text-themeBlue">
             訂單詳情
           </h1>
-          <hr />
+
           {cart.map((ticket) => (
-            <>
-              <div className="m-3 flex justify-between">
-                <div className="flex flex-col mx-1 my-2 text-lg">
+            <div key={ticket.id}>
+              <div className="my-3 p-2 flex justify-between border border-solid border-bgBlue rounded-lg">
+                <div className="flex flex-col mx-1 my-2 text-xl">
                   <h1 className="mb-2 font-medium">{ticket.title}</h1>
                   <h3 className="text-sm m-1 mb-3 text-gray-500">
                     使用日期：
                     {formatDateTW(ticket.time)}
                   </h3>
                 </div>
-                <div className="flex items-center text-lg">
+                <div className="w-60 flex items-center justify-between text-xl">
                   <span className="pr-20">{ticket.quantity} 張</span>
-                  <div className="font-bold">NT$ {ticket.price}</div>
+                  <div className="font-bold">
+                    NT$ {ticket.price * ticket.quantity}
+                  </div>
                 </div>
               </div>
-              <hr />
-            </>
+            </div>
           ))}
           <div className="m-3 flex justify-between text-lg">
             <span className="font-medium">總金額</span>
-            <span className="font-bold text-themeRed">NT$ 2350</span>
+            <span className="font-bold text-themeRed text-[22px]">
+              NT$ {total}
+            </span>
           </div>
         </div>
         <div className="w-3/4 mb-6 p-4 flex flex-col rounded-2xl bg-white">
@@ -105,15 +122,15 @@ const Booking = () => {
           <hr />
           <div className="flex flex-col my-5 mx-2 text-lg">
             <div className="my-4">
-              <i class="fa-regular fa-circle"></i>
+              <i className="fa-regular fa-circle"></i>
               <span className="px-2">信用卡/簽帳金融卡</span>
             </div>
             <div className="my-4">
-              <i class="fa-regular fa-circle"></i>
+              <i className="fa-regular fa-circle"></i>
               <span className="px-2">LINE Pay</span>
             </div>
             <div className="my-4">
-              <i class="fa-regular fa-circle"></i>
+              <i className="fa-regular fa-circle"></i>
               <span className="px-2">超商繳費</span>
             </div>
           </div>
@@ -123,7 +140,7 @@ const Booking = () => {
             onClick={() => {
               changePage("/cart");
             }}
-            class="py-2 px-3 text-xl font-bold rounded-xl bg-bgBlue text-themeBlue cursor-pointer"
+            className="py-2 px-3 text-xl font-bold rounded-xl bg-bgBlue text-themeBlue cursor-pointer"
           >
             回上一頁
           </button>
@@ -131,7 +148,7 @@ const Booking = () => {
             onClick={() => {
               changePage("/complete-order");
             }}
-            class="py-2 px-3 text-xl font-bold rounded-xl bg-[#cd333339] text-[#cd3333] cursor-pointer"
+            className="py-2 px-3 text-xl font-bold rounded-xl bg-[#cd333339] text-[#cd3333] cursor-pointer"
           >
             確定結帳
           </button>

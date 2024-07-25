@@ -4,6 +4,7 @@ import { userApi } from "@/api/user";
 import { useUserStore } from "@/store/user";
 import { Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import clsx from "clsx";
 
 const Layout = ({ children }) => {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
   const changePage = (url) => {
     navigate(url);
   };
+
   const handleCancel = (bool) => {
     setIsModalOpen(bool);
   };
@@ -55,7 +57,7 @@ const Layout = ({ children }) => {
               <i className="fa-solid fa-globe"></i>
             </li>
             <li className="mr-2 px-3 py-1 rounded-3xl hover:bg-bgBlue cursor-pointer">
-              <i className="fa-solid fa-moon"></i>
+              <i className="fa-regular fa-moon"></i>
             </li>
             <li
               onClick={() => changePage("/cart")}

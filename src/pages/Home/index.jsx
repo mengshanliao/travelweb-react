@@ -11,11 +11,12 @@ import { useTicketStore } from "@/store/ticket";
 
 const Home = () => {
   const { storagePosts, setStoragePosts } = usePostStore(); //存入localStorage
-  const { storageTickets, setStorageTickets } = useTicketStore();
+  const { storageTickets, setStorageTickets, storageCities, setStorageCities } =
+    useTicketStore();
 
   const [posts, setPosts] = useState(storagePosts);
   const [tickets, setTickets] = useState(storageTickets);
-  const [cities, setCities] = useState([]);
+  const [cities, setCities] = useState(storageCities);
 
   const navigate = useNavigate();
   const changePage = (url) => {
@@ -45,6 +46,7 @@ const Home = () => {
     const { code, data } = await cityApi.getCities();
     if (code === 200) {
       setCities(data);
+      setStorageCities(data);
     }
   };
 

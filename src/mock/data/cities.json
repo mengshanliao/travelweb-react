@@ -14,25 +14,25 @@
         "id": 1,
         "title": "東京鐵塔",
         "desc": "東京鐵塔是日本東京的標誌性建築，塔內設有觀景台，提供360度的城市全景，天氣晴朗時甚至可以看到富士山。",
-        "cover": "https://images.unsplash.com/photo-1574171561594-338bfc560f69?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHRva3lvJTIwdG93ZXJ8ZW58MHx8MHx8fDA%3D"
+        "cover": "https://images.unsplash.com/photo-1555883006-0f5a0915a80f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW4lMjB0b2t5byUyMHRvd2VyfGVufDB8fDB8fHww"
       },
       {
         "id": 2,
         "title": "京都清水寺",
         "desc": "京都清水寺是日本最著名的佛教寺廟之一，以宏偉的木造建築和懸崖邊的壯麗景觀聞名。特別是春天的櫻花季和秋天的紅葉季。",
-        "cover": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGt5b3RvfGVufDB8fDB8fHww"
+        "cover": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGphcGFufGVufDB8fDB8fHww"
       },
       {
         "id": 3,
         "title": "富士山",
         "desc": "富士山是日本最高的山峰，也是日本的象徵之一。從山頂可以看到壯麗的日出景觀。周圍還有許多溫泉和湖泊。",
-        "cover": "https://images.unsplash.com/photo-1635215277614-5bea1b092836?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZnVqaXxlbnwwfHwwfHx8MA%3D%3D"
+        "cover": "https://images.unsplash.com/photo-1606918801925-e2c914c4b503?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8amFwYW4lMjBmdWppfGVufDB8fDB8fHww"
       },
       {
         "id": 4,
         "title": "大阪城",
         "desc": "大阪城是日本大阪市的一座著名城堡。擁有美麗的庭園和壯觀的天守閣，每年春天城堡周圍的櫻花盛開，吸引大量遊客前來賞花。",
-        "cover": "https://images.unsplash.com/photo-1580138051672-325eb98b2749?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3Nha2ElMjBjYXN0bGV8ZW58MHx8MHx8fDA%3D"
+        "cover": "https://images.unsplash.com/photo-1565559203353-49efc30af68d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGphcGFuJTIwb3Nha2ElMjBjYXN0bGV8ZW58MHx8MHx8fDA%3D"
       }
     ],
     "food": [
@@ -52,7 +52,7 @@
         "id": 3,
         "title": "築地市場海鮮丼",
         "desc": "築地市場是東京最大的魚市場，這裡的海鮮丼以新鮮的魚生和豐富的配料而著稱，讓人可以品嚐到最新鮮的海味。",
-        "cover": "https://images.unsplash.com/photo-1579398937948-598009379315?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGphcGFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+        "cover": "https://media.istockphoto.com/id/1490509481/photo/high-class-seafood-rice-bowl-from-hokkaido-sea-urchin-shrimp-crab-salmon-roe.jpg?s=612x612&w=0&k=20&c=iKvyzvXwYGedIqOiZFK_gGgvfDE7IMSRawA69aFLnAc="
       },
       {
         "id": 4,
@@ -67,6 +67,7 @@
     "cityKey": "korea",
     "image": "https://images.unsplash.com/photo-1597552571860-136a103d5eb3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHNlb3VsfGVufDB8fDB8fHww",
     "title": "韓國",
+    "desc": "韓國，全名大韓民國，是位於東亞朝鮮半島南部的國家。首都首爾是現代化與傳統文化並存的都市，擁有著名的景點如景福宮和首爾塔。韓國以其豐富的文化遺產、美食和先進的科技而著稱，K-POP、韓劇、韓服等文化輸出在全球範圍內擁有大量的粉絲。韓國的自然景觀也非常壯麗，包括濟州島的美麗風光和雪嶽山的壯觀山脈。",
     "cover": "https://images.unsplash.com/photo-1597552571860-136a103d5eb3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHNlb3VsfGVufDB8fDB8fHww",
     "weather": "18~27°C",
     "volt": "220v",
@@ -76,16 +77,60 @@
         "id": 1,
         "title": "首爾塔",
         "desc": "首爾塔是首爾市的地標之一，位於南山頂上，提供壯麗的城市全景。遊客可以乘坐纜車或步行登上塔頂，欣賞首爾市日夜不同的美麗景色。",
-
-        "cover": ""
+        "cover": "https://images.unsplash.com/photo-1541694764078-df09dec4f9c8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGtvcmVhJTIwdG93ZXJ8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        "id": 2,
+        "title": "濟州島",
+        "desc": "濟州島是韓國最大的島嶼，以其獨特的自然景觀和文化遺產而聞名。這裡有壯麗的火山口湖、瀑布、溫泉和美麗的海灘，是探索韓國自然之美的理想地點。",
+        "cover": "https://images.unsplash.com/photo-1543503430-244aace16cbd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8a29yZWElMjBqZWp1fGVufDB8fDB8fHww"
+      },
+      {
+        "id": 3,
+        "title": "慶州泰安郡王陵",
+        "desc": "慶州泰安郡王陵是韓國慶州的一處世界遺產，是朝鮮時代的王室陵墓之一。這裡的古建築、石碑和美麗的自然環境展示了韓國古代王朝的遺產和文化。",
+        "cover": "https://plus.unsplash.com/premium_photo-1716968595130-3df477c0087d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a29yZWElMjB0YWVhbiUyMGd1bnxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 4,
+        "title": "景福宮",
+        "desc": "首爾景福宮是韓國宮殿中最著名的之一，建於朝鮮時代，其優雅的建築和精美的庭園展現了韓國傳統文化的精髓。遊客可以在這裡體驗韓國古代王朝的宮廷生活。",
+        "cover": "https://plus.unsplash.com/premium_photo-1661948404806-391a240d6d40?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGtvcmVhJTIwZ3llb25nYm9rZ3VuZ3xlbnwwfHwwfHx8MA%3D%3D"
       }
     ],
-    "food": [{ "id": 1, "title": "", "desc": "", "cover": "" }]
+    "food": [
+      {
+        "id": 1,
+        "title": "韓式烤肉",
+        "desc": "韓式烤肉是韓國最具代表性的美食之一，肉類種類多樣，通常包括牛肉、豬肉和雞肉。肉片在桌邊烤爐上烤製，配上各種新鮮的蔬菜和醬料，口感鮮美多汁，是韓國飲食文化的精髓。",
+        "cover": "https://images.unsplash.com/photo-1551006839-2055edb67ff4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGtvcmVhJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 2,
+        "title": "韓式炸雞",
+        "desc": "韓式炸雞以其外酥內嫩的口感和多樣化的調味聞名，常見口味包括甜辣、蒜香和原味。韓式炸雞通常搭配啤酒一起享用，是韓國夜生活中不可或缺的美食。",
+        "cover": "https://media.istockphoto.com/id/1098130942/photo/chicken.jpg?s=612x612&w=0&k=20&c=j5FNutv9EJ3Goh53s00IxNjjtD9hsFol-ftHQcxlH_E="
+      },
+      {
+        "id": 3,
+        "title": "泡菜鍋",
+        "desc": "泡菜鍋是韓國傳統的湯鍋料理，主要材料是泡菜、豆腐、豬肉或牛肉，湯底酸辣可口。這道菜既能暖身，又能刺激味蕾，是韓國冬季的經典美食。",
+        "cover": "https://media.istockphoto.com/id/1080177492/photo/korean-sea-food-soft-tofu-stew.jpg?s=612x612&w=0&k=20&c=NueEHTImmO9LYXZLUridsC_Mg0gjnqLKBda6BSvexeo="
+      },
+      {
+        "id": 4,
+        "title": "韓式醬蟹",
+        "desc": "韓式醬蟹是韓國的傳統美食，由新鮮生蟹浸泡在特製的醬汁中，醬汁中含有韓式醬油、糖、蒜末和辣椒粉等調味料，讓蟹入味。這道菜以冷盤形式呈現，味道獨特，甜、鹹、辣三味俱全，是韓國餐桌上的受歡迎小吃。",
+        "cover": "https://media.istockphoto.com/id/2161453865/photo/crab-marinated-in-soy-sauce.jpg?s=612x612&w=0&k=20&c=yYMo5ISgsx46ikelIMwnHGiJ88qwNK2zUm82M0K-Iss="
+      }
+    ]
   },
   {
+    "id": 3,
     "cityKey": "thailand",
     "image": "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhhaWxhbmR8ZW58MHx8MHx8fDA%3D",
     "title": "泰國",
+    "desc": "泰國，全名泰王國，是位於東南亞的國家，以其豐富的文化、壯麗的自然景觀和友好的人民而著名。首都曼谷是一座充滿活力的大都市，擁有壯觀的寺廟、繁忙的市場和現代化的高樓。泰國以其美味的街頭小吃、迷人的海灘和悠久的佛教文化吸引著全球遊客。著名景點包括大皇宮、清邁古城和普吉島的美麗沙灘。",
     "cover": "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhhaWxhbmR8ZW58MHx8MHx8fDA%3D",
     "weather": "28~34°C",
     "volt": "220v",
@@ -95,16 +140,60 @@
         "id": 1,
         "title": "普吉島",
         "desc": "普吉島是泰國南部的一個熱門旅遊目的地，以其美麗的海灘、清澈的海水和豐富的水上活動而聞名。遊客可以在這裡享受陽光沙灘、潛水、浮潛以及豐富的夜生活和餐飲選擇。",
-
-        "cover": ""
+        "cover": "https://images.unsplash.com/photo-1532370184535-22cec5ca8480?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRoYWlsYW5kJTIwcGh1a2V0fGVufDB8fDB8fHww"
+      },
+      {
+        "id": 2,
+        "title": "恰圖恰市集",
+        "desc": "恰圖恰市集是位於曼谷的世界上最大的週末市集之一，擁有超過15,000個攤位。販售各式各樣的商品，包括服飾、手工藝品、古董、寵物和美食，是體驗曼谷多元文化和購物樂趣的場所。",
+        "cover": "https://images.unsplash.com/photo-1553426971-e1937d26f49b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRoYWlsYW5kJTIwbWFya2V0fGVufDB8fDB8fHww"
+      },
+      {
+        "id": 3,
+        "title": "鄭王廟",
+        "desc": "鄭王廟又稱黎明寺，是曼谷最著名的寺廟之一，位於昭披耶河西岸。寺廟以其高聳的中央佛塔和精美的瓷片裝飾而聞名，特別是在日出和日落時分，景色格外壯麗。",
+        "cover": "https://media.istockphoto.com/id/1039489792/photo/wat-arun.jpg?s=612x612&w=0&k=20&c=bRg_RzH2n832QzpqlqbOdbaWCGMgRMKnfx55vRWQ_zQ="
+      },
+      {
+        "id": 4,
+        "title": "曼谷大皇宮",
+        "desc": "曼谷大皇宮曾是泰國國王的居所和行政中心。宮殿內的建築風格華麗瑰麗，充滿了泰國傳統文化和歷史遺產。大皇宮內還有著名的玉佛寺，供奉著泰國最神聖的玉佛像，是宗教朝聖的重要場所。",
+        "cover": "https://media.istockphoto.com/id/599480662/photo/moonlight-pavilion-in-phnom-penh-cambodia.jpg?s=612x612&w=0&k=20&c=RDOuvqezGJhje4JdzjyYRo4TXINnjH7bwPtuHSBn1IY="
       }
     ],
-    "food": [{ "id": 1, "title": "", "desc": "", "cover": "" }]
+    "food": [
+      {
+        "id": 1,
+        "title": "芒果糯米飯 (Khao Niew Mamuang)",
+        "desc": "芒果糯米飯是泰國的傳統甜點，以香甜的芒果和椰奶糯米飯為主要材料，口感軟糯香甜。這道甜點在泰國特別受歡迎，尤其是在炎熱的夏季，是品味泰國甜品的絕佳選擇。",
+        "cover": "https://media.istockphoto.com/id/1264957211/photo/thai-dessert.jpg?s=612x612&w=0&k=20&c=lkDm6d934zHKA4DW2d-UfRqUdSwRJrCd4oYjSHUSA3c="
+      },
+      {
+        "id": 2,
+        "title": "青木瓜沙拉 (Som Tum)",
+        "desc": "青木瓜沙拉是泰國的經典涼菜，由青木瓜絲、辣椒、大蒜、番茄、青檸和魚露混合搗製而成，味道清爽酸辣。這道菜富有層次感，是泰國東北部地區的特色美食。",
+        "cover": "https://media.istockphoto.com/id/2149941918/photo/delicious-thai-papaya-salad-with-fresh-vegetables.jpg?s=612x612&w=0&k=20&c=oMpiVY7vJ4QLGUFC_nuVaLutPzAge2t6uJg6i13TzD8="
+      },
+      {
+        "id": 3,
+        "title": "泰式炒河粉 (Pad Thai)",
+        "desc": "泰式炒河粉是泰國最著名的街頭小吃之一，以河粉、蝦、豆芽和雞蛋為主要材料，搭配花生、豆腐和蔥花，炒製而成。這道菜風味獨特，甜、酸、辣、鹹四味俱全，是泰國料理的代表之一。",
+        "cover": "https://images.unsplash.com/photo-1559314809-0d155014e29e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHRoYWlsYW5kJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 4,
+        "title": "泰國綠咖哩 (Gaeng Keow Wan)",
+        "desc": "泰國綠咖哩是泰國最具代表性的咖哩之一，以綠咖哩醬、椰奶、雞肉或牛肉、茄子和竹筍為主要材料，味道香辣濃郁。這道菜通常搭配米飯或米線一起享用，深受當地人和遊客的喜愛。",
+        "cover": "https://media.istockphoto.com/id/1161110580/photo/most-famous-thai-foods-green-curry-pork-chicken-coconut-soup-or-in-thai-names-kaeng-keaw-whan.jpg?s=612x612&w=0&k=20&c=3TNU5c0h_MMa_5PN7COXb5eCiNYhfGy5dVI8bWCclp4="
+      }
+    ]
   },
   {
+    "id": 4,
     "cityKey": "taipei",
     "image": "https://images.unsplash.com/photo-1572715381359-002b1eabd56b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8MTAxfGVufDB8fDB8fHww",
     "title": "台北",
+    "desc": "台北是台灣的首都和最大城市，以其繁華的都市生活和豐富的文化景點而著稱。台北101是城市的地標之一，曾是世界最高的建築。台北擁有眾多的博物館、夜市和歷史遺跡，如國立故宮博物院、士林夜市和龍山寺。這座城市融合了現代化的便利設施和傳統的文化元素，是台灣的經濟、政治和文化中心。",
     "cover": "https://images.unsplash.com/photo-1572715381359-002b1eabd56b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8MTAxfGVufDB8fDB8fHww",
     "weather": "27~30°C",
     "volt": "110v",
@@ -114,15 +203,60 @@
         "id": 1,
         "title": "台北101",
         "desc": "台北101是台灣最著名的地標建築之一，曾經是全球最高樓。它的設計結合了現代技術和台灣文化元素，擁有觀景台、購物中心和多樣化的餐飲選擇，是台北市區不可錯過的景點。",
-        "cover": ""
+        "cover": "https://images.unsplash.com/photo-1572715381359-002b1eabd56b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGFpcGVpJTIwY2l0eXxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 2,
+        "title": "九份",
+        "desc": "九份是一個歷史悠久的山城，以迷人的山景和濃厚的懷舊氛圍聞名。九份有著狹窄的老街、傳統的茶館和燈籠點綴的階梯，吸引了眾多遊客來。九份的夜景尤其迷人，燈光映照下的古老街道和建築別有一番風味。",
+        "cover": "https://images.unsplash.com/photo-1571474004502-c1def214ac6d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRhaXdhbiUyMGp1aWZlbnxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 3,
+        "title": "饒河街夜市",
+        "desc": "饒河街夜市位於台北市松山區，是台北最著名的夜市之一。這裡擁有各式各樣的台灣小吃、特色手工藝品和遊戲攤位。可以品嚐到胡椒餅、蚵仔煎和珍珠奶茶等美食，並體驗台灣夜市的熱鬧氛圍。",
+        "cover": "https://images.unsplash.com/photo-1583889659384-64d9df2347ba?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGFpcGVpJTIwbmlnaHQlMjBtYXJrZXR8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        "id": 4,
+        "title": "國立中正紀念堂",
+        "desc": "中正紀念堂是台北市的重要地標之一，紀念中華民國前總統蔣中正。紀念堂建築風格雄偉壯觀，周圍有美麗的花園和廣場。這裡是舉辦各種文化活動和表演的場所，也是了解台灣歷史和文化的重要景點。",
+        "cover": "https://images.unsplash.com/photo-1508248467877-aec1b08de376?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGFpd2FuJTIwdGFpbmFuJTIwY2hpa2FufGVufDB8fDB8fHww"
       }
     ],
-    "food": [{ "id": 1, "title": "", "desc": "", "cover": "" }]
+    "food": [
+      {
+        "id": 1,
+        "title": "鼎泰豐",
+        "desc": "鼎泰豐是一家全球知名的台灣餐廳，以其精緻的小籠包聞名。小籠包皮薄餡多，湯汁濃郁，口感絕佳，是台北必嘗的美食之一。",
+        "cover": "https://media.istockphoto.com/id/177823067/photo/xiao-long-bao.jpg?s=612x612&w=0&k=20&c=cadeHn4e8KQNqy78SU3Ygp6zKxsTS6EtiqE18QP5Ed8="
+      },
+      {
+        "id": 2,
+        "title": "阿宗麵線",
+        "desc": "阿宗麵線位於西門町，是台北著名的小吃店。這裡的麵線細滑入味，配上大腸和蚵仔，口感豐富，是當地人和遊客的最愛。",
+        "cover": "https://media.istockphoto.com/id/2155272090/photo/stinky-tofu-and-large-intestine-oyster-noodles-soup-with-drink-and-spoon-served-in-pot.jpg?s=1024x1024&w=is&k=20&c=9jyLReFOPS8Nd_lKNuBzw055y8ZhpPwphFksxeNOKwY="
+      },
+      {
+        "id": 3,
+        "title": "阜杭豆漿",
+        "desc": "阜杭豆漿是一家經營傳統台灣早餐的老店，以其現磨豆漿和酥脆的燒餅聞名。這裡的早餐簡單卻美味，是體驗台灣飲食文化的絕佳選擇。",
+        "cover": "https://media.istockphoto.com/id/1283682338/photo/taiwanese-breakfast-it-is-soy-milk-soup-a-tray-a-spoon-on-the-wooden-table.jpg?s=612x612&w=0&k=20&c=idqdmmjJaVxBncRwuI3JVEZbQlbiu2b0SrG4fi76xPA="
+      },
+      {
+        "id": 4,
+        "title": "鬍鬚張魯肉飯",
+        "desc": "鬍鬚張魯肉飯是一家台北知名的台灣料理餐廳，以其美味的魯肉飯著稱。魯肉飯香氣撲鼻，肉質軟嫩，配上白米飯，讓人回味無窮。",
+        "cover": "https://media.istockphoto.com/id/1450010967/photo/braised-meat-over-cooked-rice-famous-and-delicious-street-food-in-taiwan.jpg?s=612x612&w=0&k=20&c=Bf-e-lcjms239o67FA8YpuhsoGJSJ7PDiodZiT7TvPc="
+      }
+    ]
   },
   {
+    "id": 5,
     "cityKey": "tainan",
     "image": "https://images.unsplash.com/photo-1621315892013-f32af7358947?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGFpbmFufGVufDB8fDB8fHww",
     "title": "台南",
+    "desc": "台南是台灣最古老的城市之一，擁有豐富的歷史和文化遺產，被稱為台灣的文化首都。這裡有許多古老的寺廟、歷史建築和傳統市場，如赤崁樓、孔廟和花園夜市。台南也是美食天堂，以其多樣的小吃和傳統美食如擔仔麵、蝦捲和碗粿而著稱。這座城市結合了悠久的歷史和現代化的發展，吸引著眾多遊客前來探索。",
     "cover": "https://images.unsplash.com/photo-1621315892013-f32af7358947?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGFpbmFufGVufDB8fDB8fHww",
     "weather": "27~32°C",
     "volt": "110v",
@@ -132,15 +266,52 @@
         "id": 1,
         "title": "安平古堡",
         "desc": "安平古堡是台灣歷史最悠久的要塞之一，建於荷蘭時期。遊客可以登上古堡觀望台，俯瞰台南市區和安平港的景色。",
-        "cover": ""
+        "cover": "https://media.istockphoto.com/id/593333238/photo/anping-fort.jpg?s=612x612&w=0&k=20&c=W3_Sd-wo-jMeKI1gy86WXP7pCVd1fulhNgvIo2yS9ik="
       },
       {
         "id": 2,
-        "title": "赤崁樓",
+        "title": "七股鹽山",
         "desc": "赤崁樓是台南的代表性古蹟，建於17世紀。樓內展示了台灣歷史的多樣性和文化特色，是了解台灣早期歷史的重要場所。",
-        "cover": ""
+        "cover": "https://images.unsplash.com/photo-1621315892013-f32af7358947?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGFpbmFufGVufDB8fDB8fHww"
+      },
+      {
+        "id": 3,
+        "title": "四草綠色隧道",
+        "desc": "台江國家公園位於台南市區西南方向，是台灣唯一一座城市內的國家公園。公園內有豐富的自然生態和遊憩設施，是遊客放鬆和享受大自然的理想去處。",
+        "cover": "https://images.unsplash.com/photo-1621848296279-7751546e9acc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGFpbmFufGVufDB8fDB8fHww"
+      },
+      {
+        "id": 4,
+        "title": "台南孔廟",
+        "desc": "台南孔廟是台灣最早的孔廟之一，也是台南市內最具代表性的宗教建築。廟內有許多古老的石刻和文物，展示了儒家文化的重要性和影響力。",
+        "cover": "https://media.istockphoto.com/id/1163885636/photo/confucius-temple.jpg?s=612x612&w=0&k=20&c=NLP-JINWCaLMjpaAF1Fot1j_4X42PzMDmv4XaPpS97Q="
       }
     ],
-    "food": [{ "id": 1, "title": "", "desc": "", "cover": "" }]
+    "food": [
+      {
+        "id": 1,
+        "title": "富盛號碗粿",
+        "desc": "富盛號的碗粿是台南的傳統美食，以米漿製成，內有豬肉、蛋黃和香菇，蒸製而成。這道菜口感滑嫩，味道香濃，是台南早餐的經典選擇。",
+        "cover": "https://media.istockphoto.com/id/1435855708/photo/taiwanese-savory-rice-pudding-wa-gui-with-chopped-dried-radish-and-soy-sauce-isolated-on.jpg?s=612x612&w=0&k=20&c=A9otbtLoxSIhdlQmTnyB2HryIfBBlSm_G_R9zcdoWZI="
+      },
+      {
+        "id": 2,
+        "title": "赤崁棺材板",
+        "desc": "赤崁棺材板是台南獨特的小吃，外型像一個小棺材，內部挖空後填滿豐富的餡料如雞肉、海鮮和蔬菜，再炸至金黃酥脆。這道菜口感豐富，是台南特有的美食之一。",
+        "cover": "https://media.istockphoto.com/id/601394884/photo/taiwanese-food.jpg?s=612x612&w=0&k=20&c=5OrRC5VcGR1a6f2BdWQW3UITYd-eifqlgbec4O24zGc="
+      },
+      {
+        "id": 3,
+        "title": "度小月擔仔麵",
+        "desc": "度小月擔仔麵是台南的經典小吃，以其鮮美的湯頭和Q彈的麵條聞名。這道麵搭配蝦仁、豬肉末和香菜，是當地人和遊客都愛不釋手的美食之一。",
+        "cover": "https://media.istockphoto.com/id/1299306748/photo/homemade-taiwanese-danzai-noodle-soup.jpg?s=612x612&w=0&k=20&c=k3tyDVdWt5ZTn250Xf51ZI7N9IsdTRwM9q0ymM-0Ml0="
+      },
+      {
+        "id": 4,
+        "title": "台南牛肉湯",
+        "desc": "台南牛肉湯是當地的經典美食，以新鮮的牛肉片和濃郁的牛骨湯為主要材料，湯頭鮮美，牛肉嫩滑。這道湯品常常配有清爽的蔥花和辣椒，深受喜愛。",
+        "cover": "https://media.istockphoto.com/id/1088599506/photo/taiwan-famous-food-tainan-beef-soup-traditional-breakfast-in-tainan-taiwan.jpg?s=612x612&w=0&k=20&c=c7yjZMPi5kuK89WIAfPthby4AsW1cb7bqnH_EjVzkKQ="
+      }
+    ]
   }
 ]

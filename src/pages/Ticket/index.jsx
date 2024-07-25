@@ -22,7 +22,7 @@ const Ticket = () => {
   };
   const addToCart = () => {
     const product = {
-      id: Math.floor(Math.random()),
+      id: Math.floor(Math.random() * 1000),
       time: selectedTime,
       title: ticket.detail.find((item) => item.id === selectedOption).title,
       price: ticket.detail.find((item) => item.id === selectedOption).price,
@@ -106,13 +106,13 @@ const Ticket = () => {
           onClick={() => {
             changePage("/");
           }}
-          class="py-2 px-5 text-lg font-bold rounded-lg bg-bgBlue text-themeBlue cursor-pointer"
+          className="py-2 px-5 text-lg font-bold rounded-lg bg-bgBlue text-themeBlue cursor-pointer"
         >
           回上一頁
         </button>
         <button
           onClick={addToCart}
-          class="py-2 px-5 text-lg font-bold rounded-lg bg-[#cd333339] text-[#cd3333] cursor-pointer"
+          className="py-2 px-5 text-lg font-bold rounded-lg bg-[#cd333339] text-[#cd3333] cursor-pointer"
         >
           加入購物車
         </button>
