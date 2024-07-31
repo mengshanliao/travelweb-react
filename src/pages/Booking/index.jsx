@@ -4,19 +4,60 @@ import {
   SmileOutlined,
   FormOutlined,
 } from "@ant-design/icons";
-import { Steps } from "antd";
+import { Steps, message } from "antd";
 import { useUserStore } from "@/store/user";
 import { formatDateTW } from "@/utils/time";
 import { useEffect, useState } from "react";
+import Checkbox from "@/components/Checkbox";
 
+const payMethods = [
+  {
+    label: "信用卡/簽帳金融卡",
+    value: "visa",
+  },
+  {
+    label: "LINE Pay",
+    value: "line",
+  },
+  {
+    label: "超商繳費",
+    value: "store",
+  },
+];
 const Booking = () => {
   const navigate = useNavigate();
   const changePage = (url) => {
     navigate(url);
   };
-
-  const { cart, setCart } = useUserStore();
+  const { cart, setCart, order, setOrder } = useUserStore();
   const [total, setTotal] = useState(0);
+  const [payment, setPayment] = useState(payMethods[0].value); //付款方式只能選一
+  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [isError, setIsError] = useState(false); //formData 的 error
+
+  const checkout = (e) => {
+    e.preventDefault();
+    if (!lastName || !firstName || !phone || !email) {
+      message.error("請輸入正確資訊");
+      setIsError(true);
+      return;
+    }
+    const formData = {
+      lastName,
+      firstName,
+      phone,
+      email,
+      payment,
+      order: cart,
+    };
+    console.log(formData);
+    setCart([]);
+    setOrder([...order, formData]);
+    changePage("/complete-order");
+  };
 
   //totalPrice
   useEffect(() => {
@@ -64,7 +105,6 @@ const Booking = () => {
           <h1 className="px-2 pb-3 text-xl font-bold text-themeBlue">
             訂單詳情
           </h1>
-
           {cart.map((ticket) => (
             <div key={ticket.id}>
               <div className="my-3 p-2 flex justify-between border border-solid border-bgBlue rounded-lg">
@@ -91,68 +131,135 @@ const Booking = () => {
             </span>
           </div>
         </div>
-        <div className="w-3/4 mb-6 p-4 flex flex-col rounded-2xl bg-white">
-          <h1 className="px-2 pb-3 text-xl font-bold text-themeBlue">
-            訂購人資料
-          </h1>
-          <hr />
-          <div className="flex flex-col m-4 text-base">
-            <label htmlFor="" className="my-2">
-              姓氏
-            </label>
-            <input type="text" className="bg-gray-200 rounded-lg p-2 mb-3" />
-            <label htmlFor="" className="my-2">
-              名字
-            </label>
-            <input type="text" className="bg-gray-200 rounded-lg p-2 mb-3" />
-            <label htmlFor="" className="my-2">
-              手機號碼
-            </label>
-            <input type="text" className="bg-gray-200 rounded-lg p-2 mb-3" />
-            <label htmlFor="" className="my-2">
-              電子信箱
-            </label>
-            <input type="email" className="bg-gray-200 rounded-lg p-2 mb-3" />
+        <form onSubmit={(e) => checkout(e)} className="w-3/4">
+          <div className="mb-6 p-4 flex flex-col rounded-2xl bg-white">
+            <h1 className="px-2 pb-3 text-xl font-bold text-themeBlue">
+              訂購人資料
+            </h1>
+            <hr />
+            <div className="flex flex-col m-4 text-base">
+              <label htmlFor="lastName" className="my-2 font-bold">
+                姓氏
+              </label>
+              <div className="mb-3 flex flex-col">
+                <input
+                  id="lastName"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  type="text"
+                  className="bg-gray-200 rounded-lg p-2"
+                />
+                {isError && !lastName ? (
+                  <div className="text-red-600 text-base">
+                    <i class="fa-solid fa-triangle-exclamation pr-1"></i>
+                    <span className="text-red-600 text-base">請輸入姓氏</span>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+              <label htmlFor="firstName" className="my-2 font-bold">
+                名字
+              </label>
+              <div className="mb-3 flex flex-col">
+                <input
+                  id="firstName"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  type="text"
+                  className="bg-gray-200 rounded-lg p-2 mb-3"
+                />
+                {isError && !firstName ? (
+                  <div className="text-red-600 text-base">
+                    <i class="fa-solid fa-triangle-exclamation pr-1"></i>
+                    <span>請輸入名字</span>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              <label htmlFor="phone" className="my-2 font-bold">
+                手機號碼
+              </label>
+              <div className="mb-3 flex flex-col">
+                <input
+                  id="phone"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  type="text"
+                  className="bg-gray-200 rounded-lg p-2 mb-3"
+                />
+                {isError && !phone ? (
+                  <div className="text-red-600 text-base">
+                    <i class="fa-solid fa-triangle-exclamation pr-1"></i>
+                    <span className="text-red-600 text-base">
+                      請輸入手機號碼
+                    </span>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              <label htmlFor="email" className="my-2 font-bold">
+                電子信箱
+              </label>
+              <div className="mb-3 flex flex-col">
+                <input
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="email"
+                  className="bg-gray-200 rounded-lg p-2 mb-3"
+                />
+                {isError && !email ? (
+                  <div className="text-red-600 text-base">
+                    <i class="fa-solid fa-triangle-exclamation pr-1"></i>
+                    <span className="text-red-600 text-base">
+                      請輸入電子信箱
+                    </span>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="w-3/4 mb-6 p-4 flex flex-col rounded-2xl bg-white">
-          <h1 className="px-2 pb-3 text-xl font-bold text-themeBlue">
-            付款方式
-          </h1>
-          <hr />
-          <div className="flex flex-col my-5 mx-2 text-lg">
-            <div className="my-4">
-              <i className="fa-regular fa-circle"></i>
-              <span className="px-2">信用卡/簽帳金融卡</span>
-            </div>
-            <div className="my-4">
-              <i className="fa-regular fa-circle"></i>
-              <span className="px-2">LINE Pay</span>
-            </div>
-            <div className="my-4">
-              <i className="fa-regular fa-circle"></i>
-              <span className="px-2">超商繳費</span>
+          <div className="mb-6 p-4 flex flex-col rounded-2xl bg-white">
+            <h1 className="px-2 pb-3 text-xl font-bold text-themeBlue">
+              付款方式
+            </h1>
+            <hr />
+            <div className="flex flex-col my-5 mx-2 text-lg">
+              {payMethods.map((item) => (
+                <Checkbox
+                  type="circle"
+                  checked={payment === item.value}
+                  onChange={() => setPayment(item.value)}
+                >
+                  <div className="my-4">
+                    <span className="px-2">{item.label}</span>
+                  </div>
+                </Checkbox>
+              ))}
             </div>
           </div>
-        </div>
-        <div className="w-3/4 flex justify-between">
-          <button
-            onClick={() => {
-              changePage("/cart");
-            }}
-            className="py-2 px-3 text-xl font-bold rounded-xl bg-bgBlue text-themeBlue cursor-pointer"
-          >
-            回上一頁
-          </button>
-          <button
-            onClick={() => {
-              changePage("/complete-order");
-            }}
-            className="py-2 px-3 text-xl font-bold rounded-xl bg-[#cd333339] text-[#cd3333] cursor-pointer"
-          >
-            確定結帳
-          </button>
-        </div>
+          <div className="flex justify-between">
+            <button
+              type="button"
+              onClick={() => {
+                changePage("/cart");
+              }}
+              className="py-2 px-3 text-xl font-bold rounded-xl bg-bgBlue text-themeBlue cursor-pointer"
+            >
+              回上一頁
+            </button>
+            <button className="py-2 px-3 text-xl font-bold rounded-xl bg-[#cd333339] text-[#cd3333] cursor-pointer">
+              確定結帳
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

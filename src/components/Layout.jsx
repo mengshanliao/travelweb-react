@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { token, setToken } = useUserStore();
+  const { token, setToken, cart } = useUserStore();
 
   const changePage = (url) => {
     navigate(url);
@@ -63,7 +63,18 @@ const Layout = ({ children }) => {
               onClick={() => changePage("/cart")}
               className="mr-2 px-3 py-1 rounded-3xl hover:bg-bgBlue cursor-pointer"
             >
-              <i className="fa-solid fa-cart-shopping"></i>
+              <div className="relative w-6">
+                <i className="fa-solid fa-cart-shopping"></i>
+                {cart.length ? (
+                  <span className="absolute bg-themeRed block -top-3 -right-3 w-5 h-5 rounded-full">
+                    <span className="absolute text-sm text-white font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      {cart.length}
+                    </span>
+                  </span>
+                ) : (
+                  ""
+                )}
+              </div>
             </li>
             <li
               onClick={() => changePage("/my-trip")}

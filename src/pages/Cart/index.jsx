@@ -10,7 +10,6 @@ import {
 import { Steps } from "antd";
 import { useUserStore } from "@/store/user";
 import { formatDateTW } from "@/utils/time";
-import { ticketApi } from "@/api/ticket";
 
 const Cart = () => {
   const { cart, setCart } = useUserStore(); //存入localStorage
@@ -18,13 +17,11 @@ const Cart = () => {
   const [total, setTotal] = useState(0); //總金額
   const [selectedTickets, setSelectedTickets] = useState([]); //純ID數字,選取狀態
   const [isCheckAll, setIsCheckAll] = useState(false);
-
   const navigate = useNavigate();
   const changePage = (url) => {
     navigate(url);
   };
-
-  //cart裡的全選:本來都沒選或至少一個已經選取=>全選;本來全選=>全部取消選取
+  //cart裡的全選:都沒選或至少一個已經選取=>全選;全選=>全部取消
   const checkAll = () => {
     setIsCheckAll(!checkAll);
     if (selectedTickets.length < cartTickets.length) {
@@ -36,6 +33,14 @@ const Cart = () => {
     } else {
       setSelectedTickets([]);
     }
+  };
+  //刪除選中的活動
+  const deleteSelectedTickets = () => {
+    const newCart = cartTickets.filter((ticket) => {
+      return !selectedTickets.includes(ticket.id);
+    });
+    setCartTickets(newCart);
+    setCart(newCart);
   };
   //cart裡選取
   const handleSelect = (id) => {
@@ -78,6 +83,7 @@ const Cart = () => {
     };
     calculatePrice();
   }, [cartTickets]);
+
   //分別按滿選取框後，全選框也要打勾
   useEffect(() => {
     if (!selectedTickets.length) {
@@ -119,16 +125,24 @@ const Cart = () => {
         <div className="w-3/4 flex flex-col items-center ">
           <div className="w-4/5 p-3 rounded-2xl bg-white ">
             <div className="h-12 flex justify-between items-center p-2 mx-3">
-              <Checkbox onChange={checkAll} checked={isCheckAll}>
-                全選
-              </Checkbox>
-              {selectedTickets.length ? (
-                <span className="px-2 py-1 text-sm border border-solid border-black hover:bg-gray-200 rounded-xl cursor-pointer">
-                  刪除選中的活動
-                </span>
-              ) : (
-                ""
-              )}
+              <div>
+                <Checkbox onChange={checkAll} checked={isCheckAll}>
+                  全選
+                </Checkbox>
+              </div>
+
+              <div>
+                {selectedTickets.length ? (
+                  <span
+                    onClick={deleteSelectedTickets}
+                    className="px-2 py-1 text-sm border border-solid border-black hover:bg-gray-200 rounded-xl cursor-pointer"
+                  >
+                    刪除選中的活動
+                  </span>
+                ) : (
+                  ""
+                )}
+              </div>
             </div>
             <hr />
             {cartTickets.map((ticket) => (

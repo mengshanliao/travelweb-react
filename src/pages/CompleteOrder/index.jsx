@@ -47,7 +47,7 @@ const CompleteOrder = () => {
           onClick={() => {
             changePage("/booking");
           }}
-          class="my-5 py-2 px-3 text-xl font-bold rounded-xl bg-bgBlue text-themeBlue cursor-pointer"
+          className="my-5 py-2 px-3 text-xl font-bold rounded-xl bg-bgBlue text-themeBlue cursor-pointer"
         >
           回上一頁
         </button>

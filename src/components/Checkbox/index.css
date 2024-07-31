@@ -1,3 +1,6 @@
 input[type="checkbox"]:checked ~ i {
   display: inline;
 }
+input[type="checkbox"]:checked ~ .circle {
+  display: block;
+}
