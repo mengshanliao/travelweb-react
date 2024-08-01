@@ -13,7 +13,7 @@ const TicketCard = ({
   sold,
 }) => {
   return (
-    <div className="w-72 m-4 border border-solid border-gray-200 rounded-xl overflow-hidden hover:shadow-lg">
+    <div className="w-72 m-4 border border-solid border-gray-200 bg-white rounded-xl overflow-hidden hover:shadow-lg">
       <div
         onClick={onClick}
         className="relative overflow-hidden cursor-pointer"

@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+const userState = localStorage.getItem("user");
 
 export const useUserStore = create(
   persist(
@@ -12,7 +13,10 @@ export const useUserStore = create(
       setOrder: (order) => set(() => ({ order: order })),
       isDarkTheme: false,
       setIsDarkTheme: (isDarkTheme) => set(() => ({ isDarkTheme })),
+      language: userState ? JSON.parse(userState).state.language : "zh_TW",
+      setLanguage: (language) => set(() => ({ language })),
     }),
+
     {
       name: "user",
     }

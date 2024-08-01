@@ -24,13 +24,14 @@ header div h2 {
 .darkMode {
   background-color: #002143;
 }
-.darkMode header {
+.darkMode header,
+footer {
   background-color: #002143;
   color: white;
 }
-.darkMode footer {
-  background-color: white;
-  color: #002143;
+
+.darkMode h3 {
+  color: white;
 }
 
 /* Booking page - antd:steps */

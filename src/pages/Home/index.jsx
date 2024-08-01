@@ -8,6 +8,7 @@ import PostCard from "@/components/PostCard";
 import TicketCard from "@/components/TicketCard";
 import { usePostStore } from "@/store/post";
 import { useTicketStore } from "@/store/ticket";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const { storagePosts, setStoragePosts } = usePostStore(); //存入localStorage
@@ -17,6 +18,7 @@ const Home = () => {
   const [posts, setPosts] = useState(storagePosts);
   const [tickets, setTickets] = useState(storageTickets);
   const [cities, setCities] = useState(storageCities);
+  const { t } = useTranslation();
 
   const navigate = useNavigate();
   const changePage = (url) => {
@@ -70,7 +72,7 @@ const Home = () => {
           }}
           className="absolute z-20 top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] px-4 py-3 text-[22px] font-medium rounded-2xl bg-[#ffffffcc] text-[#002143] hover:text-white hover:bg-[#002143]"
         >
-          開始我的旅遊記憶庫
+          {t("start")}
         </button>
         <img
           src="/src/assets/images/lake拷貝2.jpg"
@@ -93,9 +95,10 @@ const Home = () => {
         ))}
       </div>
 
-      <h2 className="flex p-2 m-6 mt-[50px] text-[27px] font-medium text-themeBlue">
-        <i className="fa-solid fa-ticket"> 行程及門票</i>
-      </h2>
+      <h3 className="flex items-center p-2 m-6 mt-[50px] text-[27px] font-medium text-themeBlue">
+        <i className="fa-solid fa-ticket pr-2"></i>
+        {t("ticket")}
+      </h3>
       <section className="my-4 flex flex-wrap justify-center items-center">
         {tickets.map((ticket) => (
           <TicketCard
@@ -114,9 +117,10 @@ const Home = () => {
         ))}
       </section>
 
-      <h2 className="flex p-2 m-6 text-[27px] mt-[50px] font-medium text-themeBlue">
-        <i className="fa-solid fa-umbrella-beach"> 熱門記憶庫</i>
-      </h2>
+      <h3 className="flex items-center p-2 m-6 text-[27px] mt-[50px] font-medium text-themeBlue">
+        <i className="fa-solid fa-umbrella-beach pr-2"></i>
+        {t("memories")}
+      </h3>
       <section className="my-12 flex flex-wrap justify-center p-2 items-center">
         {posts.map((post) => (
           <PostCard

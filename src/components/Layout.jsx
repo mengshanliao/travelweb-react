@@ -5,13 +5,35 @@ import { useUserStore } from "@/store/user";
 import { Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
 
 const Layout = ({ children }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { token, setToken, cart, isDarkTheme, setIsDarkTheme } = useUserStore();
+  const {
+    token,
+    setToken,
+    cart,
+    isDarkTheme,
+    setIsDarkTheme,
+    language,
+    setLanguage,
+  } = useUserStore();
+
+  const languageList = {
+    zh: "zh_TW",
+    en: "en_US",
+  };
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setLanguage(lang);
+  };
+
   const changePage = (url) => {
     navigate(url);
   };
@@ -52,15 +74,41 @@ const Layout = ({ children }) => {
             <h2 className="mt-1 text-4xl">Your Travels & Memories</h2>
           </div>
           <ul className="flex justify-between items-center text-xl">
-            <li className="mr-2 px-3 py-1 rounded-3xl hover:bg-bgBlue cursor-pointer">
-              <i className="fa-solid fa-globe"></i>
+            <li className="mr-2 px-2 py-1 rounded-3xl hover:bg-bgBlue cursor-pointer">
+              {language === languageList.zh ? (
+                <div className="flex items-center">
+                  <i class="fa-solid fa-globe p-1"></i>
+                  <li
+                    className="text-base"
+                    onClick={() => changeLanguage(languageList.en)}
+                  >
+                    EN
+                  </li>
+                </div>
+              ) : (
+                <div className="flex items-center">
+                  <i class="fa-solid fa-globe p-1"></i>
+                  <li
+                    className="text-base"
+                    onClick={() => changeLanguage(languageList.zh)}
+                  >
+                    繁中
+                  </li>
+                </div>
+              )}
             </li>
             <li className="mr-2 px-3 py-1 rounded-3xl hover:bg-bgBlue cursor-pointer">
-              {setIsDarkTheme(!isDarkTheme) ? (
-                <i class="fa-solid fa-moon"></i>
-              ) : (
-                <i className="fa-regular fa-moon"></i>
-              )}
+              <div
+                onClick={() => {
+                  setIsDarkTheme(!isDarkTheme);
+                }}
+              >
+                {!isDarkTheme ? (
+                  <i className="fa-regular fa-moon"></i>
+                ) : (
+                  <i className="fa-solid fa-moon"></i>
+                )}
+              </div>
             </li>
             <li
               onClick={() => changePage("/cart")}
@@ -90,7 +138,7 @@ const Layout = ({ children }) => {
                 onClick={logout}
                 className="mr-2 p-2 rounded-3xl hover:bg-bgBlue cursor-pointer"
               >
-                登出
+                {t("logout")}
               </li>
             ) : (
               <li
@@ -99,7 +147,7 @@ const Layout = ({ children }) => {
                 }}
                 className="mr-2 p-2 rounded-3xl hover:bg-bgBlue cursor-pointer"
               >
-                登入
+                {t("login")}
               </li>
             )}
           </ul>
@@ -112,7 +160,7 @@ const Layout = ({ children }) => {
       </div>
 
       <Modal
-        title="登入"
+        title={t("login")}
         open={isModalOpen}
         onOk={login}
         onCancel={() => {
@@ -122,10 +170,10 @@ const Layout = ({ children }) => {
         <div className="flex flex-col text-base">
           <div className="mt-4 flex items-center">
             <label htmlFor="username" className="w-[100px] text-right">
-              使用者名稱：
+              {t("username")} :
             </label>
             <input
-              className="bg-gray-200 rounded-md focus:outline-none pl-2 py-1"
+              className="bg-gray-200 rounded-md focus:outline-none pl-2 py-1 mx-2"
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -134,10 +182,10 @@ const Layout = ({ children }) => {
           </div>
           <div className="mt-8 flex items-center text-right">
             <label htmlFor="password" className="w-[100px]">
-              密碼：
+              {t("password")} :
             </label>
             <input
-              className="bg-gray-200 rounded-md focus:outline-none pl-2 py-1 "
+              className="bg-gray-200 rounded-md focus:outline-none pl-2 py-1 mx-2"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -146,7 +194,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </Modal>
-      {isDarkTheme ? (
+      {!isDarkTheme ? (
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="fixed bottom-20 right-8 w-10 h-10 border-2 border-themeBlue border-solid rounded-full cursor-pointer hover:bg-bgBlue hover:border-themeBlue"

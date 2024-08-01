@@ -3,15 +3,15 @@ const NewTrip = () => {
     <div className="bg-bgBlue flex justify-center">
       <div className="w-[85%] h-[900px] py-12 flex flex-col">
         <div className="flex justify-between">
-          <h1 className="text-themeBlue font-semibold text-2xl">
+          <h3 className="text-themeBlue font-semibold text-2xl">
             <i class="fa-solid fa-signs-post p-2"></i>
             開始我的記憶庫
-          </h1>
+          </h3>
           <button
             onClick={() => {
               changePage("/cart");
             }}
-            class="w-[100px] py-2 text-xl font-bold rounded-xl bg-bgBlue text-themeBlue cursor-pointer"
+            class="w-[100px] py-2 text-xl font-bold rounded-xl bg-white text-themeBlue cursor-pointer"
           >
             發布文章
           </button>
