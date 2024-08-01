@@ -20,6 +20,19 @@ header div h2 {
   font-style: normal;
 }
 
+/* DarkTheme */
+.darkMode {
+  background-color: #002143;
+}
+.darkMode header {
+  background-color: #002143;
+  color: white;
+}
+.darkMode footer {
+  background-color: white;
+  color: #002143;
+}
+
 /* Booking page - antd:steps */
 .ant-steps-item-title::after {
   background-color: #002143 !important;

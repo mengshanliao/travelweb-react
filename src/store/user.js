@@ -10,6 +10,8 @@ export const useUserStore = create(
       setCart: (products) => set(() => ({ cart: products })),
       order: [],
       setOrder: (order) => set(() => ({ order: order })),
+      isDarkTheme: false,
+      setIsDarkTheme: (isDarkTheme) => set(() => ({ isDarkTheme })),
     }),
     {
       name: "user",

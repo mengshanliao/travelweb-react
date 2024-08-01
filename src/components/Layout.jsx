@@ -11,12 +11,11 @@ const Layout = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { token, setToken, cart } = useUserStore();
-
+  const { token, setToken, cart, isDarkTheme, setIsDarkTheme } = useUserStore();
   const changePage = (url) => {
     navigate(url);
   };
-
+  //
   const handleCancel = (bool) => {
     setIsModalOpen(bool);
   };
@@ -42,9 +41,9 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <>
+    <div className={clsx({ darkMode: isDarkTheme })}>
       <div className="flex flex-col min-h-screen">
-        <header className="flex p-2 justify-between h-[110px] bg-white text-themeBlue shadow-lg">
+        <header className="flex p-2 justify-between h-[110px] bg-white text-themeBlue ">
           <div onClick={() => changePage("/")} className="mx-2 cursor-pointer">
             <h1 className="flex text-4xl ">
               Let's Create
@@ -57,7 +56,11 @@ const Layout = ({ children }) => {
               <i className="fa-solid fa-globe"></i>
             </li>
             <li className="mr-2 px-3 py-1 rounded-3xl hover:bg-bgBlue cursor-pointer">
-              <i className="fa-regular fa-moon"></i>
+              {setIsDarkTheme(!isDarkTheme) ? (
+                <i class="fa-solid fa-moon"></i>
+              ) : (
+                <i className="fa-regular fa-moon"></i>
+              )}
             </li>
             <li
               onClick={() => changePage("/cart")}
@@ -143,13 +146,22 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </Modal>
-      <div
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-20 right-8 w-10 h-10 border-2 border-themeBlue border-solid rounded-full cursor-pointer hover:bg-bgBlue hover:border-themeBlue"
-      >
-        <i className="fa-solid fa-arrow-up absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl"></i>
-      </div>
-    </>
+      {isDarkTheme ? (
+        <div
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-20 right-8 w-10 h-10 border-2 border-themeBlue border-solid rounded-full cursor-pointer hover:bg-bgBlue hover:border-themeBlue"
+        >
+          <i className="fa-solid fa-arrow-up absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl"></i>
+        </div>
+      ) : (
+        <div
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-20 right-8 w-10 h-10 border-2 border-white border-solid text-white rounded-full cursor-pointer hover:bg-white hover:text-themeBlue"
+        >
+          <i className="fa-solid fa-arrow-up absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl"></i>
+        </div>
+      )}
+    </div>
   );
 };
 export default Layout;

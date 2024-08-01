@@ -75,7 +75,7 @@ const Home = () => {
         <img
           src="/src/assets/images/lake拷貝2.jpg"
           alt=""
-          className="my-1 w-full h-[320px] "
+          className="w-full h-[320px] "
         />
         <div className="absolute z-10 w-full h-[320px] top-0 left-0 bg-[#0000002a]"></div>
       </div>
