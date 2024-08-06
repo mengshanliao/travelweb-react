@@ -13,15 +13,15 @@ import Checkbox from "@/components/Checkbox";
 const payMethods = [
   {
     label: "信用卡/簽帳金融卡",
-    value: "visa",
+    value: "Visa",
   },
   {
     label: "LINE Pay",
-    value: "line",
+    value: "Line",
   },
   {
     label: "超商繳費",
-    value: "store",
+    value: "Store",
   },
 ];
 const Booking = () => {
@@ -46,12 +46,14 @@ const Booking = () => {
       return;
     }
     const formData = {
+      id: Math.floor(Math.random() * 1000),
       lastName,
       firstName,
       phone,
       email,
       payment,
       order: cart,
+      total,
     };
     console.log(formData);
     setCart([]);
@@ -178,7 +180,6 @@ const Booking = () => {
                   ""
                 )}
               </div>
-
               <label htmlFor="phone" className="my-2 font-bold">
                 手機號碼
               </label>

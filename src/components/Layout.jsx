@@ -8,7 +8,7 @@ import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 
-const Layout = ({ children }) => {
+const Layout = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -65,54 +65,55 @@ const Layout = ({ children }) => {
   return (
     <div className={clsx({ darkMode: isDarkTheme })}>
       <div className="flex flex-col min-h-screen">
-        <header className="flex p-2 justify-between h-[110px] bg-white text-themeBlue ">
+        <header className="px-4 flex items-center bg-white justify-between h-[110px] shadow-lg sticky top-0 z-40">
           <div onClick={() => changePage("/")} className="mx-2 cursor-pointer">
-            <h1 className="flex text-4xl ">
+            <h1 className="flex text-4xl  text-themeG">
               Let's Create
               <i className="fa-solid fa-feather-pointed ml-3 text-4xl" />
             </h1>
-            <h2 className="mt-1 text-4xl">Your Travels & Memories</h2>
+            <h2 className="mt-1 text-4xl text-lightG">
+              Your Travels & Memories
+            </h2>
           </div>
-          <ul className="flex justify-between items-center text-xl">
-            <li className="mr-2 px-2 py-1 rounded-3xl hover:bg-bgBlue cursor-pointer">
+          <ul className="flex justify-between items-center text-xl font-medium text-themeG">
+            <li className="mr-2 px-2 py-1 rounded-3xl hover:bg-bgColor cursor-pointer hover:transition-all hover:duration-300 hover:ease-in-out">
               {language === languageList.zh ? (
-                <div className="flex items-center">
-                  <i class="fa-solid fa-globe p-1"></i>
-                  <li
-                    className="text-base"
-                    onClick={() => changeLanguage(languageList.en)}
-                  >
-                    EN
-                  </li>
+                <div
+                  className="flex items-center"
+                  onClick={() => changeLanguage(languageList.en)}
+                >
+                  <i className="fa-solid fa-globe p-1"></i>
+                  <p className="text-base">EN</p>
                 </div>
               ) : (
-                <div className="flex items-center">
-                  <i class="fa-solid fa-globe p-1"></i>
-                  <li
-                    className="text-base"
-                    onClick={() => changeLanguage(languageList.zh)}
-                  >
-                    繁中
-                  </li>
+                <div
+                  className="flex items-center"
+                  onClick={() => changeLanguage(languageList.zh)}
+                >
+                  <i className="fa-solid fa-globe p-1"></i>
+                  <p className="text-base">繁中</p>
                 </div>
               )}
             </li>
-            <li className="mr-2 px-3 py-1 rounded-3xl hover:bg-bgBlue cursor-pointer">
+            <li className="mr-2 px-3 py-1 rounded-3xl hover:bg-bgColor cursor-pointer hover:transition-all hover:duration-300 hover:ease-in-out">
               <div
                 onClick={() => {
                   setIsDarkTheme(!isDarkTheme);
+                  message.success(`${!isDarkTheme ? "暗黑模式" : "明亮模式"}`);
                 }}
               >
                 {!isDarkTheme ? (
-                  <i className="fa-regular fa-moon"></i>
+                  <div>
+                    <i className="fa-regular fa-moon" />
+                  </div>
                 ) : (
-                  <i className="fa-solid fa-moon"></i>
+                  <i className="fa-solid fa-moon" />
                 )}
               </div>
             </li>
             <li
               onClick={() => changePage("/cart")}
-              className="mr-2 px-3 py-1 rounded-3xl hover:bg-bgBlue cursor-pointer"
+              className="mr-2 px-3 py-1 rounded-3xl hover:bg-bgColor cursor-pointer hover:transition-all hover:duration-300 hover:ease-in-out"
             >
               <div className="relative w-6">
                 <i className="fa-solid fa-cart-shopping"></i>
@@ -129,14 +130,14 @@ const Layout = ({ children }) => {
             </li>
             <li
               onClick={() => changePage("/my-trip")}
-              className="mr-2 px-3 py-1 rounded-3xl hover:bg-bgBlue cursor-pointer"
+              className="mr-2 px-3 py-1 rounded-3xl hover:bg-bgColor cursor-pointer hover:transition-all hover:duration-300 hover:ease-in-out"
             >
               <i className="fa-solid fa-user"></i>
             </li>
             {token ? (
               <li
                 onClick={logout}
-                className="mr-2 p-2 rounded-3xl hover:bg-bgBlue cursor-pointer"
+                className="mr-2 p-2 rounded-3xl hover:bg-bgColor cursor-pointer hover:transition-all hover:duration-300 hover:ease-in-out"
               >
                 {t("logout")}
               </li>
@@ -145,7 +146,7 @@ const Layout = ({ children }) => {
                 onClick={() => {
                   setIsModalOpen(true);
                 }}
-                className="mr-2 p-2 rounded-3xl hover:bg-bgBlue cursor-pointer"
+                className="mr-2 p-2 rounded-3xl hover:bg-bgColor cursor-pointer hover:transition-all hover:duration-300 hover:ease-in-out"
               >
                 {t("login")}
               </li>
@@ -197,7 +198,7 @@ const Layout = ({ children }) => {
       {!isDarkTheme ? (
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-20 right-8 w-10 h-10 border-2 border-themeBlue border-solid rounded-full cursor-pointer hover:bg-bgBlue hover:border-themeBlue"
+          className="fixed bottom-20 right-8 w-10 h-10 border-2 border-themeG text-themeG border-solid rounded-full cursor-pointer hover:bg-amber-100"
         >
           <i className="fa-solid fa-arrow-up absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl"></i>
         </div>

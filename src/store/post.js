@@ -9,6 +9,8 @@ export const usePostStore = create(
       setStoragePosts: (posts) => set(() => ({ storagePosts: posts })),
       collection: [],
       setCollection: (posts) => set(() => ({ collection: posts })),
+      storageAuthors: [],
+      setStorageAuthors: (authors) => set(() => ({ storageAuthors: authors })),
     }),
     {
       name: "post",

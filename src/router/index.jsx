@@ -12,6 +12,7 @@ import {
   Cart,
   Booking,
   CompleteOrder,
+  Order,
   NotFound,
 } from "@/pages";
 
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "/complete-order",
         element: <CompleteOrder />,
+      },
+      {
+        path: "/order",
+        element: <Order />,
       },
       {
         path: "*",

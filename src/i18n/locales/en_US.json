@@ -3,7 +3,10 @@
   "logout": "Logout",
   "username": "Username",
   "password": "Password",
-  "start": "Let's Start",
-  "ticket": "Journeys & Tickets",
-  "memories": "Memories"
+  "start": "START",
+  "order": "ORDER",
+  "author": "TRAVELING EXPERT",
+  "city": "CITIES",
+  "ticket": "JOURNEYS & TICKETS",
+  "memories": "MEMORIES"
 }

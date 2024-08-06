@@ -4,6 +4,9 @@
   "username": "使用者名稱",
   "password": "密碼",
   "start": "開始我的記憶庫",
+  "order": "訂單詳情",
+  "city": "熱門城市",
+  "author": "旅遊達人",
   "ticket": "行程及門票",
   "memories": "熱門記憶庫"
 }

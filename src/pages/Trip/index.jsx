@@ -45,7 +45,7 @@ const Trip = () => {
         <hr />
         <div className="flex flex-col justify-center items-center m-5">
           <div className="h-[140px] w-[800px] border border-solid border-black ">
-            簡介內容,彈窗框
+            簡介內容
           </div>
           <div className="w-[800px] m-10">
             <h2 className="my-5 font-medium text-2xl text-[#002143]">

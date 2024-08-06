@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Sophia Lin",
+    "avatar": "https://images.unsplash.com/photo-1445053023192-8d45cb66099d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "desc": "在全球各大城市居住過，寫了大量城市探索指南和文章，介紹很多當地美食、文化活動和創意市集。",
+    "isFollow": false
+  },
+  {
+    "id": 2,
+    "name": "David Chang",
+    "avatar": "https://images.unsplash.com/photo-1468078809804-4c7b3e60a478?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "desc": "探險範圍從北極的冰原到亞馬遜雨林。攀登世界最高峰、潛入海洋深處以及穿越無人沙漠的經歷。",
+    "isFollow": false
+  },
+  {
+    "id": 3,
+    "name": "Alex Wang",
+    "avatar": "https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "desc": "足跡遍布全球五大洲。擁有超過20年的旅行經驗，分享在超過150個國家的奇遇和經歷。",
+    "isFollow": false
+  },
+  {
+    "id": 4,
+    "name": "James Wang",
+    "avatar": "https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "desc": "我是一位環球旅行愛好者，足跡遍布超過80個國家，希望能讓更多人知道自助旅行的自由與樂趣。",
+    "isFollow": false
+  },
+  {
+    "id": 5,
+    "name": "Emily Chen",
+    "avatar": "https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "desc": "喜愛美食和文化旅遊，曾在歐洲、亞洲和南美洲居住過，並深入探索當地的美食文化。",
+    "isFollow": false
+  },
+  {
+    "id": 6,
+    "name": "Michael Lin",
+    "avatar": "https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "desc": "旅行故事充滿了對自然界的熱愛和保護意識。這些探險經歷及奇異的自然景觀和野生動物另人難忘。",
+    "isFollow": false
+  }
+]

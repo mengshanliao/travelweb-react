@@ -8,6 +8,7 @@ import Post from "./Post";
 import Cart from "./Cart";
 import Booking from "./Booking";
 import CompleteOrder from "./CompleteOrder";
+import Order from "./Order";
 import NotFound from "./NotFound";
 
 export {
@@ -21,5 +22,6 @@ export {
   Booking,
   Post,
   CompleteOrder,
+  Order,
   NotFound,
 };
