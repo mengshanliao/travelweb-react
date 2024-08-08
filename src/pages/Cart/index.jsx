@@ -95,7 +95,7 @@ const Cart = () => {
   }, [selectedTickets]);
 
   return (
-    <div className="h-screen py-14 bg-[#0022431b]">
+    <div className="h-screen py-14 bg-[#1a675822]">
       <div className="mx-32 mb-4 px-4 py-2">
         <Steps
           items={[
@@ -103,7 +103,7 @@ const Cart = () => {
               title: "選擇方案",
               status: "finish",
               icon: (
-                <ShoppingCartOutlined className="text-2xl text-themeBlue bg-bgBlue p-2 rounded-full" />
+                <ShoppingCartOutlined className="text-2xl text-themeBlue bg-bgG p-2 rounded-full" />
               ),
             },
             {
@@ -200,7 +200,7 @@ const Cart = () => {
               onClick={() => {
                 changePage("/");
               }}
-              className="m-3 py-2 px-5 text-xl font-bold rounded-xl bg-bgBlue text-themeBlue cursor-pointer"
+              className="m-3 py-1 px-3 text-xl font-bold rounded-xl bg-bgG text-themeG cursor-pointer"
             >
               回首頁
             </button>
@@ -209,16 +209,7 @@ const Cart = () => {
 
         <div className="w-1/5 h-1/2 p-4 bg-white rounded-2xl">
           <div className="px-2 pb-8">
-            <div className="mb-8 m-1 p-4 bg-[#0022431b] rounded-md">
-              <h1 className="text-lg pb-2">優惠折扣</h1>
-              <input
-                type="text"
-                className="w-full py-1 px-2 rounded-md bg-white"
-                placeholder="請輸入折扣碼"
-              />
-            </div>
-            <hr />
-            <p className="py-4 text-lg">
+            <p className="pb-2 text-lg">
               {cartTickets.length} 件總計
               <i className="fa-solid fa-angles-down px-3" />
             </p>

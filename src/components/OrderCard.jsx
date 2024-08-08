@@ -11,7 +11,7 @@ const OrderCard = ({
   total,
 }) => {
   return (
-    <div className="my-6 py-6 px-6 bg-bgG rounded-md">
+    <div className="mb-8 py-4 px-6 bg-bgG rounded-md">
       <p className="mb-4 font-semibold text-lg">訂單編號 {id}</p>
       <div className="flex flex-col justify-center bg-white rounded-lg">
         {order.map((order) => (
@@ -27,6 +27,10 @@ const OrderCard = ({
             <div className="m-3">
               <span className="mr-4 text-gray-500">訂單金額</span>
               <span>{order.price}</span>
+            </div>
+            <div className="m-3">
+              <span className="mr-4 text-gray-500">門票張數</span>
+              <span>{order.quantity} 張</span>
             </div>
             <hr className="mt-2 mx-2" />
           </div>

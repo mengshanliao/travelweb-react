@@ -2,7 +2,10 @@ import FollowIcon from "./FollowIcon";
 
 const AuthorCard = ({ id, isFollow, onClick, desc, avatar, name }) => {
   return (
-    <div className="w-full h-[140px] flex items-center">
+    <div
+      onClick={() => onClick(name)}
+      className="w-full h-[140px] flex items-center"
+    >
       <img
         className="w-20 h-20 object-cover rounded-full cursor-pointer"
         src={avatar}

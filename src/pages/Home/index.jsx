@@ -194,7 +194,7 @@ const Home = () => {
                   avatar={author.avatar}
                   name={author.name}
                   isFollow={author.isFollow}
-                  onClick={() => changePage("/")}
+                  onClick={() => changePage(`/trip/${author.name}`)}
                 />
               </div>
             ))}

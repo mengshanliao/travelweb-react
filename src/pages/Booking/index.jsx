@@ -13,15 +13,15 @@ import Checkbox from "@/components/Checkbox";
 const payMethods = [
   {
     label: "信用卡/簽帳金融卡",
-    value: "Visa",
+    value: "信用卡/簽帳金融卡",
   },
   {
     label: "LINE Pay",
-    value: "Line",
+    value: "LINE Pay",
   },
   {
     label: "超商繳費",
-    value: "Store",
+    value: "超商繳費",
   },
 ];
 const Booking = () => {
@@ -55,7 +55,6 @@ const Booking = () => {
       order: cart,
       total,
     };
-    console.log(formData);
     setCart([]);
     setOrder([...order, formData]);
     changePage("/complete-order");
@@ -74,7 +73,7 @@ const Booking = () => {
   }, [cart]);
 
   return (
-    <div className="py-14 bg-[#0022431b]">
+    <div className="py-6  bg-[#1a675822]">
       <div className="mx-32 mb-4 px-4 py-2">
         <Steps
           items={[
@@ -89,7 +88,7 @@ const Booking = () => {
               title: "填寫資料",
               status: "finish",
               icon: (
-                <FormOutlined className="text-2xl text-themeBlue bg-bgBlue p-2 rounded-full " />
+                <FormOutlined className="text-2xl text-themeBlue bg-bgG p-2 rounded-full" />
               ),
               className: "custom-step",
             },
@@ -103,10 +102,8 @@ const Booking = () => {
         />
       </div>
       <div className="my-6 flex flex-col items-center justify-center">
-        <div className="w-3/4 mb-6 p-4 flex flex-col rounded-2xl bg-white">
-          <h1 className="px-2 pb-3 text-xl font-bold text-themeBlue">
-            訂單詳情
-          </h1>
+        <div className="w-[70%] mb-6 p-4 flex flex-col rounded-2xl bg-white">
+          <h1 className="px-2 pb-3 text-xl font-bold text-themeG">訂單詳情</h1>
           {cart.map((ticket) => (
             <div key={ticket.id}>
               <div className="my-3 p-2 flex justify-between border border-solid border-bgBlue rounded-lg">
@@ -133,9 +130,9 @@ const Booking = () => {
             </span>
           </div>
         </div>
-        <form onSubmit={(e) => checkout(e)} className="w-3/4">
-          <div className="mb-6 p-4 flex flex-col rounded-2xl bg-white">
-            <h1 className="px-2 pb-3 text-xl font-bold text-themeBlue">
+        <form onSubmit={(e) => checkout(e)} className="w-[70%]">
+          <div className=" mb-6 p-4 flex flex-col rounded-2xl bg-white">
+            <h1 className="px-2 pb-3 text-xl font-bold text-themeG">
               訂購人資料
             </h1>
             <hr />
@@ -228,7 +225,7 @@ const Booking = () => {
             </div>
           </div>
           <div className="mb-6 p-4 flex flex-col rounded-2xl bg-white">
-            <h1 className="px-2 pb-3 text-xl font-bold text-themeBlue">
+            <h1 className="px-2 pb-3 text-xl font-bold text-themeG">
               付款方式
             </h1>
             <hr />

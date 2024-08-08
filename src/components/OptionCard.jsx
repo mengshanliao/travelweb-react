@@ -14,15 +14,15 @@ const OptionCard = ({ title, tags, drawer, price, className, onClick }) => {
       onClick={onClick}
       className={clsx(
         className,
-        " w-3/4 mt-4 p-5 border-2 border-solid border-gray-200 rounded-2xl cursor-pointer hover:border-themeRed hover:border-2"
+        "w-[60%] mb-5 p-4 border-2 border-solid border-gray-200 rounded-2xl cursor-pointer hover:border-themeRed hover:border-2"
       )}
     >
-      <h1 className="text-[22px] font-medium mb-4">{title}</h1>
+      <h1 className="text-xl font-medium mb-3">{title}</h1>
       <div className="mb-4">
         {tags.map((tag) => (
           <span
             key={tag}
-            className="mr-2 mt-1 py-1 px-2 bg-gray-200 text-gray-700 text-base rounded-md"
+            className="mr-2 mt-1 py-1 px-2 bg-gray-200 text-gray-700 text-sm rounded-md"
           >
             {tag}
           </span>

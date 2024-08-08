@@ -7,87 +7,54 @@ const MyTrip = () => {
   };
 
   return (
-    <>
-      <div className="m-12 flex justify-between items-center text-center text-lg font-medium">
-        <div
-          onClick={() => {
-            changePage("/trip/2");
-          }}
-          className="px-3 py-1 rounded-xl bg-[#002143] text-white hover:shadow-xl border-2 border-solid border-[#002143] hover:text-[#002143] hover:bg-white cursor-pointer"
-        >
-          我的首頁
-        </div>
-        <div
+    <div className="min-w-[1000px] w-[70%] mx-auto flex flex-col">
+      <h2 className="my-6 font-medium text-2xl text-themeG">
+        <i class="fa-solid fa-map-location-dot pr-2" />
+        我的旅遊記憶庫
+      </h2>
+      <div className="mb-2">
+        <span className="mr-6 text-lg hover:font-semibold cursor-pointer">
+          已發布
+        </span>
+        <span className="text-lg hover:font-semibold cursor-pointer">草稿</span>
+      </div>
+      <hr />
+      <div className="flex justify-end">
+        <span
           onClick={() => changePage("/my-new-trip")}
-          className="px-3 py-1 rounded-xl  bg-[#002143] text-white  hover:shadow-xl border-2 border-solid border-[#002143] hover:text-[#002143] hover:bg-white  cursor-pointer"
+          className="w-36 my-4 text-center py-1 rounded-lg bg-themeG text-white border-2 border-solid border-themeG hover:text-themeG hover:bg-white cursor-pointer"
         >
           <i className="fa-solid fa-plus mr-2"></i>
           新增記憶庫
-        </div>
+        </span>
       </div>
-      <div className="m-8 flex">
-        <div className="w-[300px] m-5 border border-solid border-gray-200 rounded-xl shadow-xl">
-          <img
-            className=" w-[300px] h-[180px] rounded-t-xl"
-            src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGphcGFufGVufDB8fDB8fHww"
-          />
-          <h1 className="whitespace-nowrap overflow-hidden text-ellipsis my-2 mx-2 text-lg font-extrabold">
+      <div className="h-40 flex items-center">
+        <img
+          src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGphcGFufGVufDB8fDB8fHww"
+          alt=""
+          className="w-1/5 h-full rounded-xl"
+        />
+        <div className="ml-4 p-4 h-full border border-solid border-gray-300 rounded-xl">
+          <h3 className="mb-2 cursor-pointer text-xl font-medium hover:text-[#cd3333] ">
             日本｜東京五天四夜自由行
-          </h1>
-          <div className="flex justify-between items-center px-3 mb-2">
-            <i className="fa-regular fa-heart text-[15px]"> 12 讚</i>
-            <div className="mr-2">
-              <span className="mx-3 px-1 text-gray-500 border border-solid border-gray-200 cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333] ">
+          </h3>
+          <p className="text-lg mb-2">
+            探索日本五天四夜的奇妙旅程，從東京的繁華都市到京都的歷史古蹟，再到富士山的壯麗自然，感受無與倫比的文化與美景。
+          </p>
+          <div className="flex justify-between text-gray-500">
+            <span> 2023年7月23日</span>
+            <div className="mr-2 text-base">
+              <span className="mx-3 p-1 text-gray-500 border border-solid border-gray-200 cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333] ">
                 編輯
               </span>
-              <span className="px-1 text-gray-500 border border-solid border-gray-200 cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]">
-                刪除
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="w-[300px] m-5 border border-solid border-gray-200 rounded-xl shadow-xl">
-          <img
-            className=" w-[300px] h-[180px] rounded-t-xl"
-            src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGphcGFufGVufDB8fDB8fHww"
-          />
-          <h1 className="whitespace-nowrap overflow-hidden text-ellipsis my-2 mx-2 text-lg font-extrabold">
-            日本｜東京五天四夜自由行
-          </h1>
-          <div className="flex justify-between items-center px-3 mb-2">
-            <i className="fa-regular fa-heart text-[15px]"> 12 讚</i>
-            <div className="mr-2">
-              <span className="mx-3 px-1 text-gray-500 border border-solid border-gray-200 cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333] ">
-                編輯
-              </span>
-              <span className="px-1 text-gray-500 border border-solid border-gray-200 cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]">
-                刪除
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="w-[300px] m-5 border border-solid border-gray-200 rounded-xl shadow-xl">
-          <img
-            className=" w-[300px] h-[180px] rounded-t-xl"
-            src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGphcGFufGVufDB8fDB8fHww"
-          />
-          <h1 className="whitespace-nowrap overflow-hidden text-ellipsis my-2 mx-2 text-lg font-extrabold">
-            日本｜東京五天四夜自由行
-          </h1>
-          <div className="flex justify-between items-center px-3 mb-2">
-            <i className="fa-regular fa-heart text-[15px]"> 12 讚</i>
-            <div className="mr-2">
-              <span className="mx-3 px-1 text-gray-500 border border-solid border-gray-200 cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333] ">
-                編輯
-              </span>
-              <span className="px-1 text-gray-500 border border-solid border-gray-200 cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]">
+              <span className="p-1 text-gray-500 border border-solid border-gray-200 cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]">
                 刪除
               </span>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default MyTrip;
