@@ -13,6 +13,41 @@ import { useTranslation } from "react-i18next";
 import { authorApi } from "@/api/author";
 import { Carousel } from "antd";
 
+const navList1 = [
+  {
+    id: 1,
+    name: "start",
+    changePage: "/my-new-trip",
+  },
+  {
+    id: 2,
+    name: "order",
+    changePage: "/order",
+  },
+];
+const navList2 = [
+  {
+    id: 1,
+    name: "city",
+    changePage: "#cities",
+  },
+  {
+    id: 2,
+    name: "ticket",
+    changePage: "#tickets",
+  },
+  {
+    id: 3,
+    name: "author",
+    changePage: "#authors",
+  },
+  {
+    id: 4,
+    name: "memories",
+    changePage: "#posts",
+  },
+];
+
 const Home = () => {
   const { storagePosts, setStoragePosts, storageAuthors, setStorageAuthors } =
     usePostStore(); //存入localStorage
@@ -79,53 +114,45 @@ const Home = () => {
   }, []);
 
   const carouselImages = [
-    "/src/assets/images/bg-image1.jpg",
-    "/src/assets/images/bg-image2.jpg",
-    "/src/assets/images/bg-image4.jpg",
-    "/src/assets/images/bg-image5.jpg",
-    "/src/assets/images/bg-image6.jpg",
+    "https://images.unsplash.com/photo-1468546211010-9a842bd2026e?q=80&w=2952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1495819427834-1954f20ebb97?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1599173704879-2e407aa34cde?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1671372954216-a1ed945642cd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZnVqaXxlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1486533803613-e0ce3d009238?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1554058501-f6872d688003?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1546385040-d48180ede560?q=80&w=2831&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1495822892661-2ead864e1c7b?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://media.istockphoto.com/id/1714022836/photo/bukchon-hanok-village-with-seoul-city-skyline-cityscape-south-korea.jpg?s=612x612&w=0&k=20&c=nB0CLaOdDiiOtFIkoZKPwLoFqHY7OJ9uIf77lMNaeTU=",
+    "https://images.unsplash.com/photo-1446944987594-eb9bb99c6e22?q=80&w=2946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
 
   return (
     <>
       <ul className="mx-24 my-6 flex justify-around text-lg text-gray-400 font-medium">
-        <li
-          className="cursor-pointer hover:text-themeG hover:underline hover:underline-offset-8 hover:transition-all hover:duration-300 hover:ease-in-out"
-          onClick={() => {
-            changePage("/my-new-trip");
-          }}
-        >
-          {t("start")}
-        </li>
-        <li
-          className="cursor-pointer hover:text-themeG hover:underline hover:underline-offset-8 hover:transition-all hover:duration-300 hover:ease-in-out"
-          onClick={() => {
-            changePage("/order");
-          }}
-        >
-          {t("order")}
-        </li>
-        <li className=" cursor-pointer hover:text-themeG hover:underline hover:underline-offset-8 hover:transition-all hover:duration-300 hover:ease-in-out">
-          <a href="#cities" className="scroll-smooth">
-            {t("city")}
-          </a>
-        </li>
-        <li className="cursor-pointer hover:text-themeG hover:underline hover:underline-offset-8 hover:transition-all hover:duration-300 hover:ease-in-out">
-          <a href="#tickets"> {t("ticket")}</a>
-        </li>
-        <li className="cursor-pointer hover:text-themeG hover:underline hover:underline-offset-8 hover:transition-all hover:duration-300 hover:ease-in-out">
-          <a href="#authors"> {t("author")}</a>
-        </li>
-        <li className="cursor-pointer hover:text-themeG hover:underline hover:underline-offset-8 hover:transition-all hover:duration-300 hover:ease-in-out">
-          <a href="#posts"> {t("memories")}</a>
-        </li>
+        {navList1.map((list) => (
+          <li
+            className="cursor-pointer hover:text-themeG hover:underline hover:underline-offset-8 hover:transition-all hover:duration-300 hover:ease-in-out"
+            onClick={() => {
+              changePage(list.changePage);
+            }}
+          >
+            {t(list.name)}
+          </li>
+        ))}
+        {navList2.map((list) => (
+          <li className=" cursor-pointer hover:text-themeG hover:underline hover:underline-offset-8 hover:transition-all hover:duration-300 hover:ease-in-out">
+            <a href={list.changePage} className="scroll-smooth">
+              {t(list.name)}
+            </a>
+          </li>
+        ))}
       </ul>
 
       <Carousel autoplay autoplaySpeed={4000} speed={3000}>
         {carouselImages.map((image, idx) => (
           <div key={idx}>
             <img
-              className="mx-auto w-[85%] h-full rounded object-cover"
+              className="mx-auto w-[85%] h-[500px] rounded object-cover"
               src={image}
               alt="carousel-images"
             />

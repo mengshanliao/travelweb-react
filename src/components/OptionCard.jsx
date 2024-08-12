@@ -17,7 +17,7 @@ const OptionCard = ({ title, tags, drawer, price, className, onClick }) => {
         "w-[60%] mb-5 p-4 border-2 border-solid border-gray-200 rounded-2xl cursor-pointer hover:border-themeRed hover:border-2"
       )}
     >
-      <h1 className="text-xl font-medium mb-3">{title}</h1>
+      <h3 className="text-xl font-medium mb-3">{title}</h3>
       <div className="mb-4">
         {tags.map((tag) => (
           <span

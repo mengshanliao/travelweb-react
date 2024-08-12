@@ -26,12 +26,12 @@ const TicketCard = ({
       </div>
       <div className="p-2">
         <div className="mb-2">
-          <h1
+          <h3
             onClick={onClick}
             className="mb-2 text-xl text-nowrap font-medium text-ellipsis overflow-hidden cursor-pointer"
           >
             {title}
-          </h1>
+          </h3>
           {tags.map((tag) => (
             <span
               key={tag}

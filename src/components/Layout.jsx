@@ -205,7 +205,7 @@ const Layout = () => {
       ) : (
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-20 right-8 w-10 h-10 border-2 border-white border-solid text-white rounded-full cursor-pointer hover:bg-white hover:text-themeBlue"
+          className="fixed bottom-20 right-8 w-10 h-10 border-2 border-black border-solid text-black rounded-full cursor-pointer hover:bg-gray-400"
         >
           <i className="fa-solid fa-arrow-up absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl"></i>
         </div>

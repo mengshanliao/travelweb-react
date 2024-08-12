@@ -8,10 +8,10 @@ const MyTrip = () => {
 
   return (
     <div className="min-w-[1000px] w-[70%] mx-auto flex flex-col">
-      <h2 className="my-6 font-medium text-2xl text-themeG">
+      <h3 className="my-6 font-medium text-2xl text-themeG">
         <i class="fa-solid fa-map-location-dot pr-2" />
         我的旅遊記憶庫
-      </h2>
+      </h3>
       <div className="mb-2">
         <span className="mr-6 text-lg hover:font-semibold cursor-pointer">
           已發布

@@ -20,27 +20,38 @@ header div h2 {
   font-weight: 600;
   font-style: normal;
 }
-
-/* DarkTheme */
-.darkMode {
-  background-color: #002143;
+:target {
+  padding-top: 130px;
 }
-.darkMode header,
-footer {
-  background-color: #002143;
+/* DarkTheme */
+.darkMode header {
+  background-color: black;
   color: white;
 }
+.darkMode h1 {
+  color: white;
+}
+.darkMode h2 {
+  color: white;
+}
+.darkMode header li {
+  color: white;
+}
+.darkMode header ul :hover {
+  color: black;
+}
 
-.darkMode h3 {
+.darkMode footer {
+  background-color: black;
   color: white;
 }
 
 /* Booking page - antd:steps */
 .ant-steps-item-title::after {
-  background-color: #002143 !important;
+  background-color: black !important;
 }
 .ant-steps-item-title {
-  color: #002143 !important;
+  color: black !important;
   font-size: 16px !important;
   font-weight: 500;
 }

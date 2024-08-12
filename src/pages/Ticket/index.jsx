@@ -41,7 +41,7 @@ const Ticket = (isLike) => {
         alt=""
         className="mb-4 w-full h-[380px] object-cover"
       />
-      <h1 className="mb-4 text-[27px] font-semibold">{ticket.title}</h1>
+      <h3 className="mb-4 text-[27px] font-semibold">{ticket.title}</h3>
       <div className="mb-4">
         {ticket.tags.map((tag) => (
           <span

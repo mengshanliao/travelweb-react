@@ -7,10 +7,10 @@ const Order = () => {
   return (
     <div className="w-[70%] mx-auto m-8">
       <div className="text-themeG my-4 font-medium text-2xl flex items-center">
-        <h2 className="pr-2">
+        <h3 className="pr-2">
           <i className="fa-solid fa-table-list pr-2" />
           所有訂單
-        </h2>
+        </h3>
         <span>({order.length})</span>
       </div>
       {order.map((order) => (

@@ -18,9 +18,9 @@ const Post = () => {
       />
       <div className="w-[80%]">
         <div className="my-6">
-          <h1 className="mb-2 text-[27px] font-bold text-black">
+          <h3 className="mb-2 text-[27px] font-bold text-black">
             日本｜東京四天三夜自由行
-          </h1>
+          </h3>
           <div>
             <span className="p-1 mr-2 text-sm rounded-sm bg-bgBlue text-themeBlue">
               日本旅遊
@@ -83,9 +83,9 @@ const Post = () => {
         <hr />
         <section className="flex my-4">
           <div className="">
-            <h2 className="text-[#cd3333] bg-[#cd333339] w-20 text-center p-2 rounded-3xl font-bold">
+            <h3 className="text-[#cd3333] bg-[#cd333339] w-20 text-center p-2 rounded-3xl font-bold">
               第一天
-            </h2>
+            </h3>
             <div className="my-8 text-[#002143] text-xl">
               <div>
                 <i className="fa-solid fa-location-dot"></i>
@@ -193,7 +193,7 @@ const Post = () => {
         <hr />
         <div className="mt-6">
           <div className="flex">
-            <h2 className="text-2xl font-bold text-black">留言</h2>
+            <h3 className="text-2xl font-bold text-black">留言</h3>
             <span className="px-3 text-2xl font-bold text-black">(3)</span>
           </div>
           <input
