@@ -1,39 +1,41 @@
 import { message } from "antd";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useLocation } from "react-router-dom";
+import { usePostStore } from "@/store/post";
+import { useParams } from "react-router-dom";
+import { formatDate } from "@/utils/time";
+import FollowIcon from "@/components/FollowIcon";
+import LikeIcon from "@/components/LikeIcon";
+import CollectIcon from "@/components/CollectIcon";
 
 const Post = () => {
+  //複製連結
   const location = useLocation();
   console.log(location);
   const copy = () => {
     message.success("複製成功");
   };
+  const { id } = useParams();
+  const { storagePosts } = usePostStore();
+  const post = storagePosts.find((post) => post.id === Number(id));
 
   return (
     <div className="p-6 flex flex-col items-center">
-      <img
-        className="object-cover h-[480px] w-[80%]"
-        src="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGphcGFufGVufDB8fDB8fHww"
-        alt=""
-      />
+      <img className="object-cover h-[480px] w-[80%]" src={post.cover} alt="" />
       <div className="w-[80%]">
         <div className="my-6">
           <h3 className="mb-2 text-[27px] font-bold text-black">
-            日本｜東京四天三夜自由行
+            {post.title}
           </h3>
           <div>
-            <span className="p-1 mr-2 text-sm rounded-sm bg-bgBlue text-themeBlue">
-              日本旅遊
-            </span>
-            <span className="p-1 mr-2 text-sm rounded-sm bg-bgBlue text-themeBlue">
-              東京必遊景點
-            </span>
-            <span className="p-1 mr-2 text-sm rounded-sm bg-bgBlue text-themeBlue">
-              淺草寺
-            </span>
-            <span className="p-1 text-sm rounded-sm bg-bgBlue text-themeBlue">
-              四天三夜
-            </span>
+            {post.tags.map((tag) => (
+              <span
+                key={tag}
+                className="mr-2 p-1 text-base rounded-sm bg-bgG text-themeG"
+              >
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
 
@@ -41,37 +43,30 @@ const Post = () => {
           <div className="flex items-center mb-1">
             <img
               className="w-12 h-12 object-cover rounded-full"
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+              src={post.avatar}
               alt=""
             />
-            <h3 className="mx-2 text-2xl font-medium ">Kelly Chen</h3>
-            <span className="px-3 text-base border border-solid rounded-sm border-[#002143] cursor-pointer">
-              追蹤
-            </span>
+            <h3 className="mx-2 text-2xl font-medium ">{post.name}</h3>
+            <FollowIcon id={post.authorId} />
           </div>
-          <p className="mt-3 text-lg">
-            探索日本五天四夜的奇妙旅程，從東京的繁華都市到京都的歷史古蹟，再到富士山的壯麗自然，感受無與倫比的文化與美景。
-          </p>
+          <p className="mt-3 text-lg">{post.desc}</p>
           <div className="mt-6">
             <div className="text-base flex justify-between items-center">
-              <div className="mr-2 p-1 text-black">2023年7月23日</div>
-              <div
-                className="flex items-center text-center
-              "
-              >
-                <div className="p-1 cursor-pointer">
-                  <i className="fa-regular fa-heart" />
-                  <span className="mr-5 p-1">讚</span>
-                </div>
-                <div className="p-1 cursor-pointer rounded">
-                  <i class="fa-regular fa-bookmark" />
-                  <span className="mr-3 p-1">收藏</span>
-                </div>
+              <div className="mr-2 p-1 text-black">
+                {formatDate(post.createdAt)}
+              </div>
+              <div className="w-48 flex justify-around items-center">
+                <span className="cursor-pointer text-xl hover:text-themeRed">
+                  <LikeIcon id={post.id} />
+                </span>
+                <span className="cursor-pointer text-xl hover:text-yellow-500">
+                  <CollectIcon id={post.id} />
+                </span>
                 <CopyToClipboard
                   text={window.location.href}
                   onCopy={(text) => copy(text)}
                 >
-                  <div className="p-1 cursor-pointer hover:bg-gray-300 rounded">
+                  <div className="cursor-pointer hover:bg-gray-300 rounded">
                     <i className="fa-solid fa-link"></i>
                     <span className="p-1">複製連結</span>
                   </div>
@@ -81,111 +76,77 @@ const Post = () => {
           </div>
         </div>
         <hr />
-        <section className="flex my-4">
-          <div className="">
+        <section className="flex flex-col my-4">
+          <div>
             <h3 className="text-[#cd3333] bg-[#cd333339] w-20 text-center p-2 rounded-3xl font-bold">
               第一天
             </h3>
             <div className="my-8 text-[#002143] text-xl">
-              <div>
-                <i className="fa-solid fa-location-dot"></i>
-                <span className="px-2 font-medium">築地市場</span>
-                <p className="text-lg mt-5">
-                  東京著名的魚市場，可以品嚐美味的新鮮壽司
-                </p>
-                <div className="flex flex-wrap my-8">
-                  <img
-                    src="https://images.unsplash.com/photo-1590582917892-a6e11d1b32bc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW4lMjB0c3VraWppJTIwbWFya2V0fGVufDB8fDB8fHww"
-                    alt=""
-                    className="w-80 h-80 object-cover p-3"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1591224803255-6cfbba886c2c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGphcGFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
-                    alt=""
-                    className="w-80 h-80 object-cover p-3"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1706441740242-e695b1834454?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGphcGFuJTIwc2FzaGltaXxlbnwwfHwwfHx8MA%3D%3D"
-                    alt=""
-                    className="w-80 h-80 object-cover p-3"
-                  />
+              {post.firstDay.map((item) => (
+                <div key={post.id}>
+                  <i className="fa-solid fa-location-dot"></i>
+                  <span className="px-2 font-medium">{item.title}</span>
+                  <p className="text-lg mt-5">{item.desc}</p>
+                  <div className="flex flex-wrap my-8">
+                    {item.img.map((img) => (
+                      <img
+                        key={img}
+                        src={img}
+                        alt=""
+                        className="w-80 h-80 object-cover p-3"
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div>
-                <i className="fa-solid fa-location-dot"></i>
-                <span className="px-2 font-medium">淺草寺</span>
-                <p className="text-lg mt-5">
-                  東京最古老的寺廟之一，享受傳統的日本文化
-                </p>
-                <div className="flex flex-wrap my-8">
-                  <img
-                    src="https://images.unsplash.com/photo-1590582917892-a6e11d1b32bc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW4lMjB0c3VraWppJTIwbWFya2V0fGVufDB8fDB8fHww"
-                    alt=""
-                    className="w-80 h-80 object-cover p-3"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1591224803255-6cfbba886c2c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGphcGFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
-                    alt=""
-                    className="w-80 h-80 object-cover p-3"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1706441740242-e695b1834454?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGphcGFuJTIwc2FzaGltaXxlbnwwfHwwfHx8MA%3D%3D"
-                    alt=""
-                    className="w-80 h-80 object-cover p-3"
-                  />
-                </div>
-              </div>
-              <div>
-                <i className="fa-solid fa-location-dot"></i>
-                <span className="px-2 font-medium">鳥貴族</span>
-                <p className="text-lg mt-5"> 連鎖居酒屋，提供多樣的串燒選擇</p>
-                <div className="flex flex-wrap my-8">
-                  <img
-                    src="https://images.unsplash.com/photo-1590582917892-a6e11d1b32bc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW4lMjB0c3VraWppJTIwbWFya2V0fGVufDB8fDB8fHww"
-                    alt=""
-                    className="w-80 h-80 object-cover p-3"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1591224803255-6cfbba886c2c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGphcGFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
-                    alt=""
-                    className="w-80 h-80 object-cover p-3"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1706441740242-e695b1834454?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGphcGFuJTIwc2FzaGltaXxlbnwwfHwwfHx8MA%3D%3D"
-                    alt=""
-                    className="w-80 h-80 object-cover p-3"
-                  />
-                </div>
-                <p className="text-lg mt-5">營業時間：17:00-0:00</p>
-                <p className="text-lg mt-2">地址：東京都千代田区有楽町2-3-6</p>
-              </div>
+              ))}
             </div>
           </div>
-
-          <div className="w-1/3 m-3 flex flex-col text-lg text-gray-500 font-semibold">
-            <div className="flex m-2 p-3 border border-solid border-gray-200 ">
-              <span className="mx-12">第一天</span>
-              <div className="flex flex-col cursor-pointer">
-                <span className="pb-2 hover:text-black">築地市場</span>
-                <span className="pb-2 hover:text-black">淺草寺</span>
-                <span className="pb-2 hover:text-black">鳥貴族</span>
-              </div>
+          <div>
+            <h3 className="text-[#cd3333] bg-[#cd333339] w-20 text-center p-2 rounded-3xl font-bold">
+              第二天
+            </h3>
+            <div className="my-8 text-[#002143] text-xl">
+              {post.secondDay.map((item) => (
+                <div key={post.id}>
+                  <i className="fa-solid fa-location-dot"></i>
+                  <span className="px-2 font-medium">{item.title}</span>
+                  <p className="text-lg mt-5">{item.desc}</p>
+                  <div className="flex flex-wrap my-8">
+                    {item.img.map((img) => (
+                      <img
+                        key={img}
+                        src={img}
+                        alt=""
+                        className="w-80 h-80 object-cover p-3"
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="flex m-2 p-3 border border-solid border-gray-200">
-              <span className="mx-12">第二天</span>
-              <div className="flex flex-col cursor-pointer">
-                <span className="pb-2 hover:text-black">築地市場</span>
-                <span className="pb-2 hover:text-black">淺草寺</span>
-                <span className="pb-2 hover:text-black">鳥貴族</span>
-              </div>
-            </div>
-            <div className="flex m-2 p-3 border border-solid border-gray-200">
-              <span className="mx-12">第三天</span>
-              <div className="flex flex-col cursor-pointer">
-                <span className="pb-2 hover:text-black">築地市場</span>
-                <span className="pb-2 hover:text-black">淺草寺</span>
-                <span className="pb-2 hover:text-black">鳥貴族</span>
-              </div>
+          </div>
+          <div>
+            <h3 className="text-[#cd3333] bg-[#cd333339] w-20 text-center p-2 rounded-3xl font-bold">
+              第三天
+            </h3>
+            <div className="my-8 text-[#002143] text-xl">
+              {post.thirdDay.map((item) => (
+                <div key={post.id}>
+                  <i className="fa-solid fa-location-dot"></i>
+                  <span className="px-2 font-medium">{item.title}</span>
+                  <p className="text-lg mt-5">{item.desc}</p>
+                  <div className="flex flex-wrap my-8">
+                    {item.img.map((img) => (
+                      <img
+                        key={img}
+                        src={img}
+                        alt=""
+                        className="w-80 h-80 object-cover p-3"
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

@@ -10,14 +10,14 @@ import LikeTicket from "@/components/LikeTicket";
 import { formatDateTW } from "@/utils/time";
 import clsx from "clsx";
 
-const Ticket = (isLike) => {
+const Ticket = () => {
   const { storageTickets } = useTicketStore();
   const { cart, setCart } = useUserStore();
   const { id } = useParams();
   const ticket = storageTickets.find((ticket) => ticket.id === Number(id));
   const [selectedTime, setSelectedTime] = useState(ticket.dates[0]);
   const [selectedOption, setSelectedOption] = useState(ticket.detail[0].id);
-
+  console.log(ticket.id);
   const navigate = useNavigate();
   const changePage = (url) => {
     navigate(url);
@@ -67,7 +67,7 @@ const Ticket = (isLike) => {
             {ticket.sold} <span className="text-sm">人參加過</span>
           </p>
           <span className="text-3xl hover:text-themeRed cursor-pointer">
-            <LikeTicket id={id} isLike={isLike} />
+            <LikeTicket id={ticket.id} />
           </span>
         </div>
       </div>

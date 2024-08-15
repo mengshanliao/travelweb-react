@@ -11,12 +11,12 @@ const AuthorCard = ({ id, isFollow, onClick, desc, avatar, name }) => {
       <div className="w-2/3 h-full mx-2 flex flex-col justify-center">
         <div className="flex items-center">
           <h3
-            className="mr-3 text-lg font-medium cursor-pointer"
+            className="text-lg font-medium cursor-pointer hover:text-themeRed"
             onClick={() => onClick(name)}
           >
             {name}
           </h3>
-          <span className="bg-white">
+          <span className="bg-white ml-3">
             <FollowIcon id={id} isFollow={isFollow} />
           </span>
         </div>

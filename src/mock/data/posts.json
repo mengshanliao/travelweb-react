@@ -1,39 +1,198 @@
 [
   {
     "id": 1,
-    "title": "日本｜四天三夜自由行",
-    "tags": ["日本旅遊", "東京必遊景點", "淺草寺", "四天三夜"],
+    "authorId": 1,
+    "title": "日本｜三天兩夜自由行",
+    "tags": ["日本旅遊", "東京必遊景點", "淺草寺", "三天兩夜"],
     "cover": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGphcGFufGVufDB8fDB8fHww",
-    "desc": "探索日本四天三夜的奇妙旅程，從東京的繁華都市到京都的歷史古蹟，再到富士山的壯麗自然，感受無與倫比的文化與美景，還體驗了豐富多彩的日本美食。未來有機會，還希望能再次踏上這片美麗的土地，探索更多未曾見過的風景和文化。",
-    "avatar": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
-    "name": "Kelly Chen",
+    "desc": "探索日本三天兩夜的奇妙旅程，從東京的繁華都市到京都的歷史古蹟，再到富士山的壯麗自然，感受無與倫比的文化與美景，還體驗了豐富多彩的日本美食。未來有機會，還希望能再次踏上這片美麗的土地，探索更多未曾見過的風景和文化。",
+    "avatar": "https://images.unsplash.com/photo-1445053023192-8d45cb66099d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "name": "Sophia Lin",
     "createdAt": 1689834957,
     "isLike": false,
-    "isFollow": false
+    "firstDay": [
+      {
+        "title": "築地市場",
+        "desc": "東京著名的魚市場，可以品嚐美味的新鮮壽司",
+        "img": [
+          "https://images.unsplash.com/photo-1706441740242-e695b1834454?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGphcGFuJTIwc2FzaGltaXxlbnwwfHwwfHx8MA%3D%3D",
+          "https://images.unsplash.com/photo-1590582917892-a6e11d1b32bc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW4lMjB0c3VraWppJTIwbWFya2V0fGVufDB8fDB8fHww"
+        ]
+      },
+      {
+        "title": "淺草寺",
+        "desc": "東京最古老的寺廟之一，享受傳統的日本文化",
+        "img": [
+          "https://media.istockphoto.com/id/665508138/photo/kaminari-mon-gate.jpg?s=612x612&w=0&k=20&c=xVxW14yl0ZSsplO23xwzKTDg78vEoQuDrK7kWe_CziI=",
+          "https://media.istockphoto.com/id/1165216855/photo/young-woman-in-yukata-eating-japanese-dango-dumpling-on-street.jpg?s=612x612&w=0&k=20&c=qTs-vjbxHbS1tlEqjU4nXlT1eVxryeDxQDAtaDHOc8g="
+        ]
+      },
+      {
+        "title": "鳥貴族",
+        "desc": "連鎖居酒屋，提供多樣的串燒選擇",
+        "img": [
+          "https://media.istockphoto.com/id/1162362647/photo/restaurant-owner-cooking-for-customers.jpg?s=612x612&w=0&k=20&c=uVRCE3z7eGptmKBYABKqpcgpEkixaahxXr8146ixakQ=",
+          "https://media.istockphoto.com/id/637234566/photo/japanese-street-food-in-tokyo.jpg?s=612x612&w=0&k=20&c=djZRgHGNWCDPGKeR7nm2nsQ0I9nFixjBlFFNmy3sMAE="
+        ]
+      }
+    ],
+    "secondDay": [
+      {
+        "title": "東京晴空塔",
+        "desc": "參觀世界第二高的建築，欣賞東京全景。塔內還有水族館和購物中心。",
+        "img": [
+          "https://media.istockphoto.com/id/1481705508/photo/tokyo-sky-tree-with-sakura.jpg?s=612x612&w=0&k=20&c=kzxqSnIwQZ1_rcYLFy-40i30B4k9H3biTQeLU6ApheU="
+        ]
+      },
+      {
+        "title": "叙叙苑 東京Skytreetown Solamachi店",
+        "desc": "美味烤肉搭無敵高空市景的體驗非常難得，是來東京必吃的！",
+        "img": [
+          "https://media.istockphoto.com/id/1150720527/photo/juicy-meat-grilled-on-the-net.jpg?s=612x612&w=0&k=20&c=xJYSw03Nq1O-2mN2-w4yg9WxbpbQxuvCUzFYr1PD36E=",
+          "https://media.istockphoto.com/id/816010128/photo/beef-steaks-bbq.jpg?s=612x612&w=0&k=20&c=MhQ_qoIJk9y82xYtThQ6uuOYFRQBoq4FOebWGX4lDnM="
+        ]
+      }
+    ],
+    "thirdDay": [
+      {
+        "title": "忠犬八公像",
+        "desc": "位於涉谷車站前，是忠犬八公的雕像，是東京著名的地標之一。",
+        "img": [
+          "https://th.bing.com/th/id/OIP.9qaTjgb_Cn4ef-AInHI5GAHaF0?w=199&h=156&c=7&r=0&o=5&dpr=2&pid=1.7"
+        ]
+      },
+      {
+        "title": "涉谷十字路口",
+        "desc": "世界上最繁忙的十字路口之一，感受東京的繁忙與活力。",
+        "img": [
+          "https://media.istockphoto.com/id/1804857899/photo/top-view-of-shibuya-crossing-at-twilight-in-tokyo.jpg?s=612x612&w=0&k=20&c=X9HBkD5J9T4owbKgOiX_MQeAXG8odklwvLSB5mZuia8=",
+          "https://media.istockphoto.com/id/1201905814/photo/view-shibuya-crossing-at-sunset-tokyo-2020-japan.jpg?s=612x612&w=0&k=20&c=AHEZE2ovVgVt3697xoCGRvJoE5PYFG1p02nxbO_sBwI="
+        ]
+      }
+    ]
   },
   {
     "id": 2,
+    "authorId": 2,
     "title": "韓國｜首爾探險：傳統與現代的完美融合",
-    "tags": ["首爾旅遊", "首爾必買", "弘大延南洞", "韓國烤肉"],
+    "tags": ["首爾旅遊", "首爾四天三夜", "弘大延南洞", "韓國烤肉"],
     "cover": "https://images.unsplash.com/photo-1549221428-495f00892696?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGtvcmVhfGVufDB8fDB8fHww",
-
     "desc": "首爾，這座充滿活力的城市，將現代科技與古老傳統完美結合。從古色古香的景福宮到熙熙攘攘的明洞購物街，每個角落都充滿著驚喜和魅力。無論是品嚐韓國美食還是探索歷史文化，首爾都是不可錯過的旅遊勝地。",
-    "avatar": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
-    "name": "Emily Liu",
+    "avatar": "https://images.unsplash.com/photo-1468078809804-4c7b3e60a478?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "name": "David Chang",
     "createdAt": 1708444800,
     "isLike": false,
-    "isFollow": false
+    "firstDay": [
+      {
+        "title": "景福宮",
+        "desc": "韓國最具代表性的宮殿，是朝鮮王朝的主要宮殿之一。每天有守門將交替儀式，值得一看。",
+        "img": [
+          "https://media.istockphoto.com/id/1328872630/photo/korean-lady-in-hanbok-dress-costume-smile-in-an-ancient-gyeongbokgung-palace-in-seoul-city.jpg?s=612x612&w=0&k=20&c=TmHSzFOVPcn3cbh_Bu29eG-if_nbEy3JwMjA6CYsDQY="
+        ]
+      },
+      {
+        "title": "百濟參雞湯",
+        "desc": "嘗試傳統的韓國參雞湯，這是一道以整隻雞煮製的健康料理。",
+        "img": [
+          "https://media.istockphoto.com/id/1921986212/photo/samgyetang-a-korean-ginseng-chicken-soup.jpg?s=612x612&w=0&k=20&c=ds_R9wI6U1xWIIUNCrjeMAuh8UZ_-lPlsmpVly42qZE="
+        ]
+      }
+    ],
+    "secondDay": [
+      {
+        "title": "北村韓屋村",
+        "desc": "這裡保存了韓國傳統的韓屋建築，蜿蜒的巷弄和古色古香的建築讓人感受古代的氛圍。",
+        "img": [
+          "https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VvdWx8ZW58MHx8MHx8fDA%3D"
+        ]
+      },
+      {
+        "title": "三清洞",
+        "desc": "這是一個結合了傳統與現代的街區，有很多設計師商店、咖啡廳和藝術畫廊。",
+        "img": [
+          "https://images.unsplash.com/photo-1526199119161-4be1e3368d52?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGtvcmVhJTIwc2FtY2hlb25nZG9uZ3xlbnwwfHwwfHx8MA%3D%3D"
+        ]
+      },
+      {
+        "title": "東大門市場",
+        "desc": "首爾最著名的購物區之一，從高檔時裝到便宜服飾，24小時不停歇的市場吸引了無數遊客和當地人。",
+        "img": [
+          "https://media.istockphoto.com/id/897308916/photo/crowded-ddp-in-koera.jpg?s=612x612&w=0&k=20&c=v_5cWC0JwVq-uT-uiEUgZAS9SL0KhPXjyhKBy7wHa6Q="
+        ]
+      }
+    ],
+    "thirdDay": [
+      {
+        "title": "南山首爾塔",
+        "desc": "位於南山山頂，首爾市的象徵之一。可以乘坐纜車上山，俯瞰整個首爾的城市景觀。塔上還有愛情鎖牆，許多情侶來此將鎖掛在牆上，象徵永恆的愛。",
+        "img": [
+          "https://media.istockphoto.com/id/1757520788/photo/love-locks.jpg?s=612x612&w=0&k=20&c=9TbKVpcqEEEOH7mVieuXBWopJWAhlua0osVkyyYtEV4=",
+          "https://media.istockphoto.com/id/1845303802/photo/n-seoul-tower-seoul-south-korea.jpg?s=612x612&w=0&k=20&c=tOJnE8d6zan6mKBEdsK7nz6bY0HlCKy4VstTb1aTPew="
+        ]
+      },
+      {
+        "title": "廣藏市場",
+        "desc": "廣藏市場是首爾最古老的市場之一，這裡的美食攤位琳瑯滿目，味道獨特，價格親民。",
+        "img": [
+          "https://media.istockphoto.com/id/1496797413/photo/street-food.jpg?s=612x612&w=0&k=20&c=-T7n0EBoMokKngzxgaWkllDZMG3GTY6mP301qZP0YtA=",
+          "https://media.istockphoto.com/id/501879234/photo/gwangjang-market.jpg?s=612x612&w=0&k=20&c=Gi1HqsnqHWS9tnOkFeuMYsll5H7ENpbi9PlfMVxpViA="
+        ]
+      }
+    ]
   },
   {
     "id": 3,
+    "authorId": 3,
     "title": "澎湖群島：台灣的海上樂園",
     "tags": ["澎湖必遊景點", "摩西分海", "雙心石滬", "澎湖海鮮"],
     "cover": "https://images.unsplash.com/photo-1718907992159-2553474110bc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVuZ2h1fGVufDB8fDB8fHww",
     "desc": "澎湖群島，以其美麗的海灘和豐富的海洋資源吸引著眾多遊客。這裡有壯觀的雙心石滬、古老的天后宮和令人垂涎的澎湖花枝丸。無論是喜歡水上活動還是探索歷史文化，澎湖都是理想的旅遊目的地。",
-    "avatar": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
-    "name": "Sophia Lin",
+    "avatar": "https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "name": "Kelly Chen",
     "createdAt": 1698422400,
     "isLike": false,
-    "isFollow": false
+    "firstDay": [
+      {
+        "title": "澎湖天后宮",
+        "desc": "全台灣最古老的媽祖廟之一，香火鼎盛。",
+        "img": [
+          "https://media.istockphoto.com/id/1288625645/photo/facade-of-tianhou-temple-in-penghu-island-taiwan.jpg?s=612x612&w=0&k=20&c=nryupB6NEKvfQjL_tNi-sjXxx-plwCRxECN_skkbjcA="
+        ]
+      },
+      {
+        "title": "澎湖跨海大橋",
+        "desc": "",
+        "img": [
+          "https://media.istockphoto.com/id/964647326/photo/penghu-great-bridge-in-xiyu-township-penghu-taiwan.jpg?s=612x612&w=0&k=20&c=B-seAt6aUTqME4jmIqKuqN-MCwQ6TQE0tSZLQug8OCs="
+        ]
+      }
+    ],
+    "secondDay": [
+      {
+        "title": "北海跳島一日遊",
+        "desc": "探索吉貝島、鳥嶼等小島。吉貝島：擁有美麗的白沙灘和清澈的海水，適合浮潛和水上活動。",
+        "img": [
+          "https://media.istockphoto.com/id/1473960597/photo/tongpan-island-in-penghu-taiwan.jpg?s=612x612&w=0&k=20&c=N5Yj5-y0VcB8JQfiAvrk99VvlrJJ1Vaee2NKKoMpnSQ=",
+          "https://media.istockphoto.com/id/1173227263/photo/sea-urchin.jpg?s=612x612&w=0&k=20&c=BQl98gP0Gn3UlF4JSLM_FVOMWzXKdS9IooddwbJ98os=",
+          "https://media.istockphoto.com/id/1346857337/photo/dongjiyu-lighthouse-in-penghu-taiwan.jpg?s=612x612&w=0&k=20&c=29qiZ5H1EKNkdrHK5I8SUx4daXwog2Y5DhvtqoNFVqE="
+        ]
+      }
+    ],
+    "thirdDay": [
+      {
+        "title": "篤行十村",
+        "desc": "保存完整的眷村，充滿懷舊風情，已成為文化創意園區。",
+        "img": [
+          "https://media.istockphoto.com/id/827600526/photo/ancient-house.jpg?s=612x612&w=0&k=20&c=V96XOaGozgiOctx2iLP3NCJ3rRQ6Kb-b3KSaUBcY71k="
+        ]
+      },
+      {
+        "title": "阿嬤的澎湖味",
+        "desc": "提供傳統澎湖風味的家常菜，口味地道，餐廳環境舒適，非常適合全家聚餐。",
+        "img": [
+          "https://media.istockphoto.com/id/1483610232/photo/homemade-dish.jpg?s=612x612&w=0&k=20&c=wsNvR2yvhGNhyGBsRrnMUMoChJRNpr_dHw2XSZQdCzg="
+        ]
+      }
+    ]
   }
 ]

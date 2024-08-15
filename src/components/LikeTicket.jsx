@@ -1,20 +1,24 @@
 import { useState } from "react";
 import { useTicketStore } from "@/store/ticket";
 
-const LikeTicket = ({ isLike, id }) => {
-  const { storageTickets, setStorageTickets } = useTicketStore(); //存入localStorage
+const LikeTicket = ({ id }) => {
+  const { ticketLike, setTicketLike } = useTicketStore(); //存入localStorage
+  const isLike = ticketLike.some((ticketId) => ticketId === id);
   const [likeStatus, setLikeStatus] = useState(isLike); //點擊後狀態
 
   const handleLike = () => {
-    const newTickets = storageTickets.map((ticket) => {
-      if (ticket.id === id) {
-        ticket.isLike = !likeStatus;
-        return ticket;
-      }
-      return ticket;
-    });
-    setStorageTickets(newTickets);
+    // 頁面狀態
     setLikeStatus(!likeStatus);
+    // 儲存庫
+    if (!likeStatus) {
+      //收藏
+      const newTicketLike = [...ticketLike, id];
+      setTicketLike(newTicketLike);
+    } else {
+      //不要收藏
+      const newTicketLike = ticketLike.filter((ticketId) => ticketId === id);
+      setTicketLike(newTicketLike);
+    }
   };
 
   return (

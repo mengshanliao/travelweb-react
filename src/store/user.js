@@ -15,6 +15,8 @@ export const useUserStore = create(
       setIsDarkTheme: (isDarkTheme) => set(() => ({ isDarkTheme })),
       language: userState ? JSON.parse(userState).state.language : "zh_TW",
       setLanguage: (language) => set(() => ({ language })),
+      followList: [],
+      setFollowList: (followList) => set(() => ({ followList })),
     }),
 
     {

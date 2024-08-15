@@ -1,38 +1,25 @@
 import { useState } from "react";
-import { usePostStore } from "@/store/post";
+import { useUserStore } from "@/store/user";
 
-const FollowIcon = ({ isFollow, id }) => {
-  const { storagePosts, setStoragePosts, storageAuthors, setStorageAuthors } =
-    usePostStore(); //存入localStorage
-  const [followStatus, setFollowStatus] = useState(isFollow); //點擊後狀態
+const FollowIcon = ({ id }) => {
+  const { followList, setFollowList } = useUserStore(); //存入localStorage
+  const [followStatus, setFollowStatus] = useState(
+    followList.some((followId) => followId === id)
+  ); //點擊後狀態
 
-  const handleFollow = () => {
-    const newFollow = storagePosts.map((post) => {
-      if (post.id === id) {
-        post.isFollow = !followStatus;
-        return post;
-      }
-      return post;
-    });
-    setStoragePosts(newFollow);
-
-    setFollowStatus(!followStatus);
-  };
-  const authorFollow = () => {
-    const newAuthorFollow = storageAuthors.map((author) => {
-      if (author.id === id) {
-        author.isFollow = !followStatus;
-        return author;
-      }
-      return author;
-    });
-    setStorageAuthors(newAuthorFollow);
-
+  const handleClick = () => {
+    if (followStatus) {
+      const newFollowList = followList.filter((followId) => followId !== id);
+      setFollowList(newFollowList);
+    } else {
+      const newFollowList = [...followList, id];
+      setFollowList(newFollowList);
+    }
     setFollowStatus(!followStatus);
   };
 
   return (
-    <div onClick={(handleFollow, authorFollow)}>
+    <div onClick={handleClick}>
       {followStatus ? (
         <span className="px-2 py-1 text-sm font-medium rounded-sm text-themeRed bg-bgRed cursor-pointer border border-solid border-themeRed">
           追蹤中

@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { usePostStore } from "@/store/post";
 import { useParams } from "react-router-dom";
+import FollowIcon from "@/components/FollowIcon";
 
 const Trip = () => {
   const navigate = useNavigate();
@@ -8,16 +9,17 @@ const Trip = () => {
     navigate(url);
   };
   const { storageAuthors } = usePostStore();
-  const { name } = useParams();
-  const authorInfo = storageAuthors.find((item) => item.name === name);
-  console.log(authorInfo);
+  const { author } = useParams();
+  const authorInfo = storageAuthors.find(
+    (item) => item.name.replace(" ", "").toLowerCase() === author
+  );
 
   return (
     <div className="m-6 min-w-[1000px] w-[80%] mx-auto">
       <img
         src={authorInfo.img}
         alt="backgroundImage"
-        className="w-full h-[320px]"
+        className="w-full h-[320px] object-cover"
       />
       <div className="flex flex-col justify-center items-center mt-[-60px]">
         <img
@@ -29,9 +31,7 @@ const Trip = () => {
           <h1 className="mr-2 font-medium text-2xl text-themeG">
             {authorInfo.name}
           </h1>
-          <span className="px-2 text-base cursor-pointer  border border-solid border-black">
-            追蹤
-          </span>
+          <FollowIcon id={authorInfo.id} />
         </div>
       </div>
       <div className="w-[75%] mx-auto my-2">

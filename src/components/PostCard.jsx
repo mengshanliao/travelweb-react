@@ -5,9 +5,9 @@ import FollowIcon from "./FollowIcon";
 
 const PostCard = ({
   id,
-  isLike,
-  isFollow,
+  authorId,
   onClick,
+  isLike,
   title,
   tags,
   cover,
@@ -21,7 +21,7 @@ const PostCard = ({
       <div className="w-1/3 relative overflow-hidden  rounded-tl-lg rounded-bl-lg">
         <img className="h-full object-cover" src={cover} />
         <span className="absolute top-0 left-0 text-black text-3xl py-2 px-4 hover:text-yellow-500 cursor-pointer">
-          <CollectIcon id="{id}" />
+          <CollectIcon id={id} />
         </span>
       </div>
       <div className="px-4 py-3 w-2/3 flex flex-col">
@@ -47,15 +47,13 @@ const PostCard = ({
         <div className="flex justify-between">
           <div className="w-1/2 flex items-center">
             <img
-              className="w-9 h-9 object-cover rounded-full cursor-pointer"
+              className="w-9 h-9 object-cover rounded-full"
               src={avatar}
               alt=""
             />
-            <div className="mx-3 text-xl font-medium cursor-pointer">
-              {name}
-            </div>
+            <div className="mx-3 text-xl font-medium ">{name}</div>
             <span>
-              <FollowIcon id={id} isFollow={isFollow} />
+              <FollowIcon id={authorId} />
             </span>
           </div>
           <div className="w-1/2 flex justify-end items-center">
