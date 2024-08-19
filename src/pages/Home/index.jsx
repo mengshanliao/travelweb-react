@@ -163,11 +163,8 @@ const Home = () => {
       </Carousel>
 
       <div className="w-[70%] mx-auto min-w-[1000px]">
-        <section className="my-8">
-          <h3
-            id="cities"
-            className="flex justify-center text-[27px] mb-6 font-medium text-themeG"
-          >
+        <section id="cities" className="my-8">
+          <h3 className="flex justify-center text-[27px] mb-6 font-medium text-themeG">
             {t("city")}
           </h3>
           <div className="flex justify-center">
