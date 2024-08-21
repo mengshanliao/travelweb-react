@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+import { scrollToTop } from "@/utils/scroll";
+
 const NewTrip = () => {
+  useEffect(() => scrollToTop(), []);
+
   return (
     <div className="bg-[#1a675822] flex justify-center">
       <div className="w-[85%] h-[900px] py-12 flex flex-col">

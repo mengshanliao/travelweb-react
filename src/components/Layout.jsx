@@ -63,8 +63,13 @@ const Layout = () => {
   };
 
   return (
-    <div className={clsx({ darkMode: isDarkTheme })}>
-      <div className="flex flex-col min-h-screen">
+    <>
+      <div
+        className={clsx(
+          { darkMode: isDarkTheme },
+          "flex flex-col min-h-screen"
+        )}
+      >
         <header className="px-4 flex items-center bg-white justify-between h-[110px] shadow-lg sticky top-0 z-40">
           <div onClick={() => changePage("/")} className="mx-2 cursor-pointer">
             <h1 className="flex text-4xl  text-themeG">
@@ -195,22 +200,25 @@ const Layout = () => {
           </div>
         </div>
       </Modal>
-      {!isDarkTheme ? (
-        <div
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-20 right-8 w-10 h-10 border-2 border-themeG text-themeG border-solid rounded-full cursor-pointer hover:bg-amber-100"
-        >
-          <i className="fa-solid fa-arrow-up absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl"></i>
-        </div>
-      ) : (
-        <div
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-20 right-8 w-10 h-10 border-2 border-black border-solid text-black rounded-full cursor-pointer hover:bg-gray-400"
-        >
-          <i className="fa-solid fa-arrow-up absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl"></i>
-        </div>
-      )}
-    </div>
+
+      <div>
+        {!isDarkTheme ? (
+          <div
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="fixed bottom-20 right-8 w-10 h-10 border-2 border-themeG text-themeG border-solid rounded-full cursor-pointer hover:bg-amber-100"
+          >
+            <i className="fa-solid fa-arrow-up absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl"></i>
+          </div>
+        ) : (
+          <div
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="fixed bottom-20 right-8 w-10 h-10 border-2 border-black border-solid text-black rounded-full cursor-pointer hover:bg-gray-400"
+          >
+            <i className="fa-solid fa-arrow-up absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl"></i>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 export default Layout;

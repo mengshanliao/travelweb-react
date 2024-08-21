@@ -12,6 +12,7 @@ import { useTicketStore } from "@/store/ticket";
 import { useTranslation } from "react-i18next";
 import { authorApi } from "@/api/author";
 import { Carousel } from "antd";
+import { scrollToTop } from "@/utils/scroll";
 
 const navList1 = [
   {
@@ -27,24 +28,20 @@ const navList1 = [
 ];
 const navList2 = [
   {
-    id: 1,
+    id: "cities",
     name: "city",
-    changePage: "#cities",
   },
   {
-    id: 2,
+    id: "tickets",
     name: "ticket",
-    changePage: "#tickets",
   },
   {
-    id: 3,
+    id: "authors",
     name: "author",
-    changePage: "#authors",
   },
   {
-    id: 4,
+    id: "posts",
     name: "memories",
-    changePage: "#posts",
   },
 ];
 
@@ -100,6 +97,15 @@ const Home = () => {
     }
   };
 
+  //offsetTop
+  const scrollToTarget = (id) => {
+    const target = document.querySelector(`#${id}`);
+    window.scrollTo({
+      top: target.offsetTop - 130,
+      behavior: "smooth",
+    });
+  };
+
   //useEffect
   useEffect(() => {
     if (!posts.length) {
@@ -110,6 +116,7 @@ const Home = () => {
     }
     getCities();
     getAuthors();
+    scrollToTop();
   }, []);
 
   const carouselImages = [
@@ -141,11 +148,10 @@ const Home = () => {
         {navList2.map((list) => (
           <li
             key={list.id}
+            onClick={() => scrollToTarget(list.id)}
             className=" cursor-pointer hover:text-themeG hover:underline hover:underline-offset-8 hover:transition-all hover:duration-300 hover:ease-in-out"
           >
-            <a href={list.changePage} className="scroll-smooth">
-              {t(list.name)}
-            </a>
+            {t(list.name)}
           </li>
         ))}
       </ul>

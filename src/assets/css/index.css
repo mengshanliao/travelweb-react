@@ -8,6 +8,12 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+}
 header div h1 {
   font-family: "Playwrite NZ", cursive;
   font-optical-sizing: auto;
@@ -20,9 +26,7 @@ header div h2 {
   font-weight: 600;
   font-style: normal;
 }
-:target {
-  padding-top: 130px;
-}
+
 /* DarkTheme */
 .darkMode header {
   background-color: black;
@@ -40,7 +44,12 @@ header div h2 {
 .darkMode header ul :hover {
   color: black;
 }
-
+.darkMode {
+  background-color: gainsboro;
+}
+.darkMode li {
+  color: black;
+}
 .darkMode footer {
   background-color: black;
   color: white;

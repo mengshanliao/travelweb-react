@@ -7,6 +7,8 @@ import { formatDate } from "@/utils/time";
 import FollowIcon from "@/components/FollowIcon";
 import LikeIcon from "@/components/LikeIcon";
 import CollectIcon from "@/components/CollectIcon";
+import { useEffect } from "react";
+import { scrollToTop } from "@/utils/scroll";
 
 const Post = () => {
   //複製連結
@@ -18,6 +20,8 @@ const Post = () => {
   const { id } = useParams();
   const { storagePosts } = usePostStore();
   const post = storagePosts.find((post) => post.id === Number(id));
+
+  useEffect(() => scrollToTop(), []);
 
   return (
     <div className="p-6 flex flex-col items-center">

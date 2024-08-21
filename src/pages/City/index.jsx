@@ -1,11 +1,14 @@
 import { useTicketStore } from "@/store/ticket";
 import { useParams } from "react-router-dom";
+import { scrollToTop } from "@/utils/scroll";
+import { useEffect } from "react";
 
 const City = () => {
   const { storageCities } = useTicketStore();
   const { city } = useParams();
   const cityInfo = storageCities.find((item) => item.cityKey === city);
   console.log(cityInfo);
+  useEffect(() => scrollToTop(), []);
 
   return (
     <div className="m-6 min-w-[1000px] w-[80%] mx-auto">

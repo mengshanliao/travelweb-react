@@ -1,10 +1,14 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { scrollToTop } from "@/utils/scroll";
 
 const MyTrip = () => {
   const navigate = useNavigate();
   const changePage = (url) => {
     navigate(url);
   };
+
+  useEffect(() => scrollToTop(), []);
 
   return (
     <div className="min-w-[1000px] w-[70%] mx-auto flex flex-col">

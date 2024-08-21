@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Checkbox from "@/components/Checkbox";
 import {
   ShoppingCartOutlined,
@@ -10,6 +9,7 @@ import {
 import { Steps } from "antd";
 import { useUserStore } from "@/store/user";
 import { formatDateTW } from "@/utils/time";
+import { scrollToTop } from "@/utils/scroll";
 
 const Cart = () => {
   const { cart, setCart } = useUserStore(); //存入localStorage
@@ -39,6 +39,7 @@ const Cart = () => {
     const newCart = cartTickets.filter((ticket) => {
       return !selectedTickets.includes(ticket.id);
     });
+    setSelectedTickets([]);
     setCartTickets(newCart);
     setCart(newCart);
   };
@@ -89,10 +90,15 @@ const Cart = () => {
     if (!selectedTickets.length) {
       setIsCheckAll(false);
     }
-    if (selectedTickets.length === cartTickets.length) {
+    if (
+      cartTickets.length > 0 &&
+      selectedTickets.length === cartTickets.length
+    ) {
       setIsCheckAll(true);
     }
   }, [selectedTickets]);
+
+  useEffect(() => scrollToTop(), []);
 
   return (
     <div className="h-screen py-14 bg-[#1a675822]">
@@ -126,9 +132,13 @@ const Cart = () => {
           <div className="w-4/5 p-3 rounded-2xl bg-white ">
             <div className="h-12 flex justify-between items-center p-2 mx-3">
               <div>
-                <Checkbox onChange={checkAll} checked={isCheckAll}>
-                  全選
-                </Checkbox>
+                {cartTickets.length ? (
+                  <Checkbox onChange={checkAll} checked={isCheckAll}>
+                    全選
+                  </Checkbox>
+                ) : (
+                  ""
+                )}
               </div>
 
               <div>
@@ -216,10 +226,11 @@ const Cart = () => {
             <p className="text-2xl font-bold">NT$ {total}</p>
           </div>
           <button
+            disabled={!selectedTickets.length}
             onClick={() => {
               changePage("/booking");
             }}
-            className="w-full py-1 px-5 text-lg font-bold rounded-xl bg-[#cd333339] text-[#cd3333] cursor-pointer"
+            className="w-full py-1 px-5 text-lg font-bold rounded-xl bg-[#cd333339] text-[#cd3333] cursor-pointer disabled:bg-gray-300 disabled:text-gray-600"
           >
             前往結帳
           </button>

@@ -9,6 +9,7 @@ import { useUserStore } from "@/store/user";
 import { formatDateTW } from "@/utils/time";
 import { useEffect, useState } from "react";
 import Checkbox from "@/components/Checkbox";
+import { scrollToTop } from "@/utils/scroll";
 
 const payMethods = [
   {
@@ -71,6 +72,8 @@ const Booking = () => {
     };
     calculatePrice();
   }, [cart]);
+
+  useEffect(() => scrollToTop(), []);
 
   return (
     <div className="py-6  bg-[#1a675822]">

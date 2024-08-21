@@ -6,7 +6,8 @@ import { useParams } from "react-router-dom";
 import OptionCard from "@/components/OptionCard";
 import CommentCard from "@/components/CommentCard";
 import LikeTicket from "@/components/LikeTicket";
-
+import { useEffect } from "react";
+import { scrollToTop } from "@/utils/scroll";
 import { formatDateTW } from "@/utils/time";
 import clsx from "clsx";
 
@@ -33,6 +34,8 @@ const Ticket = () => {
     setCart([...cart, product]);
     navigate("/cart");
   };
+
+  useEffect(() => scrollToTop(), []);
 
   return (
     <div className="m-6 min-w-[1000px] w-[80%] mx-auto">

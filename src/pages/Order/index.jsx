@@ -1,9 +1,14 @@
 import { useUserStore } from "@/store/user";
 import OrderCard from "@/components/OrderCard";
+import { useEffect } from "react";
+import { scrollToTop } from "@/utils/scroll";
 
 const Order = () => {
   const { order } = useUserStore();
   console.log(order);
+
+  useEffect(() => scrollToTop(), []);
+
   return (
     <div className="w-[70%] mx-auto m-8">
       <div className="text-themeG my-4 font-medium text-2xl flex items-center">

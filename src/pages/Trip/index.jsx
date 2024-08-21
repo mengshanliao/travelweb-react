@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { usePostStore } from "@/store/post";
 import { useParams } from "react-router-dom";
 import FollowIcon from "@/components/FollowIcon";
+import { useEffect } from "react";
+import { scrollToTop } from "@/utils/scroll";
 
 const Trip = () => {
   const navigate = useNavigate();
@@ -13,6 +15,8 @@ const Trip = () => {
   const authorInfo = storageAuthors.find(
     (item) => item.name.replace(" ", "").toLowerCase() === author
   );
+
+  useEffect(() => scrollToTop(), []);
 
   return (
     <div className="m-6 min-w-[1000px] w-[80%] mx-auto">
