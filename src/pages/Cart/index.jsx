@@ -10,8 +10,10 @@ import { Steps } from "antd";
 import { useUserStore } from "@/store/user";
 import { formatDateTW } from "@/utils/time";
 import { scrollToTop } from "@/utils/scroll";
+import { useTranslation } from "react-i18next";
 
 const Cart = () => {
+  const { t } = useTranslation();
   const { cart, setCart } = useUserStore(); //存入localStorage
   const [cartTickets, setCartTickets] = useState(cart); //在購物車裡的門票狀態
   const [total, setTotal] = useState(0); //總金額
@@ -134,7 +136,7 @@ const Cart = () => {
               <div>
                 {cartTickets.length ? (
                   <Checkbox onChange={checkAll} checked={isCheckAll}>
-                    全選
+                    {t("checkAll")}
                   </Checkbox>
                 ) : (
                   ""
@@ -147,7 +149,7 @@ const Cart = () => {
                     onClick={deleteSelectedTickets}
                     className="px-2 py-1 text-sm border border-solid border-black hover:bg-gray-200 rounded-xl cursor-pointer"
                   >
-                    刪除選中的活動
+                    {t("deleteSelected")}
                   </span>
                 ) : (
                   ""
@@ -155,55 +157,63 @@ const Cart = () => {
               </div>
             </div>
             <hr />
-            {cartTickets.map((ticket) => (
-              <div key={ticket.id}>
-                <div className="my-4 mx-3">
-                  <div className="flex mx-1 my-2 items-center justify-between text-lg">
-                    <h1 className="font-medium">{ticket.title}</h1>
-                    <div>
-                      <i
-                        onClick={() => updateQuantity(ticket.id, -1)}
-                        className="fa-solid fa-minus p-2 bg-[#0022431b] rounded-md"
-                      ></i>
-                      <input
-                        type="text"
-                        value={ticket.quantity}
-                        className="w-9 h-9 p-2 text-center rounded-md"
-                      />
-                      <i
-                        onClick={() => updateQuantity(ticket.id, 1)}
-                        className="fa-solid fa-plus p-2 bg-[#0022431b] rounded-md "
-                      ></i>
+            {cartTickets.length ? (
+              <div>
+                {cartTickets.map((ticket) => (
+                  <div key={ticket.id}>
+                    <div className="my-4 mx-3">
+                      <div className="flex mx-1 my-2 items-center justify-between text-lg">
+                        <h1 className="font-medium">{ticket.title}</h1>
+                        <div>
+                          <i
+                            onClick={() => updateQuantity(ticket.id, -1)}
+                            className="fa-solid fa-minus p-2 bg-[#0022431b] rounded-md"
+                          ></i>
+                          <input
+                            type="text"
+                            value={ticket.quantity}
+                            className="w-9 h-9 p-2 text-center rounded-md"
+                          />
+                          <i
+                            onClick={() => updateQuantity(ticket.id, 1)}
+                            className="fa-solid fa-plus p-2 bg-[#0022431b] rounded-md "
+                          ></i>
+                        </div>
+                      </div>
+                      <h3 className="text-sm m-1 mb-3 text-gray-500">
+                        使用日期：
+                        {formatDateTW(ticket.time)}
+                      </h3>
+                      <div className="flex justify-between items-center m-1 text-[15px]">
+                        <div className="flex">
+                          <Checkbox
+                            onChange={() => handleSelect(ticket.id)}
+                            checked={selectedTickets.some(
+                              (id) => id === ticket.id
+                            )}
+                          >
+                            {t("select")}
+                          </Checkbox>
+                          <button
+                            onClick={() => handleDelete(ticket.id)}
+                            className="ml-4 px-1 text-base text-gray-600 border border-solid border-gray-300 rounded-md cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]"
+                          >
+                            <i className="fa-solid fa-trash-can mx-1"></i>
+                            {t("delete")}
+                          </button>
+                        </div>
+                        <div className="text-xl font-semibold">
+                          NT$ {ticket.price * ticket.quantity}
+                        </div>
+                      </div>
                     </div>
+                    <hr />
                   </div>
-                  <h3 className="text-sm m-1 mb-3 text-gray-500">
-                    使用日期：
-                    {formatDateTW(ticket.time)}
-                  </h3>
-                  <div className="flex justify-between items-center m-1 text-[15px]">
-                    <div className="flex">
-                      <Checkbox
-                        onChange={() => handleSelect(ticket.id)}
-                        checked={selectedTickets.some((id) => id === ticket.id)}
-                      >
-                        選取
-                      </Checkbox>
-                      <button
-                        onClick={() => handleDelete(ticket.id)}
-                        className="ml-4 px-1 text-base text-gray-600 border border-solid border-gray-300 rounded-md cursor-pointer hover:bg-[#cd333339] hover:text-[#cd3333]"
-                      >
-                        <i className="fa-solid fa-trash-can mx-1"></i>
-                        刪除
-                      </button>
-                    </div>
-                    <div className="text-xl font-semibold">
-                      NT$ {ticket.price * ticket.quantity}
-                    </div>
-                  </div>
-                </div>
-                <hr />
+                ))}
               </div>
-            ))}
+            ) : (
+              <div className="m-6 text-xl text-center">{t("empty")}</div>
+            )}
           </div>
           <div className="w-full flex justify-center">
             <button
@@ -212,7 +222,7 @@ const Cart = () => {
               }}
               className="m-3 py-1 px-3 text-xl font-bold rounded-xl bg-bgG text-themeG cursor-pointer"
             >
-              回首頁
+              {t("homepage")}
             </button>
           </div>
         </div>
@@ -232,7 +242,7 @@ const Cart = () => {
             }}
             className="w-full py-1 px-5 text-lg font-bold rounded-xl bg-[#cd333339] text-[#cd3333] cursor-pointer disabled:bg-gray-300 disabled:text-gray-600"
           >
-            前往結帳
+            {t("checkout")}
           </button>
         </div>
       </div>

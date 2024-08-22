@@ -4,8 +4,10 @@ import { useParams } from "react-router-dom";
 import FollowIcon from "@/components/FollowIcon";
 import { useEffect } from "react";
 import { scrollToTop } from "@/utils/scroll";
+import { useTranslation } from "react-i18next";
 
 const Trip = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const changePage = (url) => {
     navigate(url);
@@ -46,7 +48,7 @@ const Trip = () => {
         <div className="flex flex-col">
           <h2 className="my-6 font-medium text-2xl">
             <i class="fa-solid fa-map-location-dot pr-2" />
-            旅遊回憶庫
+            {t("travel")}
           </h2>
           <div className="flex">
             <img

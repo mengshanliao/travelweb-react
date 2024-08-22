@@ -6,12 +6,14 @@ import { useParams } from "react-router-dom";
 import OptionCard from "@/components/OptionCard";
 import CommentCard from "@/components/CommentCard";
 import LikeTicket from "@/components/LikeTicket";
+import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { scrollToTop } from "@/utils/scroll";
 import { formatDateTW } from "@/utils/time";
 import clsx from "clsx";
 
 const Ticket = () => {
+  const { t } = useTranslation();
   const { storageTickets } = useTicketStore();
   const { cart, setCart } = useUserStore();
   const { id } = useParams();
@@ -76,7 +78,7 @@ const Ticket = () => {
       </div>
       <hr />
       <i className="fa-solid fa-angles-right pr-2 my-6"></i>
-      <span className="w-3/4 text-2xl font-medium">方案選擇</span>
+      <span className="w-3/4 text-2xl font-medium">{t("option")}</span>
       <div className="p-1 text-base">
         {ticket.dates.map((date) => (
           <span
@@ -116,25 +118,25 @@ const Ticket = () => {
           }}
           className="p-2 text-lg font-bold rounded-lg bg-bgG text-themeG cursor-pointer hover:shadow-lg"
         >
-          回上一頁
+          {t("back")}
         </button>
         <button
           onClick={addToCart}
           className="p-2 text-lg font-bold rounded-lg bg-bgRed text-themeRed cursor-pointer hover:shadow-lg"
         >
-          加入購物車
+          {t("addToCart")}
         </button>
       </div>
       <hr />
       <i className="fa-solid fa-angles-right pr-2 my-6"></i>
-      <span className="text-2xl font-medium">活動詳情</span>
+      <span className="text-2xl font-medium">{t("event")}</span>
       <div className="w-[60%]">
         <p>{ticket.desc}</p>
         <img src={ticket.descImg} alt="" className="my-9 h-[320px]" />
       </div>
       <hr />
       <i className="fa-solid fa-angles-right pr-2 my-6"></i>
-      <span className="text-2xl font-medium">最新評價</span>
+      <span className="text-2xl font-medium">{t("comment")}</span>
       <div className=" text-yellow-500 flex items-center text-xl ">
         <p className="mr-1 font-bold">4.5</p>
         <i className="fa-solid fa-star" />

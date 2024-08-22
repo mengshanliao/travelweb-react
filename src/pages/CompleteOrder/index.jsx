@@ -7,8 +7,10 @@ import { Steps } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { scrollToTop } from "@/utils/scroll";
+import { useTranslation } from "react-i18next";
 
 const CompleteOrder = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const changePage = (url) => {
     navigate(url);
@@ -46,14 +48,14 @@ const CompleteOrder = () => {
         />
       </div>
       <div className="w-[70%] h-1/2 mx-auto mb-6 p-4 flex flex-col items-center justify-around rounded-lg bg-white text-xl">
-        <div className="my-5">訂單已完成</div>
+        <div className="my-5">{t("complete")}</div>
         <div
           onClick={() => {
             changePage("/order");
           }}
           className="py-2 px-2 text-xl font-bold rounded-lg bg-bgRed text-themeRed cursor-pointer"
         >
-          訂單詳情
+          {t("orderDetail")}
         </div>
       </div>
     </div>

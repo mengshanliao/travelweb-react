@@ -1,6 +1,7 @@
 import { Button, Drawer } from "antd";
 import { useState } from "react";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 const OptionCard = ({ title, tags, drawer, price, className, onClick }) => {
   //antd:drawer
@@ -8,6 +9,8 @@ const OptionCard = ({ title, tags, drawer, price, className, onClick }) => {
   const showDrawer = (bool) => {
     setOpen(bool);
   };
+
+  const { t } = useTranslation();
 
   return (
     <div
@@ -42,21 +45,21 @@ const OptionCard = ({ title, tags, drawer, price, className, onClick }) => {
             }}
           >
             <i className="fa-solid fa-angles-right"></i>
-            方案詳情
+            {t("detail")}
           </Button>
           <Drawer title={title} onClose={() => showDrawer(false)} open={open}>
             <div className="mb-5">
-              <h1 className="font-semibold text-lg">票價：</h1>
+              <h1 className="font-semibold text-lg">{t("price")}：</h1>
               <p className="text-base">NT$ {drawer.price}</p>
             </div>
             <hr />
             <div className="my-5">
-              <h1 className="font-semibold text-lg">購票：</h1>
+              <h1 className="font-semibold text-lg">{t("buy")}：</h1>
               <p className="text-base">{drawer.buy}</p>
             </div>
             <hr />
             <div className="my-5">
-              <h1 className="font-semibold text-lg">主題區域：</h1>
+              <h1 className="font-semibold text-lg">{t("area")}：</h1>
               <p className="text-base">{drawer.desc}</p>
             </div>
             <hr />

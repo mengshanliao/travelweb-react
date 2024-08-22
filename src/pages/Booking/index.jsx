@@ -10,6 +10,7 @@ import { formatDateTW } from "@/utils/time";
 import { useEffect, useState } from "react";
 import Checkbox from "@/components/Checkbox";
 import { scrollToTop } from "@/utils/scroll";
+import { useTranslation } from "react-i18next";
 
 const payMethods = [
   {
@@ -26,6 +27,7 @@ const payMethods = [
   },
 ];
 const Booking = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const changePage = (url) => {
     navigate(url);
@@ -106,7 +108,9 @@ const Booking = () => {
       </div>
       <div className="my-6 flex flex-col items-center justify-center">
         <div className="w-[70%] mb-6 p-4 flex flex-col rounded-2xl bg-white">
-          <h1 className="px-2 pb-3 text-xl font-bold text-themeG">訂單詳情</h1>
+          <h1 className="px-2 pb-3 text-xl font-bold text-themeG">
+            {t("orderDetail")}{" "}
+          </h1>
           {cart.map((ticket) => (
             <div key={ticket.id}>
               <div className="my-3 p-2 flex justify-between border border-solid border-bgBlue rounded-lg">
@@ -127,7 +131,7 @@ const Booking = () => {
             </div>
           ))}
           <div className="m-3 flex justify-between text-lg">
-            <span className="font-medium">總金額</span>
+            <span className="font-medium">{t("total")}</span>
             <span className="font-bold text-themeRed text-[22px]">
               NT$ {total}
             </span>
@@ -136,12 +140,12 @@ const Booking = () => {
         <form onSubmit={(e) => checkout(e)} className="w-[70%]">
           <div className=" mb-6 p-4 flex flex-col rounded-2xl bg-white">
             <h1 className="px-2 pb-3 text-xl font-bold text-themeG">
-              訂購人資料
+              {t("orderInfo")}
             </h1>
             <hr />
             <div className="flex flex-col m-4 text-base">
               <label htmlFor="lastName" className="my-2 font-bold">
-                姓氏
+                {t("lastName")}
               </label>
               <div className="mb-3 flex flex-col">
                 <input
@@ -161,7 +165,7 @@ const Booking = () => {
                 )}
               </div>
               <label htmlFor="firstName" className="my-2 font-bold">
-                名字
+                {t("firstName")}
               </label>
               <div className="mb-3 flex flex-col">
                 <input
@@ -181,7 +185,7 @@ const Booking = () => {
                 )}
               </div>
               <label htmlFor="phone" className="my-2 font-bold">
-                手機號碼
+                {t("phone")}
               </label>
               <div className="mb-3 flex flex-col">
                 <input
@@ -204,7 +208,7 @@ const Booking = () => {
               </div>
 
               <label htmlFor="email" className="my-2 font-bold">
-                電子信箱
+                {t("email")}
               </label>
               <div className="mb-3 flex flex-col">
                 <input
@@ -229,7 +233,7 @@ const Booking = () => {
           </div>
           <div className="mb-6 p-4 flex flex-col rounded-2xl bg-white">
             <h1 className="px-2 pb-3 text-xl font-bold text-themeG">
-              付款方式
+              {t("payment")}
             </h1>
             <hr />
             <div className="flex flex-col my-5 mx-2 text-lg">
@@ -254,10 +258,10 @@ const Booking = () => {
               }}
               className="py-2 px-3 text-xl font-bold rounded-xl bg-bgBlue text-themeBlue cursor-pointer"
             >
-              回上一頁
+              {t("back")}
             </button>
             <button className="py-2 px-3 text-xl font-bold rounded-xl bg-[#cd333339] text-[#cd3333] cursor-pointer">
-              確定結帳
+              {t("confirm")}
             </button>
           </div>
         </form>

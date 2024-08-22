@@ -2,8 +2,10 @@ import { useUserStore } from "@/store/user";
 import OrderCard from "@/components/OrderCard";
 import { useEffect } from "react";
 import { scrollToTop } from "@/utils/scroll";
+import { useTranslation } from "react-i18next";
 
 const Order = () => {
+  const { t } = useTranslation();
   const { order } = useUserStore();
   console.log(order);
 
@@ -14,7 +16,7 @@ const Order = () => {
       <div className="text-themeG my-4 font-medium text-2xl flex items-center">
         <h3 className="pr-2">
           <i className="fa-solid fa-table-list pr-2" />
-          所有訂單
+          {t("allOrder")}
         </h3>
         <span>({order.length})</span>
       </div>

@@ -2,8 +2,10 @@ import { useTicketStore } from "@/store/ticket";
 import { useParams } from "react-router-dom";
 import { scrollToTop } from "@/utils/scroll";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const City = () => {
+  const { t } = useTranslation();
   const { storageCities } = useTicketStore();
   const { city } = useParams();
   const cityInfo = storageCities.find((item) => item.cityKey === city);
@@ -15,20 +17,20 @@ const City = () => {
       <div className="flex w-full h-80 rounded-lg bg-bgG ">
         <div className="m-6 flex flex-col justify-around rounded-lg">
           <h3 className="text-[27px] font-medium text-themeG">
-            {cityInfo.title} | 旅遊指南
+            {cityInfo.title} | {t("tips")}
           </h3>
           <p className="text-lg">{cityInfo.desc}</p>
           <div className="flex justify-around items-center text-lg text-center text-black">
             <span className="w-1/5 flex flex-col rounded-md bg-white">
-              <i className="fa-solid fa-sun my-2">天氣</i>
+              <i className="fa-solid fa-sun my-2">{t("weather")}</i>
               {cityInfo.weather}
             </span>
             <span className="w-1/5 flex flex-col rounded-md bg-white">
-              <i className="fa-solid fa-plug-circle-bolt my-2">電壓</i>
+              <i className="fa-solid fa-plug-circle-bolt my-2">{t("volt")}</i>
               {cityInfo.volt}
             </span>
             <span className="w-1/5 flex flex-col rounded-md bg-white">
-              <i className="fa-solid fa-comment-dollar my-2">貨幣</i>
+              <i className="fa-solid fa-comment-dollar my-2">{t("currency")}</i>
               {cityInfo.currency}
             </span>
           </div>
@@ -42,7 +44,8 @@ const City = () => {
 
       <div className="my-8">
         <h3 className="text-2xl font-semibold">
-          <i className="fa-solid fa-angles-right pr-2"></i>在地體驗排行
+          <i className="fa-solid fa-angles-right pr-2"></i>
+          {t("top")}
         </h3>
         <div className="flex flex-wrap">
           <div className="m-2 w-64 h-80 border border-solid border-gray-300 rounded-xl overflow-hidden cursor-pointer hover:shadow-lg">
@@ -152,7 +155,8 @@ const City = () => {
 
       <div className="my-8">
         <h3 className="text-2xl font-semibold">
-          <i className="fa-solid fa-angles-right pr-2"></i>必遊景點
+          <i className="fa-solid fa-angles-right pr-2"></i>
+          {t("spot")}
         </h3>
         <div className="flex flex-wrap">
           {cityInfo.location.map((location) => (
@@ -173,7 +177,8 @@ const City = () => {
 
       <div className="my-8">
         <h3 className="text-2xl font-semibold">
-          <i className="fa-solid fa-angles-right pr-2"></i>必吃美食
+          <i className="fa-solid fa-angles-right pr-2"></i>
+          {t("food")}
         </h3>
         <div className="flex flex-wrap">
           {cityInfo.food.map((food) => (
