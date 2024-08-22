@@ -166,11 +166,11 @@ const Post = () => {
             className="bg-gray-200 w-2/3 mt-10 p-2 rounded-xl"
             placeholder="留下你的評論..."
           />
-          <button className="ml-2 text-white text-lg font-medium bg-[#002243d1] py-1 px-4 rounded-xl hover:shadow-lg">
+          <button className="ml-2 text-white text-lg font-medium bg-themeG py-1 px-4 rounded-xl hover:shadow-lg">
             送出
           </button>
           <div className="w-3/4 my-20 flex flex-col">
-            <div className="mr-8 my-2 p-2 rounded-xl flex flex-col border border-solid border-gray-300">
+            <div className="bg-white mr-8 my-2 p-2 rounded-xl flex flex-col border border-solid border-gray-300">
               <div className="flex items-center text-xl font-medium ">
                 <img
                   className="m-2 w-10 h-10 object-cover rounded-full "
@@ -187,7 +187,7 @@ const Post = () => {
                 <span className="font-extrabold cursor-pointer">回覆</span>
               </div>
             </div>
-            <div className="mr-8  my-2 p-2 rounded-xl flex flex-col border border-solid border-gray-300">
+            <div className="bg-white mr-8  my-2 p-2 rounded-xl flex flex-col border border-solid border-gray-300">
               <div className="flex items-center text-xl font-medium ">
                 <img
                   className="m-2 w-10 h-10 object-cover rounded-full "
@@ -204,7 +204,7 @@ const Post = () => {
                 <span className="font-extrabold cursor-pointer">回覆</span>
               </div>
             </div>
-            <div className="mr-8  my-2 p-2 rounded-xl flex flex-col border border-solid border-gray-300">
+            <div className="bg-white mr-8 my-2 p-2 rounded-xl flex flex-col border border-solid border-gray-300">
               <div className="flex items-center text-xl font-medium ">
                 <img
                   className="m-2 w-10 h-10 object-cover rounded-full "

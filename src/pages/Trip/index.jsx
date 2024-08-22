@@ -34,29 +34,29 @@ const Trip = () => {
           className="w-32 h-32 object-cover overflow-hidden rounded-full border-[7px] border-solid border-white"
         />
         <div className="flex items-center">
-          <h1 className="mr-2 font-medium text-2xl text-themeG">
+          <h3 className="mr-2 font-medium text-2xl text-themeG">
             {authorInfo.name}
-          </h1>
+          </h3>
           <FollowIcon id={authorInfo.id} />
         </div>
       </div>
       <div className="w-[75%] mx-auto my-2">
-        <div className="my-6 p-4 text-lg border border-solid border-gray-300">
+        <div className="bg-white rounded-xl my-6 p-4 text-lg border border-solid border-gray-300">
           {authorInfo.desc}
         </div>
 
         <div className="flex flex-col">
-          <h2 className="my-6 font-medium text-2xl">
+          <h3 className="my-6 font-medium text-2xl">
             <i class="fa-solid fa-map-location-dot pr-2" />
             {t("travel")}
-          </h2>
+          </h3>
           <div className="flex">
             <img
               src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGphcGFufGVufDB8fDB8fHww"
               alt=""
               className="w-44 h-40 rounded-xl"
             />
-            <div className="ml-2 p-4 border border-solid border-gray-300 rounded-xl">
+            <div className="bg-white ml-2 p-4 border border-solid border-gray-300 rounded-xl">
               <h3 className="cursor-pointer text-xl font-medium  hover:text-[#cd3333] ">
                 日本｜東京五天四夜自由行
               </h3>

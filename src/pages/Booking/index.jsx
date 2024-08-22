@@ -108,14 +108,14 @@ const Booking = () => {
       </div>
       <div className="my-6 flex flex-col items-center justify-center">
         <div className="w-[70%] mb-6 p-4 flex flex-col rounded-2xl bg-white">
-          <h1 className="px-2 pb-3 text-xl font-bold text-themeG">
+          <h3 className="px-2 pb-3 text-xl font-bold text-themeG">
             {t("orderDetail")}{" "}
-          </h1>
+          </h3>
           {cart.map((ticket) => (
             <div key={ticket.id}>
               <div className="my-3 p-2 flex justify-between border border-solid border-bgBlue rounded-lg">
                 <div className="flex flex-col mx-1 my-2 text-xl">
-                  <h1 className="mb-2 font-medium">{ticket.title}</h1>
+                  <h3 className="mb-2 font-medium">{ticket.title}</h3>
                   <h3 className="text-sm m-1 mb-3 text-gray-500">
                     使用日期：
                     {formatDateTW(ticket.time)}
@@ -139,9 +139,9 @@ const Booking = () => {
         </div>
         <form onSubmit={(e) => checkout(e)} className="w-[70%]">
           <div className=" mb-6 p-4 flex flex-col rounded-2xl bg-white">
-            <h1 className="px-2 pb-3 text-xl font-bold text-themeG">
+            <h3 className="px-2 pb-3 text-xl font-bold text-themeG">
               {t("orderInfo")}
-            </h1>
+            </h3>
             <hr />
             <div className="flex flex-col m-4 text-base">
               <label htmlFor="lastName" className="my-2 font-bold">
@@ -232,9 +232,9 @@ const Booking = () => {
             </div>
           </div>
           <div className="mb-6 p-4 flex flex-col rounded-2xl bg-white">
-            <h1 className="px-2 pb-3 text-xl font-bold text-themeG">
+            <h3 className="px-2 pb-3 text-xl font-bold text-themeG">
               {t("payment")}
-            </h1>
+            </h3>
             <hr />
             <div className="flex flex-col my-5 mx-2 text-lg">
               {payMethods.map((item) => (

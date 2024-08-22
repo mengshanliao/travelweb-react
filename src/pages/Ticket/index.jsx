@@ -88,7 +88,7 @@ const Ticket = () => {
               {
                 "border-2 border-themeRed text-themeRed": date === selectedTime,
               },
-              "mr-3 py-1 px-3 border border-solid border-black cursor-pointer rounded-lg hover:bg-bgRed hover:border-themeRed hover:text-themeRed"
+              "bg-white mr-3 py-1 px-3 border border-solid border-black cursor-pointer rounded-lg hover:bg-bgRed hover:border-themeRed hover:text-themeRed"
             )}
           >
             {formatDateTW(date)}

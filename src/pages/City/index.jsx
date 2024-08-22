@@ -48,7 +48,7 @@ const City = () => {
           {t("top")}
         </h3>
         <div className="flex flex-wrap">
-          <div className="m-2 w-64 h-80 border border-solid border-gray-300 rounded-xl overflow-hidden cursor-pointer hover:shadow-lg">
+          <div className="m-2 w-64 h-80 bg-white border border-solid border-gray-300 rounded-xl overflow-hidden cursor-pointer hover:shadow-lg">
             <div className="relative overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1547782101-30c84b97a71b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW4lMjBkaXNuZXl8ZW58MHx8MHx8fDA%3D"
@@ -82,7 +82,7 @@ const City = () => {
               </span>
             </div>
           </div>
-          <div className="m-2 w-64 h-80 border border-solid border-gray-300 rounded-xl overflow-hidden cursor-pointer hover:shadow-lg">
+          <div className="m-2 w-64 h-80 bg-white border border-solid border-gray-300 rounded-xl overflow-hidden cursor-pointer hover:shadow-lg">
             <div className="relative overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1547782101-30c84b97a71b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW4lMjBkaXNuZXl8ZW58MHx8MHx8fDA%3D"
@@ -116,7 +116,7 @@ const City = () => {
               </span>
             </div>
           </div>
-          <div className="m-2 w-64 h-80 border border-solid border-gray-300 rounded-xl overflow-hidden cursor-pointer hover:shadow-lg">
+          <div className="m-2 w-64 h-80 bg-white border border-solid border-gray-300 rounded-xl overflow-hidden cursor-pointer hover:shadow-lg">
             <div className="relative overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1547782101-30c84b97a71b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amFwYW4lMjBkaXNuZXl8ZW58MHx8MHx8fDA%3D"
@@ -160,7 +160,7 @@ const City = () => {
         </h3>
         <div className="flex flex-wrap">
           {cityInfo.location.map((location) => (
-            <div className="m-3 w-[46%] h-40 flex rounded-xl border border-solid border-gray-300 overflow-hidden hover:shadow-lg">
+            <div className="m-3 w-[46%] h-40 bg-white flex rounded-xl border border-solid border-gray-300 overflow-hidden hover:shadow-lg">
               <img
                 src={location.cover}
                 alt=""
@@ -182,7 +182,7 @@ const City = () => {
         </h3>
         <div className="flex flex-wrap">
           {cityInfo.food.map((food) => (
-            <div className="m-3 w-[47%] h-40 flex rounded-xl border border-solid border-gray-300 overflow-hidden hover:shadow-lg">
+            <div className="m-3 w-[47%] h-40 bg-white flex rounded-xl border border-solid border-gray-300 overflow-hidden hover:shadow-lg">
               <img src={food.cover} alt="" className="object-cover w-48 h-40" />
               <div className="flex flex-col m-3">
                 <p className="text-lg font-medium">{food.title}</p>

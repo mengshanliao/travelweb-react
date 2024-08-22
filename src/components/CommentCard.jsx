@@ -2,7 +2,7 @@ import { formatDateTW } from "@/utils/time";
 
 const CommentCard = ({ name, avatar, message, createdAt }) => {
   return (
-    <div className="my-2 p-2 rounded-xl flex flex-col border border-solid border-gray-300">
+    <div className="bg-white my-2 p-2 rounded-xl flex flex-col border border-solid border-gray-300">
       <div className="flex">
         <div className="flex items-center text-lg font-medium ">
           <img

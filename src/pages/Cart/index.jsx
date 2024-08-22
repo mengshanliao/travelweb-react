@@ -163,7 +163,7 @@ const Cart = () => {
                   <div key={ticket.id}>
                     <div className="my-4 mx-3">
                       <div className="flex mx-1 my-2 items-center justify-between text-lg">
-                        <h1 className="font-medium">{ticket.title}</h1>
+                        <h3 className="font-medium">{ticket.title}</h3>
                         <div>
                           <i
                             onClick={() => updateQuantity(ticket.id, -1)}
