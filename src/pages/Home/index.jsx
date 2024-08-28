@@ -1,18 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Carousel } from "antd";
+import { scrollToTop } from "@/utils/scroll";
+
 import { postApi } from "@/api/post";
 import { ticketApi } from "@/api/ticket";
 import { cityApi } from "@/api/city";
+import { authorApi } from "@/api/author";
+
 import CityCard from "@/components/CityCard";
 import PostCard from "@/components/PostCard";
 import TicketCard from "@/components/TicketCard";
 import AuthorCard from "@/components/AuthorCard";
+
 import { usePostStore } from "@/store/post";
 import { useTicketStore } from "@/store/ticket";
-import { useTranslation } from "react-i18next";
-import { authorApi } from "@/api/author";
-import { Carousel } from "antd";
-import { scrollToTop } from "@/utils/scroll";
 
 const navList1 = [
   {

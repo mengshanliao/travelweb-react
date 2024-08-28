@@ -2,9 +2,9 @@ import { useState } from "react";
 import { usePostStore } from "@/store/post";
 
 const LikeIcon = ({ id }) => {
-  const { postLike, setPostLike } = usePostStore(); //存入localStorage
-  const isLike = postLike.some((postId) => postId === id);
-  const [likeStatus, setLikeStatus] = useState(isLike); //點擊後狀態
+  const { postLike, setPostLike } = usePostStore(); //post的愛心，存入localStorage
+  const isLike = postLike.some((postId) => postId === id); //確認這個 post 是否已經被喜歡
+  const [likeStatus, setLikeStatus] = useState(isLike); //點擊愛心後狀態
 
   const handleLike = () => {
     // 頁面狀態

@@ -11,7 +11,7 @@ import i18n from "@/i18n";
 const Layout = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); //antd 登入框開啟狀態
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const {
